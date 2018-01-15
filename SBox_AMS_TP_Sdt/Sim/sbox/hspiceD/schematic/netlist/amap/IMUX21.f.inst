@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"I6v" "xi6"
+"I6n" "clinv_core"
+"I5v" "xi5"
+"I5n" "clinv_core"
+"I4v" "xi4"
+"I4n" "inv_core"
+"Av" "(FUNCTION (plus (root \"I6/A\")))"
+"Bv" "(FUNCTION (plus (root \"I5/A\")))"
+"Sv" "(FUNCTION (plus (root \"I5/C\") (root \"I6/CN\") (root \"I4/in\")))"
+"Qv" "(FUNCTION (plus (root \"I5/Q\") (root \"I6/Q\")))"

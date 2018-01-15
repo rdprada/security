@@ -1,0 +1,30 @@
+; --------------------------------------------------------
+;|                                                        |
+;|             NanoSim Version D-2010.03-SP1              |
+;|                    SN:20100517-amd64                   |
+;|                 Machine Name: cimepc79                 |
+;| Copyright (c) 2010 Synopsys Inc., All Rights Reserved. |
+;|                                                        |
+; --------------------------------------------------------
+;
+;Built by nsmgr   on Mon May 17 18:11:11 PDT 2010
+; Mon Dec 18 10:25:10 CET 2017
+; 
+; ratio = TotalCap / NodeCap
+; where TotalCap is the capacitances between two terminals
+; and NodeCap is node capacitance.
+; Both TotalCap and NodeCap are estimation of capacitive effects.
+;
+
+# of capacitors from netlist                              :            0
+     # of Ground CAPS from netlist                        :            0
+     # of Coupling CAPS from netlist                      :            0
+# of capacitors converted from diodes                     :            0
+     # of Ground CAPS converted from diodes               :            0
+     # of Coupling CAPS converted from diodes             :            0
+# of Coupling CAPS from netlist and converted diodes      :            0
+     # of Coupling CAPS kept (listed here)                :            0
+     # of Coupling CAPS put into SMS Mode                 :            0
+     # of Coupling CAPS split to ground                   :            0
+# of MOSFETS converted to Ground CAPS                     :            0
+# of MOSFETS used as Coupling CAPS (listed here)          :            0

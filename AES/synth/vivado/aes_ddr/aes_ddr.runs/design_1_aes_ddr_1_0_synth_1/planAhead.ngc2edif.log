@@ -1,0 +1,38 @@
+Release 14.7 - ngc2edif P_INT.20170217 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design aes_core.ngc ...
+WARNING:NetListWriters:298 - No output is written to aes_core.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus DU/col0/lin_0/mc/MC/f<7 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col1/lin_0/mc/MC/f<7 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col2/lin_0/mc/MC/f<7 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col3/lin_0/mc/MC/f<7 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col0/i_sbox/a1h<3 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col0/i_sbox/v<4 : 2> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col1/i_sbox/a1h<3 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col1/i_sbox/v<4 : 2> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col2/i_sbox/a1h<3 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col2/i_sbox/v<4 : 2> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col3/i_sbox/a1h<3 : 0> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus DU/col3/i_sbox/v<4 : 2> on block
+   aes_core is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file aes_core.edif ...
+PMSPEC -- Overriding Xilinx file
+</softslin/vivado_17.1/Vivado/2017.1/ids_lite/ISE/data/ngc2edif.pfd> with local
+file </softl2/XILINX/vivado_17.1/Vivado/2017.1/ids_lite/ISE/data/ngc2edif.pfd>
+ngc2edif: Total memory usage is 110260 kilobytes
+

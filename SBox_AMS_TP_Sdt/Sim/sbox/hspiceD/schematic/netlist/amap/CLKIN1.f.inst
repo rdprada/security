@@ -1,0 +1,6 @@
+HEADER
+"PSFversion" "1.00"
+"I3v" "xi3"
+"I3n" "invb_core"
+"Av" "(FUNCTION (plus (root \"I3/A\")))"
+"Qv" "(FUNCTION (plus (root \"I3/Q\")))"

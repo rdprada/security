@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Nov 20 12:22:38 2017
+# Process ID: 8765
+# Current directory: /tp/xph3sle/xph3sle603/Security_lab/AES
+# Command line: vivado
+# Log file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.log
+# Journal file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+write_hwdef -force  -file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf
+write_hwdef -force  -file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf

@@ -1,0 +1,493 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Nov 20 10:32:42 2017
+# Process ID: 4055
+# Current directory: /tp/xph3sle/xph3sle603/Security_lab/AES
+# Command line: vivado
+# Log file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.log
+# Journal file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project aes_ddr /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr -part xc7z010clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
+create_bd_design "design_1"
+Wrote  : </tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6091.457 ; gain = 20.707 ; free physical = 13059 ; free virtual = 24723
+update_compile_order -fileset sources_1
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:10.0 microblaze_0
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config {local_mem "32KB" ecc "None" cache "None" debug_module "Debug Only" axi_periph "Enabled" axi_intc "0" clk "New Clocking Wizard (100 MHz)" }  [get_bd_cells microblaze_0]
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+create_bd_cell: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 6323.723 ; gain = 155.047 ; free physical = 12817 ; free virtual = 24518
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 6335.902 ; gain = 167.227 ; free physical = 12770 ; free virtual = 24475
+endgroup
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]
+set_property -dict [list CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} CONFIG.PRIM_IN_FREQ {125.000} CONFIG.CLKOUT2_USED {true} CONFIG.CLK_OUT2_PORT {clk_out_40} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {40.000} CONFIG.CLKIN1_JITTER_PS {80.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} CONFIG.MMCM_CLKIN1_PERIOD {8.000} CONFIG.MMCM_CLKOUT1_DIVIDE {25} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {124.615} CONFIG.CLKOUT1_PHASE_ERROR {96.948} CONFIG.CLKOUT2_JITTER {150.675} CONFIG.CLKOUT2_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+set_property location {1.5 493 -66} [get_bd_cells xlconstant_0]
+set_property location {1.5 393 -108} [get_bd_cells xlconstant_0]
+set_property location {1 139 -165} [get_bd_cells xlconstant_0]
+set_property location {1.5 495 -101} [get_bd_cells xlconstant_0]
+startgroup
+set_property location {1.5 321 199} [get_bd_cells clk_wiz_1]
+set_property location {2 321 199} [get_bd_cells mdm_1]
+set_property location {2 321 199} [get_bd_cells microblaze_0]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property location {2 321 199} [get_bd_cells microblaze_0]'
+INFO: [Common 17-17] undo 'set_property location {2 321 199} [get_bd_cells mdm_1]'
+INFO: [Common 17-17] undo 'set_property location {1.5 321 199} [get_bd_cells clk_wiz_1]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'set_property location {1.5 495 -101} [get_bd_cells xlconstant_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {1 139 -165} [get_bd_cells xlconstant_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {1.5 393 -108} [get_bd_cells xlconstant_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {1.5 493 -66} [get_bd_cells xlconstant_0]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]'
+set_property location {1.5 598 12} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+set_property location {1 100 -200} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins clk_wiz_1/reset]
+set_property location {0.5 -310 493} [get_bd_cells xlconstant_1]
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} CONFIG.GPIO2_BOARD_INTERFACE {leds_4bits} CONFIG.C_GPIO_WIDTH {4} CONFIG.C_GPIO2_WIDTH {4} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1} CONFIG.C_ALL_OUTPUTS_2 {1}] [get_bd_cells axi_gpio_0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "sys_clock ( sys_clock ) " }  [get_bd_pins clk_wiz_1/clk_in1]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_1]
+INFO: [board_rule 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells /clk_wiz_1]
+INFO: [board_rule 100-100] create_bd_port -dir I sys_clock -type clk
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 125000000 /sys_clock
+INFO: [board_rule 100-100] set_property CONFIG.PHASE 0.000 /sys_clock
+INFO: [board_rule 100-100] connect_bd_net /sys_clock /clk_wiz_1/clk_in1
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 125000000 /sys_clock
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_0/S_AXI]
+</axi_gpio_0/S_AXI/Reg> is being mapped into </microblaze_0/Data> at <0x40000000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "btns_4bits ( btns_4bits ) " }  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE btns_4bits [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_4bits
+INFO: [board_rule 100-100] connect_bd_intf_net /btns_4bits /axi_gpio_0/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "leds_4bits ( leds_4bits ) " }  [get_bd_intf_pins axi_gpio_0/GPIO2]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO2_BOARD_INTERFACE leds_4bits [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_4bits
+INFO: [board_rule 100-100] connect_bd_intf_net /leds_4bits /axi_gpio_0/GPIO2
+endgroup
+create_peripheral cime3 user aes_ddr 1.0 -dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core cime3:user:aes_ddr:1.0]
+set_property VALUE 14 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core cime3:user:aes_ddr:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core cime3:user:aes_ddr:1.0]
+write_peripheral [ipx::find_open_core cime3:user:aes_ddr:1.0]
+set_property  ip_repo_paths  /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_aes_ddr_v1_0 -directory /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/src /tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.ngc
+update_compile_order -fileset sources_1
+current_project aes_ddr
+current_project edit_aes_ddr_v1_0
+set_property target_language VHDL [current_project]
+current_project aes_ddr
+set_property target_language VHDL [current_project]
+current_project edit_aes_ddr_v1_0
+close_project
+create_peripheral cime3 user aes_ddr 1.0 -dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core cime3:user:aes_ddr:1.0]
+set_property VALUE 14 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core cime3:user:aes_ddr:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core cime3:user:aes_ddr:1.0]
+write_peripheral [ipx::find_open_core cime3:user:aes_ddr:1.0]
+set_property  ip_repo_paths  {/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0 /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_aes_ddr_v1_0 -directory /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/src /tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.ngc
+update_compile_order -fileset sources_1
+current_project aes_ddr
+current_project edit_aes_ddr_v1_0
+update_compile_order -fileset sources_1
+ipx::add_bus_interface aes_clk [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:signal:clock_rtl:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:signal:clock:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property display_name aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property description aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+ipx::add_port_map CLK [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property physical_name s00_axi_aclk [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]]
+ipx::merge_project_changes ports [ipx::current_core]
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 's00_axi_aresetn' as interface 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's00_axi_aclk' as interface 's00_axi_aclk'.
+ipx::remove_bus_interface aes_clk [ipx::current_core]
+undo
+INFO: [Common 17-17] undo 'set_property physical_name s00_axi_aclk [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]]'
+undo
+INFO: [Common 17-17] undo 'set_property description aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]'
+undo
+INFO: [Common 17-17] undo 'set_property display_name aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]'
+undo
+INFO: [Common 17-17] undo 'set_property bus_type_vlnv xilinx.com:signal:clock:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]'
+undo
+INFO: [Common 17-17] undo 'set_property abstraction_type_vlnv xilinx.com:signal:clock_rtl:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]'
+undo
+INFO: [Common 17-17] undo 'current_project edit_aes_ddr_v1_0'
+current_project edit_aes_ddr_v1_0
+close_project
+startgroup
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+open_project /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/edit_aes_ddr_v1_0.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/softslin/vivado_17.1/Vivado/2017.1/data/ip'.
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/component.xml
+WARNING: [IP_Flow 19-4308] Project file 'src/aes_core.ngc' is not found in the component files. It will be added automatically when merging sources and repackaging. Please remove the file from the source project if this is not desired.
+WARNING: [IP_Flow 19-4308] Project file 'src/aes_core.ngc' is not found in the component files. It will be added automatically when merging sources and repackaging. Please remove the file from the source project if this is not desired.
+ipx::remove_port aes_clk [ipx::current_core]
+ipx::add_bus_interface aes_clk [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:signal:clock_rtl:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:signal:clock:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property display_name aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property description aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+current_project aes_ddr
+delete_bd_objs [get_bd_cells aes_ddr_0]
+startgroup
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+delete_bd_objs [get_bd_cells aes_ddr_0]
+current_project edit_aes_ddr_v1_0
+ipx::add_bus_parameter aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+ipx::remove_bus_parameter aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+ipx::remove_bus_interface aes_clk [ipx::current_core]
+ipx::add_bus_interface aes_clk [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:signal:clock_rtl:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:signal:clock:1.0 [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property display_name aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property description aes_clk [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+ipx::add_port_map CLK [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]
+set_property physical_name s00_axi_aclk [ipx::get_port_maps CLK -of_objects [ipx::get_bus_interfaces aes_clk -of_objects [ipx::current_core]]]
+startgroup
+current_project aes_ddr
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+set_property location {1 150 116} [get_bd_cells aes_ddr_0]
+delete_bd_objs [get_bd_cells aes_ddr_0]
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+ERROR: [Common 17-190] Invalid Tcl eval of 'current_project edit_aes_ddr_v1_0' during processing of event '267'.
+ERROR: [Common 17-39] 'update_ip_catalog' failed due to earlier errors.
+startgroup
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+delete_bd_objs [get_bd_cells aes_ddr_0]
+current_project edit_aes_ddr_v1_0
+ipx::merge_project_changes files [ipx::current_core]
+ipx::remove_bus_interface aes_clk [ipx::current_core]
+current_project aes_ddr
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+ERROR: [Common 17-190] Invalid Tcl eval of 'current_project edit_aes_ddr_v1_0' during processing of event '267'.
+ERROR: [Common 17-39] 'update_ip_catalog' failed due to earlier errors.
+startgroup
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+delete_bd_objs [get_bd_cells aes_ddr_0]
+current_project edit_aes_ddr_v1_0
+ipx::merge_project_changes ports [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'aes_clk' as interface 'aes_clk'.
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'
+startgroup
+current_project aes_ddr
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_0
+endgroup
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+WARNING: [IP_Flow 19-2207] Repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0'.
+ERROR: [Common 17-190] Invalid Tcl eval of 'current_project edit_aes_ddr_v1_0' during processing of event '267'.
+ERROR: [Common 17-39] 'update_ip_catalog' failed due to earlier errors.
+startgroup
+create_bd_cell -type ip -vlnv cime3:user:aes_ddr:1.0 aes_ddr_1
+endgroup
+delete_bd_objs [get_bd_cells aes_ddr_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" intc_ip "/microblaze_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins aes_ddr_1/S00_AXI]
+</aes_ddr_1/S00_AXI/S00_AXI_reg> is being mapped into </microblaze_0/Data> at <0x44A00000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_1/clk_out_40 (40 MHz)" }  [get_bd_pins aes_ddr_1/aes_clk]
+endgroup
+current_project edit_aes_ddr_v1_0
+close_project
+generate_target all [get_files  /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : </tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd
+VHDL Output written to : /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block aes_ddr_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+Exporting to file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 6953.996 ; gain = 0.000 ; free physical = 11990 ; free virtual = 23904
+export_ip_user_files -of_objects [get_files /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 {design_1_microblaze_0_0_synth_1 design_1_mdm_1_0_synth_1 design_1_clk_wiz_1_0_synth_1 design_1_rst_clk_wiz_1_100M_0_synth_1 design_1_xlconstant_0_0_synth_1 design_1_xlconstant_1_0_synth_1 design_1_axi_gpio_0_0_synth_1 design_1_aes_ddr_1_0_synth_1 design_1_xbar_0_synth_1 design_1_dlmb_v10_0_synth_1 design_1_ilmb_v10_0_synth_1 design_1_dlmb_bram_if_cntlr_0_synth_1 design_1_ilmb_bram_if_cntlr_0_synth_1 design_1_lmb_bram_0_synth_1}
+[Mon Nov 20 11:58:13 2017] Launched design_1_microblaze_0_0_synth_1, design_1_mdm_1_0_synth_1, design_1_clk_wiz_1_0_synth_1, design_1_rst_clk_wiz_1_100M_0_synth_1, design_1_xlconstant_0_0_synth_1, design_1_xlconstant_1_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_aes_ddr_1_0_synth_1, design_1_xbar_0_synth_1, design_1_dlmb_v10_0_synth_1, design_1_ilmb_v10_0_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1...
+Run output will be captured here:
+design_1_microblaze_0_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_microblaze_0_0_synth_1/runme.log
+design_1_mdm_1_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_mdm_1_0_synth_1/runme.log
+design_1_clk_wiz_1_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_clk_wiz_1_0_synth_1/runme.log
+design_1_rst_clk_wiz_1_100M_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_rst_clk_wiz_1_100M_0_synth_1/runme.log
+design_1_xlconstant_0_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_xlconstant_0_0_synth_1/runme.log
+design_1_xlconstant_1_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_xlconstant_1_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_aes_ddr_1_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_aes_ddr_1_0_synth_1/runme.log
+design_1_xbar_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_xbar_0_synth_1/runme.log
+design_1_dlmb_v10_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_dlmb_v10_0_synth_1/runme.log
+design_1_ilmb_v10_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_ilmb_v10_0_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_ilmb_bram_if_cntlr_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_lmb_bram_0_synth_1/runme.log
+export_simulation -of_objects [get_files /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd] -directory /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files/sim_scripts -ip_user_files_dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files -ipstatic_source_dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/modelsim} {questa=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/questa} {ies=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/ies} {vcs=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/vcs} {riviera=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+create_ip_run [get_files -of_objects [get_fileset sources_1] /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: design_1_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7065.895 ; gain = 20.000 ; free physical = 11775 ; free virtual = 23780
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:22]
+INFO: [Synth 8-3491] module 'design_1' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1384' bound to instance 'design_1_i' of component 'design_1' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1396]
+INFO: [Synth 8-3491] module 'design_1_aes_ddr_1_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_aes_ddr_1_0_stub.vhdl:5' bound to instance 'aes_ddr_1' of component 'design_1_aes_ddr_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1657]
+INFO: [Synth 8-638] synthesizing module 'design_1_aes_ddr_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_aes_ddr_1_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1682]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1706]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_clk_wiz_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1714]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1727]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:957]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (1#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (2#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:162]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:825]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (3#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:825]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1317]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (4#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:957]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:252]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:462]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:516]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:544]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:598]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:626]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_lmb_bram_0_stub.vhdl:25]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (5#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:252]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1872]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xlconstant_0_0_stub.vhdl:5' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1885]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xlconstant_0_0_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at '/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xlconstant_1_0_stub.vhdl:5' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1889]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_1_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/.Xil/Vivado-4055-ocaepc45/realtime/design_1_xlconstant_1_0_stub.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (6#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1396]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (7#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:22]
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port S_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7102.145 ; gain = 56.250 ; free physical = 11784 ; free virtual = 23790
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7102.145 ; gain = 56.250 ; free physical = 11786 ; free virtual = 23791
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_aes_ddr_1_0/design_1_aes_ddr_1_0.dcp' for cell 'design_1_i/aes_ddr_1'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp' for cell 'design_1_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp' for cell 'design_1_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.dcp' for cell 'design_1_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp' for cell 'design_1_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.dcp' for cell 'design_1_i/xlconstant_0'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/design_1_xlconstant_1_0.dcp' for cell 'design_1_i/xlconstant_1'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint '/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-140] Inserted 4 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 96 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 7465.793 ; gain = 419.898 ; free physical = 11581 ; free virtual = 23586
+69 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7465.793 ; gain = 419.898 ; free physical = 11581 ; free virtual = 23586
+set_property package_pin "" [get_ports [list  sys_clock]]
+place_ports sys_clock L16
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_clock]]
+file mkdir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/constrs_1/new
+close [ open /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/constrs_1/new/test_aes_xdc.xdc w ]
+add_files -fileset constrs_1 /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/constrs_1/new/test_aes_xdc.xdc
+set_property target_constrs_file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/constrs_1/new/test_aes_xdc.xdc [current_fileset -constrset]
+save_constraints -force
+save_bd_design
+Wrote  : </tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs synth_1 -jobs 8
+[Mon Nov 20 12:07:05 2017] Launched synth_1...
+Run output will be captured here: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/synth_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+file mkdir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk
+write_hwdef -force  -file /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk -hwspec /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk -hwspec /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 20 12:20:09 2017...

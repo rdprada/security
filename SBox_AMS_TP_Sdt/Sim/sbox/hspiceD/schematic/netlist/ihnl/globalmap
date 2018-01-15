@@ -1,0 +1,53 @@
+CADENCE IHNL01060
+$model
+CORELIB/XNR21/cmos_sch XNR21
+CORELIB/NAND21/cmos_sch NAND21
+CORELIB/NOR40/cmos_sch NOR40
+CORELIB/AOI221/cmos_sch AOI221
+CORELIB/AOI211/cmos_sch AOI211
+GATES/invb_core/schematic invb_core
+GATES/oai211_core/schematic oai211_core
+GATES/oai22_core/schematic oai22_core
+CORELIB/MUX22/cmos_sch MUX22
+CORELIB/XNR22/cmos_sch XNR22
+SBox_AMS_CDS/sbox/schematic sbox
+GATES/tgate_core/schematic tgate_core
+GATES/nand4_core/schematic nand4_core
+CORELIB/CLKIN1/cmos_sch CLKIN1
+CORELIB/OAI2111/cmos_sch OAI2111
+GATES/inv_core/schematic inv_core
+CORELIB/BUF2/cmos_sch BUF2
+GATES/oai31_core/schematic oai31_core
+GATES/aoi31_core/schematic aoi31_core
+CORELIB/NAND41/cmos_sch NAND41
+CORELIB/NOR31/cmos_sch NOR31
+CORELIB/NAND31/cmos_sch NAND31
+CORELIB/AOI311/cmos_sch AOI311
+GATES/nor3_core/schematic nor3_core
+GATES/clinva_core/schematic clinva_core
+CORELIB/OAI221/cmos_sch OAI221
+GATES/nor2_core/schematic nor2_core
+GATES/aoi22_core/schematic aoi22_core
+CORELIB/NOR22/cmos_sch NOR22
+CORELIB/OAI311/cmos_sch OAI311
+CORELIB/NAND22/cmos_sch NAND22
+CORELIB/INV3/cmos_sch INV3
+CORELIB/DFC1/cmos_sch DFC1
+GATES/aoi21_core/schematic aoi21_core
+GATES/clinv_core/schematic clinv_core
+CORELIB/NOR21/cmos_sch NOR21
+CORELIB/OAI211/cmos_sch OAI211
+CORELIB/IMUX21/cmos_sch IMUX21
+GATES/aoi211_core/schematic aoi211_core
+CORELIB/AOI2111/cmos_sch AOI2111
+GATES/nand3_core/schematic nand3_core
+GATES/nand2_core/schematic nand2_core
+GATES/nor4_core/schematic nor4_core
+GATES/oai21_core/schematic oai21_core
+$endmodel
+$net
+vdd! vdd!
+gnd! 0
+$endnet
+$param
+$endparam

@@ -1,0 +1,3 @@
+source shrc_leonardo
+source shrc_cadence
+source shrc_nanosim

@@ -1,0 +1,4 @@
+xi6 a net6 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=500e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+xi5 net6 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=2e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends BUF2
+** End of subcircuit definition.

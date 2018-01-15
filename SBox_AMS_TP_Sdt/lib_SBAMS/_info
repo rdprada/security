@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt
+Esbox
+Z1 w1513346639
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8vhd/SBox.vhd
+Z5 Fvhd/SBox.vhd
+l0
+L5
+VYNa4HIkUR;D7V>`0N1FYk2
+!s100 Y3b8ld=Je8RlJd6mTS`k92
+Z6 OL;C;10.5c;63
+32
+Z7 !s110 1513585833
+!i10b 1
+Z8 !s108 1513585833.000000
+Z9 !s90 -work|lib_SBAMS|vhd/SBox.vhd|
+Z10 !s107 vhd/SBox.vhd|
+!i113 0
+Z11 o-work lib_SBAMS
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 4 sbox 0 22 YNa4HIkUR;D7V>`0N1FYk2
+l18
+L16
+VgBO5bJd@_7@Y2Fm_^Y:9:2
+!s100 SjHSULml`XC?a@;HAc?jG2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Esboxtb
+R1
+R2
+R3
+R0
+Z13 8vhd/SBoxTb.vhd
+Z14 Fvhd/SBoxTb.vhd
+l0
+L5
+VL?P[hbR=:`]6?`Vd:VZ371
+!s100 @4Z?FRH801GOGb<;8FllL0
+R6
+32
+Z15 !s110 1513585834
+!i10b 1
+R8
+Z16 !s90 -work|lib_SBAMS|vhd/SBoxTb.vhd|
+Z17 !s107 vhd/SBoxTb.vhd|
+!i113 0
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 6 sboxtb 0 22 L?P[hbR=:`]6?`Vd:VZ371
+l30
+L9
+V5P=G][4C3k11WXB6>Pn9W2
+!s100 ikK?YkKSGz?DdELBUAhE^3
+R6
+32
+R15
+!i10b 1
+R8
+R16
+R17
+!i113 0
+R11
+R12

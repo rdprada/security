@@ -1,0 +1,9 @@
+HEADER
+"PSFversion" "1.00"
+"I2v" "xi2"
+"I2n" "aoi211_core"
+"Bv" "(FUNCTION (plus (root \"I2/b\")))"
+"Av" "(FUNCTION (plus (root \"I2/a\")))"
+"Dv" "(FUNCTION (plus (root \"I2/d\")))"
+"Cv" "(FUNCTION (plus (root \"I2/c\")))"
+"Qv" "(FUNCTION (plus (root \"I2/out\")))"

@@ -1,0 +1,55 @@
+\o Program:		@(#)$CDS: libManager.exe version 5.0.2 01/23/2007 12:28 (ocelot-linux.Cadence.COM) $
+\o Sub version:		sub-version 03.01-s042
+\o Arguments:		-mpssession icfb13878 -mpshost cimepc79 
+\o Working Directory:	cimepc79:/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt
+\o Extended color mode (TrueColor 32 0x41) in use.
+\o Warning: The directory: '/tp/xph3sle/xph3sle600/SBox_AMS_TP_Sdt/SBox_AMS_CDS' does not exist
+\o 	but was defined in libFile '/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib' for Lib 'SBox_AMS_CDS'.
+\o Library Manager customization server connected.
+MPS service: map window
+\o Log file is "/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/libManager.log".
+Opening libManager window.
+No main selection
+\o Warning: The directory: '/tp/xph3sle/xph3sle600/SBox_AMS_TP_Sdt/SBox_AMS_CDS' does not exist
+\o 	but was defined in libFile '/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib' for Lib 'SBox_AMS_CDS'.
+MPS request: update library list
+\o Warning: The directory: '/tp/xph3sle/xph3sle600/SBox_AMS_TP_Sdt/SBox_AMS_CDS' does not exist
+\o 	but was defined in libFile '/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib' for Lib 'SBox_AMS_CDS'.
+MPS request: update library list
+MPS service: map window
+Invoking command (fileNewLibrary).
+Showing dialog "New Library" (newLibDialog).
+Dialog activated Apply in "New Library" (newLibDialog).
+\o Warning: LIB SBox_AMS_CDS from File /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib Line 57 redefines
+\o LIB SBox_AMS_CDS from the same file (defined earlier.)
+\o Created new library "SBox_AMS_CDS" at /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/lib_SBAMS/SBox_AMS_CDS.
+\o Warning: LIB SBox_AMS_CDS from File /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib Line 57 redefines
+\o LIB SBox_AMS_CDS from the same file (defined earlier.)
+Dialog activated Ok in "New Library" (newLibDialog).
+Showing dialog "Library Exists" (errorDialog).
+\o A library by that name already exists.
+Closing dialog "Library Exists" (errorDialog).
+Dialog activated Ok in "Library Exists" (errorDialog).
+Dialog activated Apply in "New Library" (newLibDialog).
+Showing dialog "Library Exists" (errorDialog).
+\o A library by that name already exists.
+Closing dialog "Library Exists" (errorDialog).
+Dialog activated Ok in "Library Exists" (errorDialog).
+Dialog activated Ok in "New Library" (newLibDialog).
+Showing dialog "Library Exists" (errorDialog).
+\o A library by that name already exists.
+Closing dialog "Library Exists" (errorDialog).
+Dialog activated Ok in "Library Exists" (errorDialog).
+Dialog activated Ok in "New Library" (newLibDialog).
+Showing dialog "Library Exists" (errorDialog).
+\o A library by that name already exists.
+Closing dialog "Library Exists" (errorDialog).
+Dialog activated Ok in "Library Exists" (errorDialog).
+Dialog activated Cancel in "New Library" (newLibDialog).
+Closing dialog "New Library" (newLibDialog).
+Main selection: SBox_AMS_CDS
+\o Warning: LIB SBox_AMS_CDS from File /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/cds.lib Line 57 redefines
+\o LIB SBox_AMS_CDS from the same file (defined earlier.)
+Main selection: SBox_AMS_CDS sbox
+MPS request: update library list
+\o libManager is exiting.

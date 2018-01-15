@@ -1,0 +1,5 @@
+xi6 a net11 s q inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi5 b s net11 q inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi4 s net11 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=700e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+.ends IMUX21
+** End of subcircuit definition.

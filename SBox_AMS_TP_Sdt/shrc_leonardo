@@ -1,0 +1,19 @@
+# .bashrc
+
+# User specific aliases and functions
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#!/bin/bash
+
+#
+# MENTOR GRAPHICS Leonardo 2010a session
+#
+
+#export EXEMPLAR=/softslin/leonardo2008_1
+export EXEMPLAR=/softslin/leonardo2010a
+export PATH="${PATH}:${EXEMPLAR}/bin"
+export LM_LICENSE_FILE=1718@cimekey1

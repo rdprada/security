@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Nov 20 11:59:15 2017
+# Process ID: 7367
+# Current directory: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_dlmb_v10_0_synth_1
+# Command line: vivado -log design_1_dlmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dlmb_v10_0.tcl
+# Log file: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_dlmb_v10_0_synth_1/design_1_dlmb_v10_0.vds
+# Journal file: /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.runs/design_1_dlmb_v10_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_dlmb_v10_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1183.930 ; gain = 70.000 ; free physical = 9819 ; free virtual = 21808
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/synth/design_1_dlmb_v10_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'FDS' [/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'FDS' (1#1) [/softslin/vivado_17.1/Vivado/2017.1/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dlmb_v10_0' (3#1) [/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/synth/design_1_dlmb_v10_0.vhd:89]
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1226.430 ; gain = 112.500 ; free physical = 9780 ; free virtual = 21770
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1226.430 ; gain = 112.500 ; free physical = 9799 ; free virtual = 21789
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1516.430 ; gain = 1.000 ; free physical = 8701 ; free virtual = 20691
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1516.430 ; gain = 402.500 ; free physical = 8739 ; free virtual = 20729
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1516.430 ; gain = 402.500 ; free physical = 8739 ; free virtual = 20729
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1516.430 ; gain = 402.500 ; free physical = 8742 ; free virtual = 20732
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1516.430 ; gain = 402.500 ; free physical = 8742 ; free virtual = 20732
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1516.430 ; gain = 402.500 ; free physical = 8728 ; free virtual = 20717
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1520.414 ; gain = 406.484 ; free physical = 8119 ; free virtual = 20109
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1520.414 ; gain = 406.484 ; free physical = 8118 ; free virtual = 20108
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1529.430 ; gain = 415.500 ; free physical = 8114 ; free virtual = 20103
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |FDS  |     1|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1529.434 ; gain = 415.504 ; free physical = 8141 ; free virtual = 20130
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1534.434 ; gain = 433.086 ; free physical = 8137 ; free virtual = 20127

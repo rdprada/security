@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: nor2_core
+** View name: schematic
+.subckt nor2_core a b out inh_gnd inh_vdd

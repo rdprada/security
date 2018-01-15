@@ -1,0 +1,26 @@
+
+
+.TEMP 25
+.OPTION
++    ABSMOS=1e-9
++    ABSVDC=1e-6
++    ABSV=1e-6
++    ARTIST=2
++    CHGTOL=1e-14
++    DEFAD=5.29e-12
++    DEFAS=5.29e-12
++    DEFNRD=0.1
++    DEFNRS=0.1
++    DEFPD=9.2e-06
++    DEFPS=9.2e-06
++    INGOLD=2
++    LVLTIM=2
++    MEASOUT=1
++    METHOD=GEAR
++    NOMOD
++    OPTS
++    PARHIER=LOCAL
++    PSF=2
++    RELI=1e-3
++    RELMOS=1e-3
++    TNOM=27

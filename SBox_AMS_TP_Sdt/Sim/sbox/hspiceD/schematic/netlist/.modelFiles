@@ -1,0 +1,5 @@
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/cmos49.lib" cmostm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/res.lib" restm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/cap.lib" captm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/bip.lib" biptm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/esddiode.lib" esddiodetm

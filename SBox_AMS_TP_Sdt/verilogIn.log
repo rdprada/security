@@ -1,0 +1,30 @@
+@(#)$CDS: ihdl.exe version 5.1.0 10/28/2008 10:23 (cicln03) $  Mon Dec 18 09:45:03 2017
+
+VerilogIn: *W,26: Library (sample) not initialised in the database.
+Verilog definition for module DFC1 was not found. Using lib 'CORELIB' cell 'DFC1' view 'symbol' as its symbol.
+Verilog definition for module CLKIN1 was not found. Using lib 'CORELIB' cell 'CLKIN1' view 'symbol' as its symbol.
+Verilog definition for module NOR40 was not found. Using lib 'CORELIB' cell 'NOR40' view 'symbol' as its symbol.
+Verilog definition for module NAND41 was not found. Using lib 'CORELIB' cell 'NAND41' view 'symbol' as its symbol.
+Verilog definition for module NAND21 was not found. Using lib 'CORELIB' cell 'NAND21' view 'symbol' as its symbol.
+Verilog definition for module XNR21 was not found. Using lib 'CORELIB' cell 'XNR21' view 'symbol' as its symbol.
+Verilog definition for module NAND22 was not found. Using lib 'CORELIB' cell 'NAND22' view 'symbol' as its symbol.
+Verilog definition for module XNR22 was not found. Using lib 'CORELIB' cell 'XNR22' view 'symbol' as its symbol.
+Verilog definition for module NOR21 was not found. Using lib 'CORELIB' cell 'NOR21' view 'symbol' as its symbol.
+Verilog definition for module AOI221 was not found. Using lib 'CORELIB' cell 'AOI221' view 'symbol' as its symbol.
+Verilog definition for module NOR22 was not found. Using lib 'CORELIB' cell 'NOR22' view 'symbol' as its symbol.
+Verilog definition for module OAI211 was not found. Using lib 'CORELIB' cell 'OAI211' view 'symbol' as its symbol.
+Verilog definition for module AOI211 was not found. Using lib 'CORELIB' cell 'AOI211' view 'symbol' as its symbol.
+Verilog definition for module OAI221 was not found. Using lib 'CORELIB' cell 'OAI221' view 'symbol' as its symbol.
+Verilog definition for module OAI2111 was not found. Using lib 'CORELIB' cell 'OAI2111' view 'symbol' as its symbol.
+Verilog definition for module NAND31 was not found. Using lib 'CORELIB' cell 'NAND31' view 'symbol' as its symbol.
+Verilog definition for module AOI2111 was not found. Using lib 'CORELIB' cell 'AOI2111' view 'symbol' as its symbol.
+Verilog definition for module IMUX21 was not found. Using lib 'CORELIB' cell 'IMUX21' view 'symbol' as its symbol.
+Verilog definition for module NOR31 was not found. Using lib 'CORELIB' cell 'NOR31' view 'symbol' as its symbol.
+Verilog definition for module AOI311 was not found. Using lib 'CORELIB' cell 'AOI311' view 'symbol' as its symbol.
+Verilog definition for module OAI311 was not found. Using lib 'CORELIB' cell 'OAI311' view 'symbol' as its symbol.
+Verilog definition for module MUX22 was not found. Using lib 'CORELIB' cell 'MUX22' view 'symbol' as its symbol.
+Verilog definition for module INV3 was not found. Using lib 'CORELIB' cell 'INV3' view 'symbol' as its symbol.
+Verilog definition for module BUF2 was not found. Using lib 'CORELIB' cell 'BUF2' view 'symbol' as its symbol.
+Checked in symbol sbox
+Checked in schematic sbox
+End of Logfile.

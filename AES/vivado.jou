@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Dec 11 11:57:02 2017
+# Process ID: 4133
+# Current directory: /tp/xph3sle/xph3sle603/Security_lab/AES
+# Command line: vivado
+# Log file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.log
+# Journal file: /tp/xph3sle/xph3sle603/Security_lab/AES/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name aes_ddr_v1_0_project -directory /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.tmp/aes_ddr_v1_0_project /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0/src {/tp/xph3sle/xph3sle603/Security_lab/AES/vhd/X2Time.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/GFMap.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/MixColumn.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/PreMcRot.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/X_e.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/DDR_reg.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/GFMapInv.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/aes_core.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/DDR_enable.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/aes_globals.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/column.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/KeyUnit_ddr.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/dataunit_ddr.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/XTime.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Quadrato.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/GF_Inv.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Aff_Trans_Inv.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/GF_Molt.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Rcon.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Sbox.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/l_barrel.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Aff_Trans.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/X4Time.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/Control_ddr.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/DDR_dual.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/linear.vhd /tp/xph3sle/xph3sle603/Security_lab/AES/vhd/MixColumn0.vhd}
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/ip_repo/aes_ddr_1.0
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv cime3:user:aes_ddr:1.0 [get_ips  design_1_aes_ddr_1_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_aes_ddr_1_0] -no_script -sync -force -quiet
+generate_target all [get_files  /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_aes_ddr_1_0] }
+export_ip_user_files -of_objects [get_files /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 8 design_1_aes_ddr_1_0_synth_1
+export_simulation -of_objects [get_files /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd] -directory /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files/sim_scripts -ip_user_files_dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files -ipstatic_source_dir /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.ip_user_files/ipstatic -lib_map_path [list {modelsim=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/modelsim} {questa=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/questa} {ies=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/ies} {vcs=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/vcs} {riviera=/tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+launch_sdk -workspace /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk -hwspec /tp/xph3sle/xph3sle603/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf

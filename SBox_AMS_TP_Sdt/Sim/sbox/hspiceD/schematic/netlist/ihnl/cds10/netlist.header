@@ -1,0 +1,5 @@
+
+** Library name: CORELIB
+** Cell name: MUX22
+** View name: cmos_sch
+.subckt MUX22 a b q s inh_gnd inh_vdd

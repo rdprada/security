@@ -1,0 +1,6 @@
+** Generated for: hspiceD
+** Generated on: Dec 18 09:48:40 2017
+** Design library name: SBox_AMS_CDS
+** Design cell name: sbox
+** Design view name: schematic
+.GLOBAL vdd!

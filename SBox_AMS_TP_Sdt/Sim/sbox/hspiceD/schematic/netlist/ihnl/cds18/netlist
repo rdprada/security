@@ -1,0 +1,10 @@
+mn2 out d net35 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn7 net35 c inh_gnd inh_gnd modn L=gt_mn7l W=gt_mn7w AD='sx*gt_mn7w' AS='sx*gt_mn7w' PD='2*sx+gt_mn7w' PS='2*sx+gt_mn7w' NRD='lc/gt_mn7w' NRS='lc/gt_mn7w' M=1
+mn4 net35 b inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn1 net35 a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 net11 b net7 inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 out c net11 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 net7 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp4 out d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+.ends oai31_core
+** End of subcircuit definition.

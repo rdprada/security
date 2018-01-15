@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt
+Esbox
+Z1 w1513346639
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/vhd/SBox.vhd
+Z5 F/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/vhd/SBox.vhd
+l0
+L5
+V4JclPXfkP:BR@E2E[0@8j2
+!s100 Y3b8ld=Je8RlJd6mTS`k92
+Z6 OL;C;10.5c;63
+32
+!s110 1513585092
+!i10b 1
+Z7 !s108 1513585092.000000
+Z8 !s90 -reportprogress|300|-work|work|/tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/vhd/SBox.vhd|
+Z9 !s107 /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/vhd/SBox.vhd|
+!i113 0
+Z10 o-work work
+Z11 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 4 sbox 0 22 4JclPXfkP:BR@E2E[0@8j2
+l18
+L16
+VL2Rl0`5f0TY:ZiHFjbYaH3
+!s100 SjHSULml`XC?a@;HAc?jG2
+R6
+32
+!s110 1513585093
+!i10b 1
+R7
+R8
+R9
+!i113 0
+R10
+R11

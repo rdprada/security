@@ -1,0 +1,39 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "hspiceD cmos_sch schematic"
+  stopList "hspiceD"
+  hierDelim "^"
+ )
+( net
+( "CI" "ci" )
+( "D" "d" )
+( "CN" "cn" )
+( "C" "c" )
+( "gnd!" "inh_gnd" )
+( "Q" "q" )
+( "QN" "qn" )
+( "RN" "rn" )
+( "vdd!" "inh_vdd" )
+ )
+( inst
+( "I59" "xi59" )
+( "I53" "xi53" )
+( "I51" "xi51" )
+( "I58" "xi58" )
+( "I60" "xi60" )
+( "I57" "xi57" )
+( "I50" "xi50" )
+( "I55" "xi55" )
+( "I61" "xi61" )
+( "I52" "xi52" )
+( "I56" "xi56" )
+( "I54" "xi54" )
+ )
+( model
+ )
+( term
+ )
+( param
+ )
+ )

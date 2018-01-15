@@ -1,0 +1,17 @@
+.option dccap  
+.option relvdc=0.0001 absvdc=1e-06 reli=0.001 absi=1e-12  
+.option pivot=11  
+.option kcltest  
+.option method=GEAR maxord=2  
+.option lvltim=2 chgtol=1e-15 trtol=7  
+.option relv=0.001  
+.option acct=2 co=80  
+.option opts  
+.option ingold=2  
+.option post probe  
+.option absmos=1e-09 absvdc=1e-06 absv=1e-06 artist=2 chgtol=1e-14 ingold=2 lvltim=2 measout=1 method=GEAR nomod opts psf=2 reli=0.001 relmos=0.001  
+** Generated for: hspiceD
+** Generated on: Dec 18 09:48:40 2017
+** Design library name: SBox_AMS_CDS
+** Design cell name: sbox
+** Design view name: schematic

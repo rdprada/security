@@ -1,0 +1,248 @@
+ --------------------------------------------------------
+|                                                        |
+|             NanoSim Version D-2010.03-SP1              |
+|                    SN:20100517-amd64                   |
+|                 Machine Name: cimepc79                 |
+| Copyright (c) 2010 Synopsys Inc., All Rights Reserved. |
+|                                                        |
+ --------------------------------------------------------
+
+Built by nsmgr   on Mon May 17 18:11:11 PDT 2010
+Mon Dec 18 10:25:09 CET 2017
+
+Command line options:  -n spice/SBox.spi -nvec vec/SBox_K00000100_V11110101.vec -c spice/SBox.cfg -out fsdb -o simulations/K00000100/simu -t 21ns
+
+
+The 64-bit version of the simulator is running.
+
+
+Initializing system messages took 0.010 s
+
+Installing interactive/configuration commands ... 
+Installing commands took 0.010 s
+
+
+Start netlist compilation at Mon Dec 18 10:25:09 2017
+
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly1.mod', Model 'resnoi' in rpoly1 has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2.mod', Model 'resnoi' in rpoly2 has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2p.mod', Model 'resnoi' in rpoly2p has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2ph.mod', Model 'resnoi' in rpoly2ph has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpolyh.mod', Model 'resnoi' in rpolyh has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cvar.mod', Model 'rvarmod' in top level has unsupported parameter "noise", ignored.
+Compiling "spice/SBox.spi" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/profile.opt" (SPICE)
+Compiling "/softl1/AMS_380_CDS/hspiceS/c35/cmos49.lib" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/nd.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/pd.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modn.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnl.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnml.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modpl.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modpml.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnm.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modpm.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modp.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnh.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnmh.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnhl.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modnmhl.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modn30m.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cmos49/tm/modn18t.mod" (SPICE)
+Compiling "/softl1/AMS_380_CDS/hspiceS/c35/res.lib" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rdiffn3.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rdiffp3.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rdiffn.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rdiffp.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly1.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2p.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2ph.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpolyz.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpolyh.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/nwd.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rnwell.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/sbd5.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/res/tm/zd2sm24.mod" (SPICE)
+Compiling "/softl1/AMS_380_CDS/hspiceS/c35/cap.lib" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cpoly.mod" (SPICE)
+WARNING:NanoSim:0x20201112:Instance, 'c1', has unsupported instance parameter, 'ctype', at line 17 in file '/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cpoly.mod'.  It is ignored
+
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cmim.mod" (SPICE)
+WARNING:NanoSim:0x20201112:Instance, 'c1', has unsupported instance parameter, 'ctype', at line 18 in file '/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cmim.mod'.  It is ignored
+
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/ngatecap.mod" (SPICE)
+WARNING:NanoSim:0x20201112:Instance, 'c1', has unsupported instance parameter, 'ctype', at line 17 in file '/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/ngatecap.mod'.  It is ignored
+
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cvar.mod" (SPICE)
+Compiling "/softl1/AMS_380_CDS/hspiceS/c35/bip.lib" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/bip/tm/lat2.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/bip/tm/vert10.mod" (SPICE)
+Compiling "/softl1/AMS_380_CDS/hspiceS/c35/esddiode.lib" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/esddiode/tm/esdfdn5.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/esddiode/tm/esdfdp5.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/esddiode/tm/esdgcn5.mod" (SPICE)
+Compiling "/softslin/AMS_380_CDS/hspiceS/c35/esddiode/tm/esdgcp5.mod" (SPICE)
+Compiling "vec/SBox_K00000100_V11110101.vec" (VECTOR)
+
+
+
+Parsing netlist finished in 1 seconds
+
+Circuit temperature from netlist                  :       25.000
+
+
+Netlist compilation will be case insensitive.
+All letters will be converted to lower case.
+
+Parameterised optimization done for the following cell(s) "oai21_core nand2_core inv_core nor2_core clinv_core aoi211_core aoi31_core aoi22_core oai31_core oai211_core nand3_core aoi21_core nand4_core nor3_core oai22_core nor4_core clinva_core tgate_core invb_core".
+Building instance tree finished in 0 seconds
+
+Finish netlist compilation at Mon Dec 18 10:25:10 2017
+
+Netlist compilation took 0.110 s
+NOTICE:Techfile Voltage (*nanosim tech="voltage") set to  5V ... 
+
+This simulation uses HSPICE models
+
+Building node/element arrays took 0.360 s
+
+Reading configuration files ...
+Reading configuration files took 0.000000 s
+
+
+# of CMOS elements                                        :         4292
+# of dc voltage sources                                   :            1
+# of stimulus elements                                    :            1
+# of elements                                             :         4294
+# of used elements                                        :         4293
+# of nodes                                                :         2162
+# of subckt                                               :           83
+# of top-level instances                                  :          837
+
+
+Circuit partitioning ...
+
+Among 897 stages, there are: 
+         897 pwl stages 
+           0 grouped pwl stages
+           0 analog stages 
+           0 NR stages 
+           0 grouped analog stages
+           0 rc stages 
+           0 ud stages 
+           0 ADFMI functional model stages
+           5 nodes in the largest pwl stage
+           0 nodes in the largest digital stage
+
+         897 stages (897 pwl/analog stages) with 0-9 nodes
+
+
+Among 2162 nodes, there are: 
+        2162 pwl nodes
+           0 analog (accurate) nodes
+           0 rc nodes
+           0 ud nodes
+
+           0 cut nodes 
+           0 mem_cut nodes 
+           0 no_clamp nodes 
+        2142 nodes in stages
+          20 voltage source nodes
+           2 constant nodes
+           0 NR nodes
+
+Among 4294 elements, there are: 
+        4292 elements in stages
+        4292 pwl elements 
+           0 synchronous elements 
+           0 SMS elements 
+           0 analog (accurate) elements
+           0 rc elements 
+           0 ud elements 
+           0 ADFMI functional model elements 
+           0 VERILOGA model elements 
+           0 behavioral model elements 
+
+           0 mna elements
+           0 NR elements
+           0 mos transistors identified as keepers
+         311 mos transistors need Subthreshold current
+           0 keepers removed
+           0 keepers reduced
+
+
+Circuit partitioning took 0.010 s
+Constructing matrix ...
+Matrix ordering and construction took 0.000 s
+
+
+After reading configuration file(s), 55 signals are identified to be printed:
+          26 logic signals
+          26 voltage signals
+           3 node current signals, including:
+                 1 node inst. current signals
+                 1 node RMS current signals
+                 1 node AVG current signals
+
+Statistics of memory used for signal printing:
+     3560920 bytes allocated in total, including:
+             96016 bytes allocated for node current/voltage/logic signals
+               152 bytes allocated additionally for current printing
+           1712016 bytes allocated additionally for node current signals
+           1752736 bytes allocated additionally for element branch current signals
+
+Levelizing stages ...
+Levelizing stages took 0.000 s
+DC initialization ...
+
+Finishing initialization (level 0 -- 18)
+0 dynamic stages assigned in DC Initialization
+
+Number of residual dc events scheduled          : 0
+Number of ic nodes scheduled                    : 0
+DC initialization took 0.000 s
+
+Simulation begins in pwl mode ...
+Simulation ends at 21.000 ns
+
+Simulation took 0.020 s
+
+Current information calculated over the intervals:
+
+     0.00000e+00 -  2.10010e+01 ns
+
+Node: vdd!
+    Average current	: -9.62263e+02 uA
+    RMS current		:  2.43106e+03 uA
+
+    Current peak #1	: -1.35560e+04 uA  at   1.22340e+01 ns
+    Current peak #2	: -5.66700e+03 uA  at   1.32440e+01 ns
+    Current peak #3	: -4.20300e+03 uA  at   6.28400e+00 ns
+    Current peak #4	: -3.80800e+03 uA  at   3.15800e+00 ns
+    Current peak #5	: -3.80100e+03 uA  at   9.23800e+00 ns
+
+
+Simulation time resolution                      : 1.000e-03 ns
+Print time resolution                           : 1.000e-03 ns
+Number of PWL matrix solutions                  : 6633
+Number of PWL MOS model lookups                 : 22365
+Number of time steps                            : 6633
+Number of iterations                            : 0
+Number of rejected time steps                   : 5
+
+Global simulation parameters used:
+
+SPD             0.5V     ASPD            0.1V
+SIM_DESV        0.5V     SIM_AESV       0.25V
+VDS_MIN  5.91765e-05V     AVDS_MIN      1e-08V
+SSC (steady state current)         0.1uA
+SUBI (subthreshold current)          1uA
+DC CURRENT                           1uA
+
+	      19.0 real	       0.5 user	       0.1 sys
+
+Signal data is saved in simulations/K00000100/simu.fsdb
+
+No errors reported in the .err file (simulations/K00000100/simu.err)
+

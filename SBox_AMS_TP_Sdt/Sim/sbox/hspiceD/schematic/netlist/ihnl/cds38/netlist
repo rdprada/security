@@ -1,0 +1,14 @@
+xi50 d cn ci net48 inh_gnd inh_vdd clinva_core gt_mn0l=350e-9 gt_mn0w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6 gt_mp0l=350e-9 gt_mp0w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi61 net57 net55 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi60 net55 qn inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi59 net57 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi58 net48 net63 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi57 rn net40 net57 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi56 rn net63 net47 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi55 ci cn net63 net40 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi54 ci cn net47 net48 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi53 cn ci net55 net40 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi51 cn ci inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=800e-9 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=400e-9
+xi52 c cn inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=1e-6 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=500e-9
+.ends DFC1
+** End of subcircuit definition.

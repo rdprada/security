@@ -1,0 +1,5 @@
+
+** Library name: CORELIB
+** Cell name: NOR21
+** View name: cmos_sch
+.subckt NOR21 a b q inh_gnd inh_vdd

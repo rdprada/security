@@ -1,0 +1,9 @@
+HEADER
+"PSFversion" "1.00"
+"I5v" "xi5"
+"I5n" "oai21_core"
+"I6v" "xi6"
+"I6n" "nand2_core"
+"Av" "(FUNCTION (plus (root \"I5/b\") (root \"I6/b\")))"
+"Bv" "(FUNCTION (plus (root \"I5/a\") (root \"I6/a\")))"
+"Qv" "(FUNCTION (plus (root \"I5/out\")))"

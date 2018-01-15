@@ -1,0 +1,44 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "hspiceD cmos_sch schematic"
+  stopList "hspiceD"
+  hierDelim "^"
+ )
+( net
+( "gnd!" "inh_gnd" )
+( "vdd!" "inh_vdd" )
+ )
+( inst
+( "MN2" "mn2" )
+( "MP3" "mp3" )
+( "MP4" "mp4" )
+( "MN4" "mn4" )
+( "MP1" "mp1" )
+( "MP2" "mp2" )
+( "MN3" "mn3" )
+( "MN1" "mn1" )
+ )
+( model
+ )
+( term
+ )
+( param
+( "GT_MN2W" "gt_mn2w" )
+( "GT_MP3L" "gt_mp3l" )
+( "GT_MP2W" "gt_mp2w" )
+( "GT_MN1W" "gt_mn1w" )
+( "GT_MN4L" "gt_mn4l" )
+( "GT_MP4L" "gt_mp4l" )
+( "GT_MN3W" "gt_mn3w" )
+( "GT_MN4W" "gt_mn4w" )
+( "GT_MP4W" "gt_mp4w" )
+( "GT_MN1L" "gt_mn1l" )
+( "GT_MP1W" "gt_mp1w" )
+( "GT_MN2L" "gt_mn2l" )
+( "GT_MP1L" "gt_mp1l" )
+( "GT_MN3L" "gt_mn3l" )
+( "GT_MP3W" "gt_mp3w" )
+( "GT_MP2L" "gt_mp2l" )
+ )
+ )

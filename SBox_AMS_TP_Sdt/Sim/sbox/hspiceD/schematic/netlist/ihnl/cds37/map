@@ -1,0 +1,28 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "hspiceD cmos_sch schematic"
+  stopList "hspiceD"
+  hierDelim "^"
+ )
+( net
+( "gnd!" "inh_gnd" )
+( "Q" "q" )
+( "A" "a" )
+( "vdd!" "inh_vdd" )
+ )
+( inst
+( "MN2" "mn2" )
+( "MP2" "mp2" )
+ )
+( model
+ )
+( term
+ )
+( param
+( "GT_MN2W" "gt_mn2w" )
+( "GT_MP2W" "gt_mp2w" )
+( "GT_MN2L" "gt_mn2l" )
+( "GT_MP2L" "gt_mp2l" )
+ )
+ )

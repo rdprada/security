@@ -1,0 +1,1332 @@
+** Generated for: hspiceD
+** Generated on: Dec 18 09:48:40 2017
+** Design library name: SBox_AMS_CDS
+** Design cell name: sbox
+** Design view name: schematic
+.GLOBAL vdd!
+.include "/softslin/AMS_380_CDS/hspiceS/c35/profile.opt"
+
+
+.TEMP 25
+.OPTION
++    ABSMOS=1e-9
++    ABSVDC=1e-6
++    ABSV=1e-6
++    ARTIST=2
++    CHGTOL=1e-14
++    DEFAD=5.29e-12
++    DEFAS=5.29e-12
++    DEFNRD=0.1
++    DEFNRS=0.1
++    DEFPD=9.2e-06
++    DEFPS=9.2e-06
++    INGOLD=2
++    LVLTIM=2
++    MEASOUT=1
++    METHOD=GEAR
++    NOMOD
++    OPTS
++    PARHIER=LOCAL
++    PSF=2
++    RELI=1e-3
++    RELMOS=1e-3
++    TNOM=27
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/cmos49.lib" cmostm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/res.lib" restm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/cap.lib" captm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/bip.lib" biptm
+.LIB "/softl1/AMS_380_CDS/hspiceS/c35/esddiode.lib" esddiodetm
+
+** Library name: GATES
+** Cell name: oai21_core
+** View name: schematic
+.subckt oai21_core a b c out inh_gnd inh_vdd
+mn3 out c net10 inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 net10 a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn2 net10 b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mp2 net26 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 out c inh_vdd inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 out a net26 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends oai21_core
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nand2_core
+** View name: schematic
+.subckt nand2_core a b out inh_gnd inh_vdd
+mn2 net13 b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 out a net13 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 out b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 out a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends nand2_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: XNR22
+** View name: cmos_sch
+.subckt XNR22 a b q inh_gnd inh_vdd
+xi5 b a net8 q inh_gnd inh_vdd oai21_core gt_mn3l=350e-9 gt_mn3w=4e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=4e-6 gt_mn2l=350e-9 gt_mn2w=4e-6 gt_mp2l=350e-9 gt_mp2w=6.4e-6 gt_mp3l=350e-9 gt_mp3w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=6.4e-6
+xi6 b a net8 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+.ends XNR22
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: inv_core
+** View name: schematic
+.subckt inv_core in out inh_gnd inh_vdd
+mn1 out in inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp1 out in inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends inv_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: INV3
+** View name: cmos_sch
+.subckt INV3 a q inh_gnd inh_vdd
+xi3 a q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=3e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=4.8e-6
+.ends INV3
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nor2_core
+** View name: schematic
+.subckt nor2_core a b out inh_gnd inh_vdd
+mn2 out a inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 out b inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 net17 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 out a net17 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends nor2_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NOR22
+** View name: cmos_sch
+.subckt NOR22 a b q inh_gnd inh_vdd
+xi1 b a q inh_gnd inh_vdd nor2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=6.4e-6 gt_mp1l=350e-9 gt_mp1w=6.4e-6
+.ends NOR22
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NAND22
+** View name: cmos_sch
+.subckt NAND22 a b q inh_gnd inh_vdd
+xi1 a b q inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=4e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=4e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends NAND22
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: BUF2
+** View name: cmos_sch
+.subckt BUF2 a q inh_gnd inh_vdd
+xi6 a net6 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=500e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+xi5 net6 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=2e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends BUF2
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: clinv_core
+** View name: schematic
+.subckt clinv_core a c cn q inh_gnd inh_vdd
+mn0 q c net18 inh_gnd modn L=gt_mn0l W=gt_mn0w AD='sx*gt_mn0w' AS='sx*gt_mn0w' PD='2*sx+gt_mn0w' PS='2*sx+gt_mn0w' NRD='lc/gt_mn0w' NRS='lc/gt_mn0w' M=1
+mn1 net18 a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp0 q cn net10 inh_vdd modp L=gt_mp0l W=gt_mp0w AD='sx*gt_mp0w' AS='sx*gt_mp0w' PD='2*sx+gt_mp0w' PS='2*sx+gt_mp0w' NRD='lc/gt_mp0w' NRS='lc/gt_mp0w' M=1
+mp1 net10 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends clinv_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: MUX22
+** View name: cmos_sch
+.subckt MUX22 a b q s inh_gnd inh_vdd
+xi9 net020 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=2e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi8 s net11 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=700e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+xi7 a net11 s net020 inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi6 b s net11 net020 inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends MUX22
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: aoi211_core
+** View name: schematic
+.subckt aoi211_core a b c d out inh_gnd inh_vdd
+mn2 net23 b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 out a net23 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn3 out c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn4 out d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mp3 net15 c net7 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp2 net7 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp4 out d net15 inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+mp1 net7 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends aoi211_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: AOI2111
+** View name: cmos_sch
+.subckt AOI2111 a b c d q inh_gnd inh_vdd
+xi2 a b c d q inh_gnd inh_vdd aoi211_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mn3l=350e-9 gt_mn3w=1e-6 gt_mn4l=350e-9 gt_mn4w=1e-6 gt_mp3l=350e-9 gt_mp3w=4.75e-6 gt_mp2l=350e-9 gt_mp2w=4.75e-6 gt_mp4l=350e-9 gt_mp4w=4.75e-6 gt_mp1l=350e-9 gt_mp1w=4.75e-6
+.ends AOI2111
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: aoi31_core
+** View name: schematic
+.subckt aoi31_core a b c d out inh_gnd inh_vdd
+mn2 net23 b net27 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 net27 a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn4 out d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn3 out c net23 inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mp2 out d net7 inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 net7 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp4 net7 b inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+mp7 net7 c inh_vdd inh_vdd modp L=gt_mp7l W=gt_mp7w AD='sx*gt_mp7w' AS='sx*gt_mp7w' PD='2*sx+gt_mp7w' PS='2*sx+gt_mp7w' NRD='lc/gt_mp7w' NRS='lc/gt_mp7w' M=1
+.ends aoi31_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: AOI311
+** View name: cmos_sch
+.subckt AOI311 a b c d q inh_gnd inh_vdd
+xi2 a b c d q inh_gnd inh_vdd aoi31_core gt_mn2l=350e-9 gt_mn2w=3.05e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=3.05e-6 gt_mn4l=350e-9 gt_mn4w=1e-6 gt_mn3l=350e-9 gt_mn3w=3.05e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6 gt_mp4l=350e-9 gt_mp4w=3.2e-6 gt_mp7l=350e-9 gt_mp7w=3.2e-6
+.ends AOI311
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: IMUX21
+** View name: cmos_sch
+.subckt IMUX21 a b q s inh_gnd inh_vdd
+xi6 a net11 s q inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi5 b s net11 q inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi4 s net11 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=700e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+.ends IMUX21
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: aoi22_core
+** View name: schematic
+.subckt aoi22_core a b c d out inh_gnd inh_vdd
+mn4 net7 d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn3 out c net7 inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn2 net15 b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 out a net15 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp3 out c net23 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp4 out d net23 inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+mp2 net23 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 net23 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends aoi22_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: AOI221
+** View name: cmos_sch
+.subckt AOI221 a b c d q inh_gnd inh_vdd
+xi2 a b c d q inh_gnd inh_vdd aoi22_core gt_mn4l=350e-9 gt_mn4w=2e-6 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=2e-6 gt_mn2l=350e-9 gt_mn2w=2e-6 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp3l=350e-9 gt_mp3w=3.2e-6 gt_mp4l=350e-9 gt_mp4w=3.2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends AOI221
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: oai31_core
+** View name: schematic
+.subckt oai31_core a b c d out inh_gnd inh_vdd
+mn2 out d net35 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn7 net35 c inh_gnd inh_gnd modn L=gt_mn7l W=gt_mn7w AD='sx*gt_mn7w' AS='sx*gt_mn7w' PD='2*sx+gt_mn7w' PS='2*sx+gt_mn7w' NRD='lc/gt_mn7w' NRS='lc/gt_mn7w' M=1
+mn4 net35 b inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn1 net35 a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 net11 b net7 inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 out c net11 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 net7 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp4 out d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+.ends oai31_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: OAI311
+** View name: cmos_sch
+.subckt OAI311 a b c d q inh_gnd inh_vdd
+xi1 a b c d q inh_gnd inh_vdd oai31_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn7l=350e-9 gt_mn7w=2e-6 gt_mn4l=350e-9 gt_mn4w=2e-6 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=4.8e-6 gt_mp3l=350e-9 gt_mp3w=4.8e-6 gt_mp1l=350e-9 gt_mp1w=4.8e-6 gt_mp4l=350e-9 gt_mp4w=1.6e-6
+.ends OAI311
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: oai211_core
+** View name: schematic
+.subckt oai211_core a b c d out inh_gnd inh_vdd
+mn4 net7 d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn3 net11 c net7 inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 out a net11 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn2 out b net11 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mp3 out c inh_vdd inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 out a net27 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp2 net27 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp4 out d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+.ends oai211_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: OAI2111
+** View name: cmos_sch
+.subckt OAI2111 a b c d q inh_gnd inh_vdd
+xi1 b a c d q inh_gnd inh_vdd oai211_core gt_mn4l=350e-9 gt_mn4w=2.95e-6 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=2.95e-6 gt_mn1l=350e-9 gt_mn1w=2.95e-6 gt_mn2l=350e-9 gt_mn2w=2.95e-6 gt_mp3l=350e-9 gt_mp3w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp4l=350e-9 gt_mp4w=1.6e-6
+.ends OAI2111
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: OAI211
+** View name: cmos_sch
+.subckt OAI211 a b c q inh_gnd inh_vdd
+xi1 b a c q inh_gnd inh_vdd oai21_core gt_mn3l=350e-9 gt_mn3w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mn2l=350e-9 gt_mn2w=2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp3l=350e-9 gt_mp3w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends OAI211
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nand3_core
+** View name: schematic
+.subckt nand3_core a b c out inh_gnd inh_vdd
+mn2 net6 b net10 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn3 net10 c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 out a net6 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 out b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 out c inh_vdd inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 out a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends nand3_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NAND31
+** View name: cmos_sch
+.subckt NAND31 a b c q inh_gnd inh_vdd
+xi1 a b c q inh_gnd inh_vdd nand3_core gt_mn2l=350e-9 gt_mn2w=3e-6 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=3e-6 gt_mn1l=350e-9 gt_mn1w=3e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp3l=350e-9 gt_mp3w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+.ends NAND31
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: aoi21_core
+** View name: schematic
+.subckt aoi21_core a b c out inh_gnd inh_vdd
+mn3 out c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 out a net14 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn2 net14 b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mp3 out c net18 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp2 net18 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 net18 a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends aoi21_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: AOI211
+** View name: cmos_sch
+.subckt AOI211 a b c q inh_gnd inh_vdd
+xi3 a b c q inh_gnd inh_vdd aoi21_core gt_mn3l=350e-9 gt_mn3w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mn2l=350e-9 gt_mn2w=2e-6 gt_mp3l=350e-9 gt_mp3w=3.2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends AOI211
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nand4_core
+** View name: schematic
+.subckt nand4_core a b c d out inh_gnd inh_vdd
+mn4 net23 d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn3 net27 c net23 inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 out a net35 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn2 net35 b net27 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mp4 out d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+mp2 out b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 out c inh_vdd inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp1 out a inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends nand4_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NAND41
+** View name: cmos_sch
+.subckt NAND41 a b c d q inh_gnd inh_vdd
+xi3 a b c d q inh_gnd inh_vdd nand4_core gt_mn4l=350e-9 gt_mn4w=4e-6 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=4e-6 gt_mn1l=350e-9 gt_mn1w=4e-6 gt_mn2l=350e-9 gt_mn2w=4e-6 gt_mp4l=350e-9 gt_mp4w=1.6e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp3l=350e-9 gt_mp3w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+.ends NAND41
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nor3_core
+** View name: schematic
+.subckt nor3_core a b c out inh_gnd inh_vdd
+mn2 out b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn3 out c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn1 out a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 net22 b net18 inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 out a net22 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp3 net18 c inh_vdd inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+.ends nor3_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NOR31
+** View name: cmos_sch
+.subckt NOR31 a b c q inh_gnd inh_vdd
+xi1 a b c q inh_gnd inh_vdd nor3_core gt_mn2l=350e-9 gt_mn2w=1e-6 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=1e-6 gt_mn1l=350e-9 gt_mn1w=1e-6 gt_mp2l=350e-9 gt_mp2w=4.8e-6 gt_mp1l=350e-9 gt_mp1w=4.8e-6 gt_mp3l=350e-9 gt_mp3w=4.8e-6
+.ends NOR31
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: oai22_core
+** View name: schematic
+.subckt oai22_core a b c d out inh_gnd inh_vdd
+mn2 out b net27 inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn4 net27 d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn1 out a net27 inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mn3 net27 c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mp2 net11 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 out a net11 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp3 out c net15 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+mp4 net15 d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+.ends oai22_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: OAI221
+** View name: cmos_sch
+.subckt OAI221 a b c d q inh_gnd inh_vdd
+xi1 a b c d q inh_gnd inh_vdd oai22_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn4l=350e-9 gt_mn4w=2e-6 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mn3l=350e-9 gt_mn3w=2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6 gt_mp3l=350e-9 gt_mp3w=3.2e-6 gt_mp4l=350e-9 gt_mp4w=3.2e-6
+.ends OAI221
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: nor4_core
+** View name: schematic
+.subckt nor4_core a b c d out inh_gnd inh_vdd
+mn2 out b inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn3 out c inh_gnd inh_gnd modn L=gt_mn3l W=gt_mn3w AD='sx*gt_mn3w' AS='sx*gt_mn3w' PD='2*sx+gt_mn3w' PS='2*sx+gt_mn3w' NRD='lc/gt_mn3w' NRS='lc/gt_mn3w' M=1
+mn4 out d inh_gnd inh_gnd modn L=gt_mn4l W=gt_mn4w AD='sx*gt_mn4w' AS='sx*gt_mn4w' PD='2*sx+gt_mn4w' PS='2*sx+gt_mn4w' NRD='lc/gt_mn4w' NRS='lc/gt_mn4w' M=1
+mn1 out a inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp4 net35 d inh_vdd inh_vdd modp L=gt_mp4l W=gt_mp4w AD='sx*gt_mp4w' AS='sx*gt_mp4w' PD='2*sx+gt_mp4w' PS='2*sx+gt_mp4w' NRD='lc/gt_mp4w' NRS='lc/gt_mp4w' M=1
+mp1 out a net27 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mp2 net27 b net31 inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp3 net31 c net35 inh_vdd modp L=gt_mp3l W=gt_mp3w AD='sx*gt_mp3w' AS='sx*gt_mp3w' PD='2*sx+gt_mp3w' PS='2*sx+gt_mp3w' NRD='lc/gt_mp3w' NRS='lc/gt_mp3w' M=1
+.ends nor4_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NOR40
+** View name: cmos_sch
+.subckt NOR40 a b c d q inh_gnd inh_vdd
+xi3 d c b a q inh_gnd inh_vdd nor4_core gt_mn2l=350e-9 gt_mn2w=500e-9 sx=850e-9 lc=500e-9 gt_mn3l=350e-9 gt_mn3w=500e-9 gt_mn4l=350e-9 gt_mn4w=500e-9 gt_mn1l=350e-9 gt_mn1w=500e-9 gt_mp4l=350e-9 gt_mp4w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp3l=350e-9 gt_mp3w=3.2e-6
+.ends NOR40
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: clinva_core
+** View name: schematic
+.subckt clinva_core a c cn q inh_gnd inh_vdd
+mn0 q a net18 inh_gnd modn L=gt_mn0l W=gt_mn0w AD='sx*gt_mn0w' AS='sx*gt_mn0w' PD='2*sx+gt_mn0w' PS='2*sx+gt_mn0w' NRD='lc/gt_mn0w' NRS='lc/gt_mn0w' M=1
+mn1 net18 c inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp0 q a net10 inh_vdd modp L=gt_mp0l W=gt_mp0w AD='sx*gt_mp0w' AS='sx*gt_mp0w' PD='2*sx+gt_mp0w' PS='2*sx+gt_mp0w' NRD='lc/gt_mp0w' NRS='lc/gt_mp0w' M=1
+mp1 net10 cn inh_vdd inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends clinva_core
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: tgate_core
+** View name: schematic
+.subckt tgate_core en ep in out inh_gnd inh_vdd
+mp1 out ep in inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mn1 out en in inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+.ends tgate_core
+** End of subcircuit definition.
+
+** Library name: GATES
+** Cell name: invb_core
+** View name: schematic
+.subckt invb_core a q inh_gnd inh_vdd
+mp2 q a inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mn2 q a inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+.ends invb_core
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: DFC1
+** View name: cmos_sch
+.subckt DFC1 c d q qn rn inh_gnd inh_vdd
+xi50 d cn ci net48 inh_gnd inh_vdd clinva_core gt_mn0l=350e-9 gt_mn0w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6 gt_mp0l=350e-9 gt_mp0w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi61 net57 net55 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi60 net55 qn inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi59 net57 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi58 net48 net63 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=1e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi57 rn net40 net57 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi56 rn net63 net47 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+xi55 ci cn net63 net40 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi54 ci cn net47 net48 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi53 cn ci net55 net40 inh_gnd inh_vdd tgate_core gt_mp1l=350e-9 gt_mp1w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6
+xi51 cn ci inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=800e-9 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=400e-9
+xi52 c cn inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=1e-6 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=500e-9
+.ends DFC1
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NOR21
+** View name: cmos_sch
+.subckt NOR21 a b q inh_gnd inh_vdd
+xi1 b a q inh_gnd inh_vdd nor2_core gt_mn2l=350e-9 gt_mn2w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends NOR21
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: CLKIN1
+** View name: cmos_sch
+.subckt CLKIN1 a q inh_gnd inh_vdd
+xi3 a q inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=1.6e-6 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=800e-9
+.ends CLKIN1
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: NAND21
+** View name: cmos_sch
+.subckt NAND21 a b q inh_gnd inh_vdd
+xi1 a b q inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp2l=350e-9 gt_mp2w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=1.6e-6
+.ends NAND21
+** End of subcircuit definition.
+
+** Library name: CORELIB
+** Cell name: XNR21
+** View name: cmos_sch
+.subckt XNR21 a b q inh_gnd inh_vdd
+xi5 b a net8 q inh_gnd inh_vdd oai21_core gt_mn3l=350e-9 gt_mn3w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mn2l=350e-9 gt_mn2w=2e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp3l=350e-9 gt_mp3w=1.6e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi6 b a net8 inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=1e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=1e-6 gt_mp2l=350e-9 gt_mp2w=800e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+.ends XNR21
+** End of subcircuit definition.
+
+** Library name: SBox_AMS_CDS
+** Cell name: sbox
+** View name: schematic
+xix17445 m_6 k_6 nx17444 0 vdd! XNR22
+xix17447 m_7 k_7 nx17446 0 vdd! XNR22
+xix17521 nx74 nx17520 0 vdd! INV3
+xix17559 nx4 nx17558 0 vdd! INV3
+xix219 nx17602 nx218 0 vdd! INV3
+xix75 nx17444 nx2 nx74 0 vdd! NOR22
+xix5 nx17444 nx18787 nx4 0 vdd! NOR22
+xix17603 nx17444 nx2 nx17602 0 vdd! NAND22
+xix17443 nx17444 nx18787 nx17442 0 vdd! NAND22
+xix18788 nx17446 nx18787 0 vdd! BUF2
+xix2221 nx696 nx774 nx2220 nx18787 0 vdd! MUX22
+xix17877 nx4 nx68 nx136 nx106 nx17876 0 vdd! AOI2111
+xix18404 nx416 nx4 nx1506 nx1498 nx18403 0 vdd! AOI2111
+xix18500 nx178 nx146 nx1834 nx710 nx18499 0 vdd! AOI2111
+xix17832 nx58 nx218 nx284 nx278 nx17831 0 vdd! AOI2111
+xix18761 nx254 nx146 nx2382 nx2372 nx18760 0 vdd! AOI2111
+xix18701 nx230 nx74 nx2196 nx2192 nx18700 0 vdd! AOI2111
+xix857 nx18065 nx18098 nx17868 nx18787 nx856 0 vdd! AOI311
+xix1073 nx17612 nx17976 nx17460 nx17520 nx1072 0 vdd! AOI311
+xix1771 nx17964 nx17818 nx17767 nx17442 nx1770 0 vdd! AOI311
+xix831 nx17737 nx17427 nx17673 nx17558 nx830 0 vdd! AOI311
+xix821 nx17612 nx18103 nx18105 nx17442 nx820 0 vdd! AOI311
+xix209 nx17863 nx17865 nx208 nx18787 0 vdd! IMUX21
+xix18245 nx408 nx58 nx18244 nx74 0 vdd! IMUX21
+xix18240 nx600 nx1110 nx18239 nx18787 0 vdd! IMUX21
+xix18566 nx678 nx146 nx18787 nx1162 nx18565 0 vdd! AOI221
+xix18517 nx58 nx17444 nx18787 nx928 nx18516 0 vdd! AOI221
+xix17872 nx94 nx146 nx150 nx18787 nx17871 0 vdd! AOI221
+xix17846 nx244 nx218 nx248 nx4 nx17845 0 vdd! AOI221
+xix18616 nx340 nx74 nx394 nx17444 nx18615 0 vdd! AOI221
+xix18618 nx4 nx2004 nx18787 nx2012 nx18617 0 vdd! AOI221
+xix17484 nx402 nx146 nx18787 nx774 nx17483 0 vdd! AOI221
+xix377 nx17721 nx74 nx17444 nx18686 nx376 0 vdd! OAI311
+xix18388 nx510 nx882 nx394 nx218 nx18387 0 vdd! OAI311
+xix1549 nx18060 nx18787 nx17756 nx18392 nx1548 0 vdd! OAI311
+xix1213 nx17442 nx18247 nx18250 nx18255 nx1212 0 vdd! OAI2111
+xix2013 nx17756 nx18060 nx18621 nx18148 nx2012 0 vdd! OAI2111
+xix1499 nx17835 nx17520 nx18407 nx18409 nx1498 0 vdd! OAI2111
+xix2069 nx17647 nx17442 nx18589 nx18014 nx2068 0 vdd! OAI2111
+xix311 nx17678 nx17558 nx17823 nx17828 nx310 0 vdd! OAI2111
+xix2029 nx18787 nx18613 nx18615 nx18617 nx2028 0 vdd! OAI2111
+xix921 nx2 nx18065 nx17793 nx18067 nx920 0 vdd! OAI2111
+xix1523 nx17993 nx18787 nx18401 nx17843 nx1522 0 vdd! OAI2111
+xix1537 nx17622 nx17558 nx18396 nx1536 0 vdd! OAI211
+xix1831 nx17715 nx17520 nx18565 nx1830 0 vdd! OAI211
+xix18765 nx64 nx882 nx17444 nx18764 0 vdd! OAI211
+xix1225 nx17787 nx17558 nx18244 nx1224 0 vdd! OAI211
+xix18687 nx298 nx340 nx146 nx18686 0 vdd! OAI211
+xix1341 nx18787 nx17863 nx18365 nx1340 0 vdd! OAI211
+xix1089 nx17673 nx17520 nx17958 nx1088 0 vdd! OAI211
+xix967 nx17675 nx17442 nx18040 nx966 0 vdd! OAI211
+xix1271 nx18089 nx17442 nx17483 nx1270 0 vdd! OAI211
+xix17731 nx500 nx94 nx4 nx17730 0 vdd! OAI211
+xix1797 nx17841 nx2 nx18516 nx1796 0 vdd! OAI211
+xix18373 nx58 nx332 nx146 nx18372 0 vdd! OAI211
+xix345 nx17751 nx17520 nx17808 nx344 0 vdd! OAI211
+xix1575 nx17618 nx17520 nx18379 nx1574 0 vdd! OAI211
+xix18587 nx222 nx248 nx218 nx18586 0 vdd! OAI211
+xix18256 nx366 nx222 nx218 nx18255 0 vdd! OAI211
+xix1935 nx17737 nx17442 nx17763 nx1934 0 vdd! OAI211
+xix451 nx17751 nx17558 nx17753 nx450 0 vdd! OAI211
+xix1813 nx17972 nx17442 nx18287 nx1812 0 vdd! OAI211
+xix18699 nx1038 nx840 nx2 nx18698 0 vdd! OAI211
+xix1561 nx17881 nx17520 nx18495 nx1560 0 vdd! OAI211
+xix18051 nx244 nx262 nx146 nx18050 0 vdd! OAI211
+xix441 nx17761 nx17520 nx17763 nx440 0 vdd! OAI211
+xix17794 nx380 nx228 nx74 nx17793 0 vdd! OAI211
+xix1247 nx17475 nx17558 nx17939 nx1246 0 vdd! OAI211
+xix2373 nx17779 nx17520 nx18764 nx2372 0 vdd! OAI211
+xix459 nx17745 nx17558 nx17747 nx458 0 vdd! OAI211
+xix18251 nx1038 nx850 nx2 nx18250 0 vdd! OAI211
+xix18431 nx86 nx532 nx218 nx18430 0 vdd! OAI211
+xix663 nx17612 nx17602 nx17615 nx662 0 vdd! OAI211
+xix971 nx17626 nx17442 nx17502 nx970 0 vdd! OAI211
+xix261 nx17851 nx17558 nx18640 nx260 0 vdd! OAI211
+xix18477 nx262 nx244 nx74 nx18476 0 vdd! OAI211
+xix18213 nx532 nx472 nx74 nx18212 0 vdd! OAI211
+xix18556 nx214 nx532 nx146 nx18555 0 vdd! OAI211
+xix2033 nx17692 nx17602 nx18610 nx2032 0 vdd! OAI211
+xix407 nx17779 nx17520 nx17781 nx406 0 vdd! OAI211
+xix18490 nx228 nx58 nx4 nx18489 0 vdd! OAI211
+xix227 nx17857 nx17442 nx17859 nx226 0 vdd! OAI211
+xix18078 nx86 nx394 nx146 nx18077 0 vdd! OAI211
+xix2077 nx17635 nx17558 nx18586 nx2076 0 vdd! OAI211
+xix1625 nx2 nx17536 nx18351 nx1624 0 vdd! OAI211
+xix1727 nx18287 nx18290 nx18293 nx1726 0 vdd! NAND31
+xix1611 nx18027 nx18356 nx18359 nx1610 0 vdd! NAND31
+xix1695 nx17753 nx18306 nx18151 nx1694 0 vdd! NAND31
+xix1657 nx18329 nx17828 nx18331 nx1656 0 vdd! NAND31
+xix2305 nx18164 nx18322 nx18311 nx2304 0 vdd! NAND31
+xix1671 nx18319 nx18164 nx18322 nx1670 0 vdd! NAND31
+xix1591 nx18047 nx18372 nx18032 nx1590 0 vdd! NAND31
+xix2281 nx18666 nx18671 nx18675 nx2280 0 vdd! NAND31
+xix1355 nx18186 nx18188 nx17657 nx1354 0 vdd! NAND31
+xix2267 nx18555 nx18337 nx17995 nx2266 0 vdd! NAND31
+xix1685 nx18311 nx18314 nx17571 nx1684 0 vdd! NAND31
+xix991 nx17704 nx18025 nx18027 nx990 0 vdd! NAND31
+xix2141 nx18545 nx18557 nx18560 nx2140 0 vdd! NAND31
+xix1121 nx17936 nx17939 nx17942 nx1120 0 vdd! NAND31
+xix1709 nx18062 nx17930 nx17841 nx1708 0 vdd! NAND31
+xix1909 nx17657 nx17660 nx17823 nx1908 0 vdd! NAND31
+xix1739 nx18280 nx17808 nx17814 nx1738 0 vdd! NAND31
+xix1385 nx18176 nx17990 nx18178 nx1384 0 vdd! NAND31
+xix909 nx18075 nx18077 nx18080 nx908 0 vdd! NAND31
+xix1601 nx17698 nx18034 nx17704 nx1600 0 vdd! NAND31
+xix1645 nx18337 nx17995 nx18339 nx1644 0 vdd! NAND31
+xix1565 nx18384 nx18387 nx18212 nx1564 0 vdd! NAND31
+xix1633 nx18345 nx17640 nx18347 nx1632 0 vdd! NAND31
+xix18410 nx17444 nx432 nx2 nx18409 0 vdd! NAND31
+xix2233 nx18689 nx18387 nx18691 nx2232 0 vdd! NAND31
+xix1035 nx17993 nx17643 nx17995 nx1034 0 vdd! NAND31
+xix2055 nx18595 nx18600 nx18607 nx2054 0 vdd! NAND31
+xix295 nx17831 nx17843 nx17845 nx294 0 vdd! NAND31
+xix1327 nx18030 nx18032 nx17698 nx1326 0 vdd! NAND31
+xix18041 nx94 nx146 nx958 nx18040 0 vdd! AOI211
+xix537 nx17710 nx17712 nx17520 nx536 0 vdd! AOI211
+xix945 nx17818 nx17515 nx17520 nx944 0 vdd! AOI211
+xix1137 nx17561 nx17779 nx17602 nx1136 0 vdd! AOI211
+xix17776 nx408 nx74 nx406 nx17775 0 vdd! AOI211
+xix17811 nx332 nx74 nx330 nx17810 0 vdd! AOI211
+xix18048 nx436 nx74 nx944 nx18047 0 vdd! AOI211
+xix1257 nx17612 nx17561 nx17442 nx1256 0 vdd! AOI211
+xix18397 nx316 nx4 nx1528 nx18396 0 vdd! AOI211
+xix2197 nx17520 nx17602 nx18144 nx2196 0 vdd! AOI211
+xix2193 nx17515 nx17715 nx17558 nx2192 0 vdd! AOI211
+xix18291 nx678 nx218 nx1048 nx18290 0 vdd! AOI211
+xix1579 nx17972 nx18001 nx17558 nx1578 0 vdd! AOI211
+xix235 nx17851 nx17853 nx17442 nx234 0 vdd! AOI211
+xix825 nx17745 nx17805 nx17520 nx824 0 vdd! AOI211
+xix875 nx17818 nx17515 nx17602 nx874 0 vdd! AOI211
+xix17727 nx510 nx4 nx508 nx17726 0 vdd! AOI211
+xix1267 nx17737 nx17879 nx17558 nx1266 0 vdd! AOI211
+xix1775 nx17692 nx17712 nx17520 nx1774 0 vdd! AOI211
+xix18479 nx86 nx74 nx170 nx18478 0 vdd! AOI211
+xix1331 nx17737 nx17820 nx17602 nx1330 0 vdd! AOI211
+xix421 nx17612 nx17460 nx17558 nx420 0 vdd! AOI211
+xix1279 nx17523 nx17712 nx17558 nx1278 0 vdd! AOI211
+xix18236 nx4 nx1248 nx1246 nx18235 0 vdd! AOI211
+xix18076 nx532 nx4 nx648 nx18075 0 vdd! AOI211
+xix583 nx17673 nx17675 nx17602 nx582 0 vdd! AOI211
+xix18210 nx1076 nx218 nx742 nx18209 0 vdd! AOI211
+xix1053 nx17460 nx17523 nx17602 nx1052 0 vdd! AOI211
+xix1779 nx17961 nx17820 nx17558 nx1778 0 vdd! AOI211
+xix1311 nx17745 nx17721 nx17520 nx1310 0 vdd! AOI211
+xix531 nx17715 nx17515 nx17442 nx530 0 vdd! AOI211
+xix107 nx17685 nx17784 nx17520 nx106 0 vdd! AOI211
+xix137 nx17884 nx17887 nx18787 nx136 0 vdd! AOI211
+xix1835 nx17787 nx17805 nx17558 nx1834 0 vdd! AOI211
+xix431 nx17767 nx17635 nx17442 nx430 0 vdd! AOI211
+xix569 nx17682 nx17695 nx17723 nx17758 nx568 0 vdd! NAND41
+xix1473 nx18113 nx18120 nx18122 nx18124 nx1472 0 vdd! NAND41
+xix2179 nx18528 nx18530 nx18535 nx18541 nx2178 0 vdd! NAND41
+xix1861 nx18486 nx18492 nx18508 nx18513 nx1860 0 vdd! NAND41
+xix1987 nx18417 nx18423 nx18432 nx18437 nx1986 0 vdd! NAND41
+xix389 nx17793 nx17796 nx17802 nx17810 nx388 0 vdd! NAND41
+xix69 nx17879 nx17881 nx17523 nx17475 nx68 0 vdd! NAND41
+xix2315 nx18646 nx18054 nx18648 nx18650 nx2314 0 vdd! NAND41
+xix1945 nx18443 nx18446 nx18449 nx18455 nx1944 0 vdd! NAND41
+xix1423 nx18151 nx17936 nx18153 nx18158 nx1422 0 vdd! NAND41
+xix1597 nx18369 nx18381 nx18389 nx18403 nx1596 0 vdd! NAND41
+xix2319 nx18643 nx18654 nx18658 nx18660 nx2318 0 vdd! NAND41
+xix691 nx17586 nx17609 nx17637 nx17654 nx690 0 vdd! NAND41
+xix1185 nx17901 nx17911 nx17923 nx17933 nx1184 0 vdd! NAND41
+xix1297 nx18075 nx18077 nx18217 nx18224 nx1296 0 vdd! NAND41
+xix1705 nx18300 nx18308 nx18316 nx18324 nx1704 0 vdd! NAND41
+xix985 nx18030 nx18032 nx18034 nx18036 nx984 0 vdd! NAND41
+xix2247 nx18682 nx18694 nx18698 nx18700 nx2246 0 vdd! NAND41
+xix1479 nx18110 nx18183 nx18198 nx18214 nx1478 0 vdd! NAND41
+xix1451 nx18128 nx18062 nx18139 nx18141 nx1450 0 vdd! NAND41
+xix2243 nx17775 nx18077 nx17770 nx18075 nx2242 0 vdd! NAND41
+xix2475 nx18721 nx18725 nx18728 nx18730 nx2474 0 vdd! NAND41
+xix1757 nx18263 nx18272 nx18282 nx18295 nx1756 0 vdd! NAND41
+xix2441 nx18734 nx18737 nx18740 nx18742 nx2440 0 vdd! NAND41
+xix957 nx18044 nx18072 nx18091 nx18095 nx956 0 vdd! NAND41
+xix1399 nx17781 nx18167 nx18170 nx18173 nx1398 0 vdd! NAND41
+xix393 nx17790 nx17848 nx17871 nx17876 nx392 0 vdd! NAND41
+xix1027 nx17998 nx18009 nx18019 nx18022 nx1026 0 vdd! NAND41
+xix1351 nx18193 nx18025 nx18196 nx18027 nx1350 0 vdd! NAND41
+xix2277 nx18548 nx18178 nx17828 nx17615 nx2276 0 vdd! NAND41
+xix2505 nx18710 nx18713 nx18715 nx18717 nx2504 0 vdd! NAND41
+xix1651 nx18334 nx18342 nx18353 nx18361 nx1650 0 vdd! NAND41
+xix2101 nx18568 nx18574 nx18582 nx18592 nx2100 0 vdd! NAND41
+xix1101 nx17950 nx17966 nx17978 nx17985 nx1100 0 vdd! NAND41
+xix2137 nx17615 nx18548 nx18337 nx18550 nx2136 0 vdd! NAND41
+xix2409 nx18749 nx18751 nx18753 nx18760 nx2408 0 vdd! NAND41
+xix803 nx17424 nx17480 nx17526 nx17555 nx802 0 vdd! NAND41
+xix1323 nx18204 nx18206 nx18209 nx18212 nx1322 0 vdd! NAND41
+xix2353 nx18629 nx18632 nx18635 nx18637 nx2352 0 vdd! NAND41
+xix1903 nx18459 nx18462 nx18468 nx18473 nx1902 0 vdd! NAND41
+xix1261 nx18233 nx18235 nx18239 nx18241 nx1260 0 vdd! NAND41
+xix18037 nx362 nx970 nx966 nx18036 0 vdd! NOR31
+xix18142 nx498 nx1426 nx1128 nx18141 0 vdd! NOR31
+xix18020 nx576 nx574 nx998 nx18019 0 vdd! NOR31
+xix18205 nx440 nx932 nx530 nx18204 0 vdd! NOR31
+xix18154 nx446 nx720 nx1412 nx18153 0 vdd! NOR31
+xix151 nx17874 nx17500 nx0 nx150 0 vdd! NOR31
+xix18010 nx606 nx1004 nx302 nx18009 0 vdd! NOR31
+xix18218 nx336 nx888 nx1286 nx18217 0 vdd! NOR31
+xix18171 nx1052 nx672 nx1388 nx18170 0 vdd! NOR31
+xix18659 nx578 nx670 nx666 nx18658 0 vdd! NOR31
+xix18125 nx754 nx1152 nx170 nx18124 0 vdd! NOR31
+xix18106 nx620 nx248 nx214 nx18105 0 vdd! NOR31
+xix841 nx17874 nx17500 nx17444 nx840 0 vdd! NOR31
+xix869 nx2 nx17887 nx17496 nx17444 nx868 0 vdd! OAI221
+xix1807 nx18277 nx18787 nx17444 nx17635 nx1806 0 vdd! OAI221
+xix897 nx17442 nx18085 nx17685 nx17520 nx896 0 vdd! OAI221
+xix279 nx18787 nx17841 nx17835 nx17602 nx278 0 vdd! OAI221
+xix1529 nx18787 nx17536 nx17515 nx17558 nx1528 0 vdd! OAI221
+xix355 nx17618 nx17558 nx17805 nx17520 nx354 0 vdd! OAI221
+xix2383 nx17884 nx18787 nx17673 nx17602 nx2382 0 vdd! OAI221
+xix321 nx17818 nx17442 nx17820 nx17520 nx320 0 vdd! OAI221
+xix933 nx18787 nx18054 nx17618 nx17558 nx932 0 vdd! OAI221
+xix1543 nx17820 nx17558 nx17721 nx17602 nx1542 0 vdd! OAI221
+xix711 nx2 nx17884 nx17982 nx17442 nx710 0 vdd! OAI221
+xix1507 nx17818 nx17602 nx17673 nx17442 nx1506 0 vdd! OAI221
+xix18627 nx2352 nx2318 nx2280 nx2246 nx18626 0 vdd! NOR40
+xix18542 nx1066 nx434 nx1388 nx406 nx18541 0 vdd! NOR40
+xix18596 nx1840 nx1278 nx310 nx1812 nx18595 0 vdd! NOR40
+xix18073 nx908 nx896 nx344 nx888 nx18072 0 vdd! NOR40
+xix18614 nx326 nx592 nx1162 nx1172 nx18613 0 vdd! NOR40
+xix18546 nx2136 nx2122 nx604 nx1372 nx18545 0 vdd! NOR40
+xix18514 nx1796 nx1778 nx1774 nx1770 nx18513 0 vdd! NOR40
+xix18261 nx1756 nx1704 nx1650 nx1596 nx18260 0 vdd! NOR40
+xix18463 nx1888 nx1340 nx552 nx1346 nx18462 0 vdd! NOR40
+xix18474 nx1870 nx1532 nx458 nx1246 nx18473 0 vdd! NOR40
+xix17481 nx782 nx758 nx754 nx752 nx17480 0 vdd! NOR40
+xix18111 nx1472 nx1450 nx1422 nx1398 nx18110 0 vdd! NOR40
+xix17587 nx684 nx672 nx670 nx666 nx17586 0 vdd! NOR40
+xix17724 nx516 nx492 nx458 nx450 nx17723 0 vdd! NOR40
+xix18325 nx1380 nx654 nx672 nx1656 nx18324 0 vdd! NOR40
+xix743 nx28 nx0 nx18787 nx17532 nx742 0 vdd! NOR40
+xix18418 nx1980 nx330 nx758 nx1164 nx18417 0 vdd! NOR40
+xix18450 nx1920 nx1368 nx648 nx1040 nx18449 0 vdd! NOR40
+xix18382 nx430 nx458 nx932 nx1564 nx18381 0 vdd! NOR40
+xix18215 nx1296 nx1260 nx1224 nx1212 nx18214 0 vdd! NOR40
+xix18129 nx1446 nx1440 nx1438 nx1146 nx18128 0 vdd! NOR40
+xix17422 nx802 nx690 nx568 nx392 nx17421 0 vdd! NOR40
+xix18081 nx488 nx478 nx474 nx470 nx18080 0 vdd! NOR40
+xix17556 nx720 nx716 nx712 nx700 nx17555 0 vdd! NOR40
+xix18184 nx606 nx614 nx1354 nx1350 nx18183 0 vdd! NOR40
+xix18199 nx976 nx1330 nx1326 nx1322 nx18198 0 vdd! NOR40
+xix17951 nx1092 nx446 nx1088 nx452 nx17950 0 vdd! NOR40
+xix18729 nx1104 nx1102 nx716 nx1412 nx18728 0 vdd! NOR40
+xix17849 nx234 nx226 nx208 nx174 nx17848 0 vdd! NOR40
+xix18529 nx794 nx958 nx944 nx788 nx18528 0 vdd! NOR40
+xix18023 nx558 nx582 nx990 nx984 nx18022 0 vdd! NOR40
+xix18714 nx788 nx786 nx728 nx1462 nx18713 0 vdd! NOR40
+xix18045 nx950 nx932 nx924 nx920 nx18044 0 vdd! NOR40
+xix18424 nx912 nx1144 nx1968 nx850 nx18423 0 vdd! NOR40
+xix18644 nx2314 nx1078 nx1074 nx2304 nx18643 0 vdd! NOR40
+xix18335 nx1644 nx1374 nx604 nx628 nx18334 0 vdd! NOR40
+xix18460 nx574 nx998 nx1892 nx576 nx18459 0 vdd! NOR40
+xix18283 nx742 nx378 nx912 nx1726 nx18282 0 vdd! NOR40
+xix18092 nx320 nx874 nx868 nx234 nx18091 0 vdd! NOR40
+xix18493 nx874 nx1560 nx1842 nx1278 nx18492 0 vdd! NOR40
+xix18174 nx1384 nx1374 nx1372 nx1368 nx18173 0 vdd! NOR40
+xix18630 nx962 nx792 nx786 nx1172 nx18629 0 vdd! NOR40
+xix18296 nx1710 nx1440 nx730 nx1708 nx18295 0 vdd! NOR40
+xix18343 nx1632 nx1004 nx1012 nx1624 nx18342 0 vdd! NOR40
+xix18593 nx1528 nx896 nx874 nx1560 nx18592 0 vdd! NOR40
+xix18309 nx700 nx488 nx1406 nx1684 nx18308 0 vdd! NOR40
+xix17425 nx794 nx792 nx788 nx786 nx17424 0 vdd! NOR40
+xix18716 nx1164 nx1126 nx752 nx1110 nx18715 0 vdd! NOR40
+xix18731 nx966 nx720 nx2444 nx970 nx18730 0 vdd! NOR40
+xix18390 nx1548 nx1536 nx1266 nx1522 nx18389 0 vdd! NOR40
+xix17759 nx440 nx430 nx422 nx398 nx17758 0 vdd! NOR40
+xix18487 nx1854 nx354 nx888 nx384 nx18486 0 vdd! NOR40
+xix18354 nx560 nx574 nx998 nx1610 nx18353 0 vdd! NOR40
+xix18526 nx2178 nx2140 nx2100 nx2054 nx18525 0 vdd! NOR40
+xix18661 nx2288 nx654 nx1052 nx672 nx18660 0 vdd! NOR40
+xix18638 nx264 nx1710 nx2320 nx1128 nx18637 0 vdd! NOR40
+xix18743 nx458 nx450 nx2410 nx1306 nx18742 0 vdd! NOR40
+xix17527 nx744 nx742 nx736 nx730 nx17526 0 vdd! NOR40
+xix18718 nx1144 nx1152 nx1966 nx1146 nx18717 0 vdd! NOR40
+xix18636 nx280 nx1156 nx1136 nx1438 nx18635 0 vdd! NOR40
+xix17934 nx1120 nx716 nx1104 nx1102 nx17933 0 vdd! NOR40
+xix18248 nx228 nx262 nx340 nx332 nx18247 0 vdd! NOR40
+xix18225 nx310 nx1278 nx1272 nx1266 nx18224 0 vdd! NOR40
+xix18750 nx336 nx2076 nx896 nx344 nx18749 0 vdd! NOR40
+xix18683 nx2242 nx376 nx1286 nx2232 nx18682 0 vdd! NOR40
+xix18708 nx2504 nx2474 nx2440 nx2408 nx18707 0 vdd! NOR40
+xix18722 nx1722 nx1720 nx1440 nx1136 nx18721 0 vdd! NOR40
+xix18312 nx1066 nx680 nx752 nx170 nx18311 0 vdd! NOR40
+xix18672 nx536 nx1586 nx2072 nx920 nx18671 0 vdd! NOR40
+xix18370 nx1590 nx504 nx1578 nx1574 nx18369 0 vdd! NOR40
+xix18575 nx1302 nx450 nx1542 nx1312 nx18574 0 vdd! NOR40
+xix18444 nx1406 nx446 nx1934 nx478 nx18443 0 vdd! NOR40
+xix17655 nx610 nx582 nx576 nx574 nx17654 0 vdd! NOR40
+xix18433 nx132 nx732 nx1954 nx264 nx18432 0 vdd! NOR40
+xix17610 nx662 nx648 nx644 nx642 nx17609 0 vdd! NOR40
+xix18362 nx1330 nx986 nx1340 nx1600 nx18361 0 vdd! NOR40
+xix17902 nx1178 nx752 nx1164 nx1162 nx17901 0 vdd! NOR40
+xix18752 nx1536 nx1830 nx320 nx1270 nx18751 0 vdd! NOR40
+xix18558 nx1018 nx1374 nx614 nx634 nx18557 0 vdd! NOR40
+xix18096 nx856 nx830 nx824 nx820 nx18095 0 vdd! NOR40
+xix18531 nx1146 nx280 nx1440 nx1048 nx18530 0 vdd! NOR40
+xix18273 nx526 nx1456 nx768 nx1738 nx18272 0 vdd! NOR40
+xix18608 nx1256 nx226 nx2032 nx2028 nx18607 0 vdd! NOR40
+xix18667 nx2276 nx2130 nx152 nx2266 nx18666 0 vdd! NOR40
+xix18726 nx1710 nx656 nx1116 nx1124 nx18725 0 vdd! NOR40
+xix18569 nx1868 nx530 nx924 nx1574 nx18568 0 vdd! NOR40
+xix18741 nx504 nx1578 nx932 nx514 nx18740 0 vdd! NOR40
+xix18317 nx1670 nx578 nx406 nx666 nx18316 0 vdd! NOR40
+xix17912 nx1156 nx1152 nx1148 nx330 nx17911 0 vdd! NOR40
+xix18561 nx616 nx1624 nx2104 nx1012 nx18560 0 vdd! NOR40
+xix17979 nx1060 nx1054 nx1052 nx672 nx17978 0 vdd! NOR40
+xix18651 nx700 nx1406 nx2148 nx492 nx18650 0 vdd! NOR40
+xix17683 nx560 nx558 nx552 nx550 nx17682 0 vdd! NOR40
+xix18469 nx1310 nx986 nx1874 nx966 nx18468 0 vdd! NOR40
+xix17924 nx1136 nx730 nx1130 nx656 nx17923 0 vdd! NOR40
+xix18159 nx478 nx1406 nx1402 nx696 nx18158 0 vdd! NOR40
+xix17986 nx1040 nx1038 nx152 nx1034 nx17985 0 vdd! NOR40
+xix18583 nx384 nx420 nx2076 nx2068 nx18582 0 vdd! NOR40
+xix18536 nx256 nx498 nx2154 nx452 nx18535 0 vdd! NOR40
+xix471 nx28 nx0 nx2 nx17532 nx470 0 vdd! NOR40
+xix17899 nx1184 nx1100 nx1026 nx956 nx17898 0 vdd! NOR40
+xix18438 nx498 nx1426 nx1946 nx508 nx18437 0 vdd! NOR40
+xix18738 nx1574 nx948 nx924 nx920 nx18737 0 vdd! NOR40
+xix18754 nx260 nx252 nx1252 nx290 nx18753 0 vdd! NOR40
+xix17999 nx1018 nx600 nx1014 nx614 nx17998 0 vdd! NOR40
+xix18456 nx616 nx1624 nx1018 nx1908 nx18455 0 vdd! NOR40
+xix18695 nx1840 nx1830 nx2220 nx1548 nx18694 0 vdd! NOR40
+xix17638 nx636 nx622 nx616 nx614 nx17637 0 vdd! NOR40
+xix18301 nx508 nx1112 nx200 nx1694 nx18300 0 vdd! NOR40
+xix17696 nx546 nx536 nx530 nx522 nx17695 0 vdd! NOR40
+xix18711 nx794 nx792 nx114 nx1176 nx18710 0 vdd! NOR40
+xix17967 nx680 nx1078 nx1074 nx1072 nx17966 0 vdd! NOR40
+xix18509 nx226 nx1812 nx1806 nx1256 nx18508 0 vdd! NOR40
+xix18447 nx1078 nx1074 nx1926 nx680 nx18446 0 vdd! NOR40
+xix17791 nx388 nx320 nx310 nx294 nx17790 0 vdd! NOR40
+xix18735 nx940 nx362 nx1868 nx536 nx18734 0 vdd! NOR40
+xix18633 nx2340 nx754 nx1164 nx526 nx18632 0 vdd! NOR40
+xix18114 nx1468 nx764 nx1462 nx788 nx18113 0 vdd! NOR40
+xix18415 nx1986 nx1944 nx1902 nx1860 nx18414 0 vdd! NOR40
+xix18601 nx1270 nx1266 nx1252 nx252 nx18600 0 vdd! NOR40
+xix18676 nx514 nx1578 nx2248 nx430 nx18675 0 vdd! NOR40
+xix18551 nx1040 nx642 nx1124 nx1432 nx18550 0 vdd! NOR40
+xix18264 nx1750 nx788 nx786 nx1176 nx18263 0 vdd! NOR40
+xreg_reg_5 clk nx2182 c_5 _net1 nx17893 0 vdd! DFC1
+xreg_reg_6 clk nx2356 c_6 _net3 nx17893 0 vdd! DFC1
+xreg_reg_0 clk nx806 c_0 _net7 nx17893 0 vdd! DFC1
+xreg_reg_1 clk nx1188 c_1 _net0 nx17893 0 vdd! DFC1
+xreg_reg_3 clk nx1760 c_3 _net5 nx17893 0 vdd! DFC1
+xreg_reg_7 clk nx2508 c_7 _net2 nx17893 0 vdd! DFC1
+xreg_reg_4 clk nx1990 c_4 _net4 nx17893 0 vdd! DFC1
+xreg_reg_2 clk nx1478 c_2 _net6 nx17893 0 vdd! DFC1
+xix593 nx0 nx17650 nx592 0 vdd! NOR21
+xix163 nx17518 nx17455 nx162 0 vdd! NOR21
+xix757 nx17500 nx17444 nx756 0 vdd! NOR21
+xix433 nx17550 nx17701 nx432 0 vdd! NOR21
+xix255 nx17539 nx17490 nx254 0 vdd! NOR21
+xix755 nx17515 nx17520 nx754 0 vdd! NOR21
+xix1019 nx18001 nx17520 nx1018 0 vdd! NOR21
+xix1407 nx17820 nx17442 nx1406 0 vdd! NOR21
+xix115 nx0 nx17712 nx114 0 vdd! NOR21
+xix1079 nx17972 nx17520 nx1078 0 vdd! NOR21
+xix17616 nx658 nx656 nx17615 0 vdd! NOR21
+xix25 nx17430 nx17478 nx24 0 vdd! NOR21
+xix789 nx17460 nx17442 nx788 0 vdd! NOR21
+xix787 nx17475 nx17442 nx786 0 vdd! NOR21
+xix229 nx17688 nx17701 nx228 0 vdd! NOR21
+xix131 nx17500 nx0 nx130 0 vdd! NOR21
+xix721 nx17496 nx17558 nx720 0 vdd! NOR21
+xix249 nx17500 nx17532 nx248 0 vdd! NOR21
+xix1375 nx17678 nx17520 nx1374 0 vdd! NOR21
+xix1373 nx2 nx17993 nx1372 0 vdd! NOR21
+xix1711 nx17751 nx17602 nx1710 0 vdd! NOR21
+xix18655 nx682 nx184 nx18654 0 vdd! NOR21
+xix987 nx17779 nx17558 nx986 0 vdd! NOR21
+xix1165 nx17787 nx17520 nx1164 0 vdd! NOR21
+xix437 nx17550 nx17553 nx436 0 vdd! NOR21
+xix483 nx26 nx17574 nx482 0 vdd! NOR21
+xix667 nx17606 nx17520 nx666 0 vdd! NOR21
+xix1173 nx0 nx17805 nx1172 0 vdd! NOR21
+xix267 nx17463 nx17455 nx266 0 vdd! NOR21
+xix245 nx17599 nx17701 nx244 0 vdd! NOR21
+xix1157 nx2 nx17914 nx1156 0 vdd! NOR21
+xix18207 nx1310 nx1092 nx18206 0 vdd! NOR21
+xix645 nx17629 nx17558 nx644 0 vdd! NOR21
+xix959 nx17629 nx17442 nx958 0 vdd! NOR21
+xix175 nx17868 nx18787 nx174 0 vdd! NOR21
+xix733 nx17779 nx17602 nx732 0 vdd! NOR21
+xix1113 nx18787 nx18303 nx1112 0 vdd! NOR21
+xix1433 nx17879 nx17602 nx1432 0 vdd! NOR21
+xix1427 nx18001 nx17558 nx1426 0 vdd! NOR21
+xix201 nx17532 nx18060 nx200 0 vdd! NOR21
+xix913 nx17879 nx17520 nx912 0 vdd! NOR21
+xix1005 nx17712 nx17558 nx1004 0 vdd! NOR21
+xix769 nx2 nx18277 nx768 0 vdd! NOR21
+xix1153 nx17626 nx17520 nx1152 0 vdd! NOR21
+xix81 nx17430 nx17455 nx80 0 vdd! NOR21
+xix87 nx28 nx17874 nx86 0 vdd! NOR21
+xix635 nx17629 nx17520 nx634 0 vdd! NOR21
+xix753 nx17523 nx17520 nx752 0 vdd! NOR21
+xix679 nx17599 nx17553 nx678 0 vdd! NOR21
+xix579 nx17675 nx17602 nx578 0 vdd! NOR21
+xix1463 nx17523 nx17442 nx1462 0 vdd! NOR21
+xix1049 nx17523 nx17602 nx1048 0 vdd! NOR21
+xix1129 nx18787 nx18148 nx1128 0 vdd! NOR21
+xix617 nx17650 nx17520 nx616 0 vdd! NOR21
+xix299 nx17574 nx17701 nx298 0 vdd! NOR21
+xix427 nx17632 nx17701 nx426 0 vdd! NOR21
+xix109 nx17518 nx17478 nx108 0 vdd! NOR21
+xix731 nx18787 nx17547 nx730 0 vdd! NOR21
+xix381 nx17707 nx17701 nx380 0 vdd! NOR21
+xix265 nx17835 nx17602 nx264 0 vdd! NOR21
+xix95 nx17688 nx17529 nx94 0 vdd! NOR21
+xix619 nx17472 nx17539 nx618 0 vdd! NOR21
+xix303 nx17851 nx17602 nx302 0 vdd! NOR21
+xix671 nx17561 nx17520 nx670 0 vdd! NOR21
+xix1105 nx17650 nx17558 nx1104 0 vdd! NOR21
+xix1125 nx17647 nx17602 nx1124 0 vdd! NOR21
+xix61 nx17430 nx17467 nx60 0 vdd! NOR21
+xix179 nx17707 nx17553 nx178 0 vdd! NOR21
+xix1075 nx17961 nx17520 nx1074 0 vdd! NOR21
+xix223 nx17707 nx17490 nx222 0 vdd! NOR21
+xix271 nx17500 nx17756 nx270 0 vdd! NOR21
+xix577 nx17678 nx17602 nx576 0 vdd! NOR21
+xix1067 nx17460 nx17520 nx1066 0 vdd! NOR21
+xix683 nx17612 nx17520 nx682 0 vdd! NOR21
+xix557 nx17599 nx17529 nx556 0 vdd! NOR21
+xix127 nx26 nx17632 nx126 0 vdd! NOR21
+xix649 nx17626 nx17558 nx648 0 vdd! NOR21
+xix999 nx17737 nx17520 nx998 0 vdd! NOR21
+xix63 nx17472 nx17500 nx62 0 vdd! NOR21
+xix1347 nx17675 nx17558 nx1346 0 vdd! NOR21
+xix331 nx2 nx17814 nx330 0 vdd! NOR21
+xix511 nx17688 nx17553 nx510 0 vdd! NOR21
+xix215 nx17550 nx17529 nx214 0 vdd! NOR21
+xix655 nx17612 nx17602 nx654 0 vdd! NOR21
+xix479 nx17678 nx17442 nx478 0 vdd! NOR21
+xix475 nx17673 nx17442 nx474 0 vdd! NOR21
+xix365 nx17463 nx17467 nx364 0 vdd! NOR21
+xix1039 nx0 nx17745 nx1038 0 vdd! NOR21
+xix97 nx17432 nx17465 nx96 0 vdd! NOR21
+xix101 nx17539 nx17529 nx100 0 vdd! NOR21
+xix185 nx2 nx17863 nx184 0 vdd! NOR21
+xix191 nx17463 nx17478 nx190 0 vdd! NOR21
+xix1723 nx17626 nx17602 nx1722 0 vdd! NOR21
+xix1013 nx17767 nx17602 nx1012 0 vdd! NOR21
+xix601 nx0 nx17606 nx600 0 vdd! NOR21
+xix1163 nx17756 nx17508 nx1162 0 vdd! NOR21
+xix167 nx17444 nx17767 nx166 0 vdd! NOR21
+xix717 nx17561 nx17558 nx716 0 vdd! NOR21
+xix509 nx17606 nx17558 nx508 0 vdd! NOR21
+xix59 nx17688 nx17490 nx58 0 vdd! NOR21
+xix657 nx17622 nx17602 nx656 0 vdd! NOR21
+xix17803 nx354 nx344 nx17802 0 vdd! NOR21
+xix2149 nx17675 nx17442 nx2148 0 vdd! NOR21
+xix351 nx17550 nx17490 nx350 0 vdd! NOR21
+xix523 nx17721 nx17442 nx522 0 vdd! NOR21
+xix501 nx17707 nx17529 nx500 0 vdd! NOR21
+xix333 nx17599 nx17490 nx332 0 vdd! NOR21
+xix533 nx17574 nx17553 nx532 0 vdd! NOR21
+xix673 nx17475 nx17602 nx672 0 vdd! NOR21
+xix775 nx0 nx17496 nx774 0 vdd! NOR21
+xix18194 nx1346 nx560 nx18193 0 vdd! NOR21
+xix489 nx17737 nx17442 nx488 0 vdd! NOR21
+xix1093 nx17835 nx17558 nx1092 0 vdd! NOR21
+xix45 nx17518 nx17467 nx44 0 vdd! NOR21
+xix1389 nx17629 nx17602 nx1388 0 vdd! NOR21
+xix561 nx17602 nx17685 nx560 0 vdd! NOR21
+xix18086 nx380 nx426 nx18085 0 vdd! NOR21
+xix883 nx17632 nx17553 nx882 0 vdd! NOR21
+xix17686 nx100 nx94 nx17685 0 vdd! NOR21
+xix623 nx17444 nx17647 nx622 0 vdd! NOR21
+xix51 nx17469 nx17457 nx50 0 vdd! NOR21
+xix575 nx17675 nx17520 nx574 0 vdd! NOR21
+xix1147 nx18001 nx17602 nx1146 0 vdd! NOR21
+xix527 nx17515 nx17442 nx526 0 vdd! NOR21
+xix1441 nx18787 nx18134 nx1440 0 vdd! NOR21
+xix33 nx17472 nx28 nx32 0 vdd! NOR21
+xix697 nx0 nx17961 nx696 0 vdd! NOR21
+xix285 nx18476 nx284 0 vdd! CLKIN1
+xix171 nx18571 nx170 0 vdd! CLKIN1
+xix341 nx17751 nx340 0 vdd! CLKIN1
+xix367 nx17721 nx366 0 vdd! CLKIN1
+xix605 nx18012 nx604 0 vdd! CLKIN1
+xix1189 nx17898 nx1188 0 vdd! CLKIN1
+xix1869 nx18478 nx1868 0 vdd! CLKIN1
+xix93 nx17529 nx92 0 vdd! CLKIN1
+xix18564 nx970 nx18563 0 vdd! CLKIN1
+xix409 nx17622 nx408 0 vdd! CLKIN1
+xix281 nx17837 nx280 0 vdd! CLKIN1
+xix17797 nx376 nx17796 0 vdd! CLKIN1
+xix2357 nx18626 nx2356 0 vdd! CLKIN1
+xix23 nx17478 nx22 0 vdd! CLKIN1
+xix1967 nx18430 nx1966 0 vdd! CLKIN1
+xix435 nx17763 nx434 0 vdd! CLKIN1
+xix15 nx17469 nx14 0 vdd! CLKIN1
+xix17762 nx436 nx17761 0 vdd! CLKIN1
+xix18152 nx1104 nx18151 0 vdd! CLKIN1
+xix765 nx18277 nx764 0 vdd! CLKIN1
+xix493 nx18080 nx492 0 vdd! CLKIN1
+xix18466 nx560 nx18465 0 vdd! CLKIN1
+xix18267 nx958 nx18266 0 vdd! CLKIN1
+xix147 nx17442 nx146 0 vdd! CLKIN1
+xix553 nx18027 nx552 0 vdd! CLKIN1
+xix121 nx17463 nx120 0 vdd! CLKIN1
+xix17702 nx62 nx17701 0 vdd! CLKIN1
+xix3 nx17446 nx2 0 vdd! CLKIN1
+xix17716 nx248 nx17715 0 vdd! CLKIN1
+xix1721 nx18290 nx1720 0 vdd! CLKIN1
+xix18104 nx178 nx18103 0 vdd! CLKIN1
+xix515 nx17726 nx514 0 vdd! CLKIN1
+xix17824 nx302 nx17823 0 vdd! CLKIN1
+xix2509 nx18707 nx2508 0 vdd! CLKIN1
+xix57 nx17490 nx56 0 vdd! CLKIN1
+xix17503 nx768 nx17502 0 vdd! CLKIN1
+xix2183 nx18525 nx2182 0 vdd! CLKIN1
+xix18168 nx670 nx18167 0 vdd! CLKIN1
+xix7 nx17432 nx6 0 vdd! CLKIN1
+xix317 nx17818 nx316 0 vdd! CLKIN1
+xix403 nx17779 nx402 0 vdd! CLKIN1
+xix291 nx17831 nx290 0 vdd! CLKIN1
+xix17943 nx1112 nx17942 0 vdd! CLKIN1
+xix18385 nx1560 nx18384 0 vdd! CLKIN1
+xix18140 nx1432 nx18139 0 vdd! CLKIN1
+xix889 nx18387 nx888 0 vdd! CLKIN1
+xix18315 nx1074 nx18314 0 vdd! CLKIN1
+xix1055 nx18548 nx1054 0 vdd! CLKIN1
+xix17711 nx532 nx17710 0 vdd! CLKIN1
+xix17996 nx644 nx17995 0 vdd! CLKIN1
+xix465 nx17508 nx464 0 vdd! CLKIN1
+xix643 nx18176 nx642 0 vdd! CLKIN1
+xix745 nx18001 nx744 0 vdd! CLKIN1
+xix18428 nx730 nx18427 0 vdd! CLKIN1
+xix559 nx18186 nx558 0 vdd! CLKIN1
+xix1041 nx18339 nx1040 0 vdd! CLKIN1
+xix9 nx17465 nx8 0 vdd! CLKIN1
+xix399 nx18077 nx398 0 vdd! CLKIN1
+xix18611 nx234 nx18610 0 vdd! CLKIN1
+xix18664 nx1388 nx18663 0 vdd! CLKIN1
+xix153 nx18329 nx152 0 vdd! CLKIN1
+xix133 nx17884 nx132 0 vdd! CLKIN1
+xix17920 nx1146 nx17919 0 vdd! CLKIN1
+xix1117 nx17936 nx1116 0 vdd! CLKIN1
+xix17565 nx710 nx17564 0 vdd! CLKIN1
+xix759 nx17914 nx758 0 vdd! CLKIN1
+xix1369 nx18555 nx1368 0 vdd! CLKIN1
+xix17428 nx500 nx17427 0 vdd! CLKIN1
+xix1381 nx18178 nx1380 0 vdd! CLKIN1
+xix17544 nx732 nx17543 0 vdd! CLKIN1
+xix963 nx18040 nx962 0 vdd! CLKIN1
+xix1413 nx18440 nx1412 0 vdd! CLKIN1
+xix17869 nx166 nx17868 0 vdd! CLKIN1
+xix1991 nx18414 nx1990 0 vdd! CLKIN1
+xix17858 nx222 nx17857 0 vdd! CLKIN1
+xix505 nx17730 nx504 0 vdd! CLKIN1
+xix18472 nx530 nx18471 0 vdd! CLKIN1
+xix18504 nx1830 nx18503 0 vdd! CLKIN1
+xix1177 nx17904 nx1176 0 vdd! CLKIN1
+xix17693 nx100 nx17692 0 vdd! CLKIN1
+xix18307 nx716 nx18306 0 vdd! CLKIN1
+xix1111 nx18303 nx1110 0 vdd! CLKIN1
+xix17866 nx200 nx17865 0 vdd! CLKIN1
+xix17636 nx426 nx17635 0 vdd! CLKIN1
+xix17854 nx228 nx17853 0 vdd! CLKIN1
+xix199 nx18060 nx198 0 vdd! CLKIN1
+xix1307 nx18209 nx1306 0 vdd! CLKIN1
+xix17619 nx350 nx17618 0 vdd! CLKIN1
+xix17888 nx114 nx17887 0 vdd! CLKIN1
+xix385 nx17793 nx384 0 vdd! CLKIN1
+xix851 nx18065 nx850 0 vdd! CLKIN1
+xix395 nx17787 nx394 0 vdd! CLKIN1
+xix17590 nx682 nx17589 0 vdd! CLKIN1
+xix18288 nx1722 nx18287 0 vdd! CLKIN1
+xix17554 nx32 nx17553 0 vdd! CLKIN1
+xix18357 nx1346 nx18356 0 vdd! CLKIN1
+xix18135 nx774 nx18134 0 vdd! CLKIN1
+xix17785 nx86 nx17784 0 vdd! CLKIN1
+xix18008 nx616 nx18007 0 vdd! CLKIN1
+xix17928 nx1128 nx17927 0 vdd! CLKIN1
+xix17991 nx150 nx17990 0 vdd! CLKIN1
+xix18006 nx1012 nx18005 0 vdd! CLKIN1
+xix18647 nx1092 nx18646 0 vdd! CLKIN1
+xix18197 nx1340 nx18196 0 vdd! CLKIN1
+xix18352 nx1152 nx18351 0 vdd! CLKIN1
+xix18090 nx510 nx18089 0 vdd! CLKIN1
+xix17983 nx254 nx17982 0 vdd! CLKIN1
+xix621 nx17647 nx620 0 vdd! CLKIN1
+xix1313 nx18206 nx1312 0 vdd! CLKIN1
+xix499 nx18375 nx498 0 vdd! CLKIN1
+xix793 nx18116 nx792 0 vdd! CLKIN1
+xix18348 nx1018 nx18347 0 vdd! CLKIN1
+xix337 nx17810 nx336 0 vdd! CLKIN1
+xix18031 nx522 nx18030 0 vdd! CLKIN1
+xix231 nx17851 nx230 0 vdd! CLKIN1
+xix681 nx17596 nx680 0 vdd! CLKIN1
+xix253 nx17845 nx252 0 vdd! CLKIN1
+xix447 nx17753 nx446 0 vdd! CLKIN1
+xix17894 rst nx17893 0 vdd! CLKIN1
+xix18393 nx1542 nx18392 0 vdd! CLKIN1
+xix18690 nx354 nx18689 0 vdd! CLKIN1
+xix1287 nx18489 nx1286 0 vdd! CLKIN1
+xix18026 nx986 nx18025 0 vdd! CLKIN1
+xix629 nx17643 nx628 0 vdd! CLKIN1
+xix929 nx18054 nx928 0 vdd! CLKIN1
+xix18068 nx912 nx18067 0 vdd! CLKIN1
+xix18189 nx582 nx18188 0 vdd! CLKIN1
+xix795 nx17907 nx794 0 vdd! CLKIN1
+xix2131 nx18550 nx2130 0 vdd! CLKIN1
+xix2155 nx18650 nx2154 0 vdd! CLKIN1
+xix17 nx17457 nx16 0 vdd! CLKIN1
+xix65 nx17879 nx64 0 vdd! CLKIN1
+xix941 nx18050 nx940 0 vdd! CLKIN1
+xix977 nx18034 nx976 0 vdd! CLKIN1
+xix551 nx18359 nx550 0 vdd! CLKIN1
+xix1457 nx18122 nx1456 0 vdd! CLKIN1
+xix18421 nx1462 nx18420 0 vdd! CLKIN1
+xix17641 nx634 nx17640 0 vdd! CLKIN1
+xix17661 nx606 nx17660 0 vdd! CLKIN1
+xix379 nx18131 nx378 0 vdd! CLKIN1
+xix1 nx17444 nx0 0 vdd! CLKIN1
+xix13 nx17430 nx12 0 vdd! CLKIN1
+xix18234 nx1256 nx18233 0 vdd! CLKIN1
+xix18320 nx184 nx18319 0 vdd! CLKIN1
+xix39 nx17518 nx38 0 vdd! CLKIN1
+xix17965 nx380 nx17964 0 vdd! CLKIN1
+xix17977 nx882 nx17976 0 vdd! CLKIN1
+xix1077 nx17972 nx1076 0 vdd! CLKIN1
+xix1533 nx18396 nx1532 0 vdd! CLKIN1
+xix1103 nx18365 nx1102 0 vdd! CLKIN1
+xix18622 nx622 nx18621 0 vdd! CLKIN1
+xix807 nx17421 nx806 0 vdd! CLKIN1
+xix1761 nx18260 nx1760 0 vdd! CLKIN1
+xix615 nx18345 nx614 0 vdd! CLKIN1
+xix18692 nx2068 nx18691 0 vdd! CLKIN1
+xix949 nx18047 nx948 0 vdd! CLKIN1
+xix327 nx17814 nx326 0 vdd! CLKIN1
+xix453 nx17747 nx452 0 vdd! CLKIN1
+xix18163 nx666 nx18162 0 vdd! CLKIN1
+xix79 nx17455 nx78 0 vdd! CLKIN1
+xix257 nx18640 nx256 0 vdd! CLKIN1
+xix18380 nx1156 nx18379 0 vdd! CLKIN1
+xix1145 nx17921 nx1144 0 vdd! CLKIN1
+xix1841 nx18499 nx1840 0 vdd! CLKIN1
+xix487 nx17737 nx486 0 vdd! CLKIN1
+xix18099 nx840 nx18098 0 vdd! CLKIN1
+xix17771 nx420 nx17770 0 vdd! CLKIN1
+xix1127 nx18148 nx1126 0 vdd! CLKIN1
+xix17844 nx260 nx17843 0 vdd! CLKIN1
+xix18121 nx1164 nx18120 0 vdd! CLKIN1
+xix1439 nx18293 nx1438 0 vdd! CLKIN1
+xix2073 nx18586 nx2072 0 vdd! CLKIN1
+xix18229 nx1270 nx18228 0 vdd! CLKIN1
+xix17882 nx58 nx17881 0 vdd! CLKIN1
+xix701 nx17958 nx700 0 vdd! CLKIN1
+xix659 nx18331 nx658 0 vdd! CLKIN1
+xix363 nx18686 nx362 0 vdd! CLKIN1
+xix17931 nx1124 nx17930 0 vdd! CLKIN1
+xix18145 nx94 nx18144 0 vdd! CLKIN1
+xix1253 nx18235 nx1252 0 vdd! CLKIN1
+xix473 nx17673 nx472 0 vdd! CLKIN1
+xix417 nx17612 nx416 0 vdd! CLKIN1
+xix729 nx17547 nx728 0 vdd! CLKIN1
+xix1587 nx18372 nx1586 0 vdd! CLKIN1
+xix263 nx17835 nx262 0 vdd! CLKIN1
+xix18453 nx1038 nx18452 0 vdd! CLKIN1
+xix1303 nx18212 nx1302 0 vdd! CLKIN1
+xix29 nx17500 nx28 0 vdd! CLKIN1
+xix27 nx17472 nx26 0 vdd! CLKIN1
+xix18680 nx440 nx18679 0 vdd! CLKIN1
+xix43 nx17467 nx42 0 vdd! CLKIN1
+xix18149 nx0 nx556 nx18148 0 vdd! NAND21
+xix18055 nx126 nx756 nx18054 0 vdd! NAND21
+xix18338 nx244 nx4 nx18337 0 vdd! NAND21
+xix17551 nx96 nx50 nx17550 0 vdd! NAND21
+xix17676 nx266 nx92 nx17675 0 vdd! NAND21
+xix18015 nx18787 nx592 nx18014 0 vdd! NAND21
+xix17788 nx60 nx92 nx17787 0 vdd! NAND21
+xix951 nx18047 nx18050 nx950 0 vdd! NAND21
+xix2289 nx17859 nx18663 nx2288 0 vdd! NAND21
+xix18002 nx44 nx92 nx18001 0 vdd! NAND21
+xix17468 nx17469 nx16 nx17467 0 vdd! NAND21
+xix17875 nx26 nx80 nx17874 0 vdd! NAND21
+xix18179 nx332 nx218 nx18178 0 vdd! NAND21
+xix17648 nx28 nx618 nx17647 0 vdd! NAND21
+xix1131 nx17927 nx17930 nx1130 0 vdd! NAND21
+xix17519 nx6 nx17465 nx17518 0 vdd! NAND21
+xix17852 nx24 nx62 nx17851 0 vdd! NAND21
+xix18033 nx2 nx622 nx18032 0 vdd! NAND21
+xix925 nx18057 nx18062 nx924 0 vdd! NAND21
+xix17782 nx254 nx74 nx17781 0 vdd! NAND21
+xix685 nx17589 nx17596 nx684 0 vdd! NAND21
+xix1403 nx18162 nx18164 nx1402 0 vdd! NAND21
+xix517 nx17726 nx17730 nx516 0 vdd! NAND21
+xix17497 nx60 nx56 nx17496 0 vdd! NAND21
+xix17885 nx126 nx130 nx17884 0 vdd! NAND21
+xix1015 nx18005 nx18007 nx1014 0 vdd! NAND21
+xix18063 nx380 nx218 nx18062 0 vdd! NAND21
+xix17746 nx44 nx62 nx17745 0 vdd! NAND21
+xix18066 nx0 nx432 nx18065 0 vdd! NAND21
+xix17842 nx17444 nx270 nx17841 0 vdd! NAND21
+xix18013 nx18787 nx600 nx18012 0 vdd! NAND21
+xix18117 nx556 nx146 nx18116 0 vdd! NAND21
+xix611 nx17657 nx17660 nx610 0 vdd! NAND21
+xix17860 nx214 nx218 nx17859 0 vdd! NAND21
+xix18242 nx592 nx2 nx18241 0 vdd! NAND21
+xix17864 nx0 nx178 nx17863 0 vdd! NAND21
+xix1179 nx17904 nx17907 nx1178 0 vdd! NAND21
+xix17819 nx24 nx56 nx17818 0 vdd! NAND21
+xix2341 nx17547 nx18420 nx2340 0 vdd! NAND21
+xix1893 nx18186 nx18188 nx1892 0 vdd! NAND21
+xix637 nx17640 nx17643 nx636 0 vdd! NAND21
+xix17516 nx108 nx56 nx17515 0 vdd! NAND21
+xix17838 nx244 nx74 nx17837 0 vdd! NAND21
+xix17905 nx18787 nx1172 nx17904 0 vdd! NAND21
+xix18360 nx500 nx218 nx18359 0 vdd! NAND21
+xix17973 nx364 nx92 nx17972 0 vdd! NAND21
+xix2249 nx18209 nx18679 nx2248 0 vdd! NAND21
+xix18278 nx618 nx464 nx18277 0 vdd! NAND21
+xix2105 nx18563 nx18565 nx2104 0 vdd! NAND21
+xix17705 nx178 nx218 nx17704 0 vdd! NAND21
+xix18590 nx486 nx218 nx18589 0 vdd! NAND21
+xix783 nx17483 nx17502 nx782 0 vdd! NAND21
+xix18304 nx0 nx214 nx18303 0 vdd! NAND21
+xix17764 nx432 nx146 nx17763 0 vdd! NAND21
+xix17768 nx162 nx32 nx17767 0 vdd! NAND21
+xix17908 nx500 nx146 nx17907 0 vdd! NAND21
+xix17613 nx266 nx56 nx17612 0 vdd! NAND21
+xix1871 nx18476 nx18478 nx1870 0 vdd! NAND21
+xix17708 nx12 nx50 nx17707 0 vdd! NAND21
+xix18165 nx510 nx74 nx18164 0 vdd! NAND21
+xix1875 nx18050 nx18471 nx1874 0 vdd! NAND21
+xix18376 nx94 nx4 nx18375 0 vdd! NAND21
+xix1149 nx17919 nx17921 nx1148 0 vdd! NAND21
+xix1061 nx17859 nx17781 nx1060 0 vdd! NAND21
+xix17633 nx120 nx50 nx17632 0 vdd! NAND21
+xix1969 nx18427 nx18430 nx1968 0 vdd! NAND21
+xix369 nx366 nx74 nx18280 0 vdd! NAND21
+xix17674 nx162 nx92 nx17673 0 vdd! NAND21
+xix18549 nx254 nx218 nx18548 0 vdd! NAND21
+xix17597 nx678 nx74 nx17596 0 vdd! NAND21
+xix423 nx17770 nx17775 nx422 0 vdd! NAND21
+xix17491 nx17472 nx28 nx17490 0 vdd! NAND21
+xix1751 nx17907 nx18266 nx1750 0 vdd! NAND21
+xix17994 nx482 nx130 nx17993 0 vdd! NAND21
+xix1843 nx18499 nx18503 nx1842 0 vdd! NAND21
+xix17537 nx618 nx198 nx17536 0 vdd! NAND21
+xix1273 nx17831 nx18228 nx1272 0 vdd! NAND21
+xix18572 nx18787 nx166 nx18571 0 vdd! NAND21
+xix18346 nx500 nx74 nx18345 0 vdd! NAND21
+xix17627 nx60 nx32 nx17626 0 vdd! NAND21
+xix17829 nx298 nx218 nx17828 0 vdd! NAND21
+xix17679 nx24 nx92 nx17678 0 vdd! NAND21
+xix18058 nx2 nx200 nx18057 0 vdd! NAND21
+xix17722 nx364 nx62 nx17721 0 vdd! NAND21
+xix17533 nx17472 nx190 nx17532 0 vdd! NAND21
+xix17780 nx44 nx56 nx17779 0 vdd! NAND21
+xix2123 nx18555 nx17643 nx2122 0 vdd! NAND21
+xix18330 nx2 nx150 nx18329 0 vdd! NAND21
+xix17540 nx96 nx42 nx17539 0 vdd! NAND21
+xix17757 nx266 nx26 nx17756 0 vdd! NAND21
+xix17431 nx17432 nx8 nx17430 0 vdd! NAND21
+xix18408 nx244 nx17444 nx18407 0 vdd! NAND21
+xix17806 nx190 nx32 nx17805 0 vdd! NAND21
+xix1981 nx18122 nx18420 nx1980 0 vdd! NAND21
+xix17940 nx86 nx4 nx17939 0 vdd! NAND21
+xix17651 nx80 nx56 nx17650 0 vdd! NAND21
+xix607 nx18012 nx18014 nx606 0 vdd! NAND21
+xix17915 nx482 nx756 nx17914 0 vdd! NAND21
+xix17630 nx17500 nx126 nx17629 0 vdd! NAND21
+xix17937 nx882 nx4 nx17936 0 vdd! NAND21
+xix18294 nx532 nx218 nx18293 0 vdd! NAND21
+xix17959 nx18787 nx696 nx17958 0 vdd! NAND21
+xix17922 nx270 nx74 nx17921 0 vdd! NAND21
+xix17880 nx60 nx62 nx17879 0 vdd! NAND21
+xix17754 nx270 nx4 nx17753 0 vdd! NAND21
+xix17821 nx108 nx92 nx17820 0 vdd! NAND21
+xix17713 nx108 nx32 nx17712 0 vdd! NAND21
+xix17699 nx298 nx4 nx17698 0 vdd! NAND21
+xix17562 nx364 nx56 nx17561 0 vdd! NAND21
+xix18332 nx350 nx218 nx18331 0 vdd! NAND21
+xix2411 nx18691 nx18206 nx2410 0 vdd! NAND21
+xix18187 nx556 nx218 nx18186 0 vdd! NAND21
+xix17530 nx17472 nx17500 nx17529 0 vdd! NAND21
+xix17752 nx108 nx62 nx17751 0 vdd! NAND21
+xix18340 nx228 nx218 nx18339 0 vdd! NAND21
+xix17738 nx17500 nx482 nx17737 0 vdd! NAND21
+xix17572 nx532 nx146 nx17571 0 vdd! NAND21
+xix18061 nx17500 nx0 nx18060 0 vdd! NAND21
+xix18641 nx254 nx4 nx18640 0 vdd! NAND21
+xix17575 nx96 nx22 nx17574 0 vdd! NAND21
+xix2005 nx17972 nx17710 nx2004 0 vdd! NAND21
+xix1889 nx18359 nx18465 nx1888 0 vdd! NAND21
+xix18132 nx228 nx74 nx18131 0 vdd! NAND21
+xix17658 nx350 nx146 nx17657 0 vdd! NAND21
+xix17809 nx298 nx74 nx17808 0 vdd! NAND21
+xix18123 nx882 nx146 nx18122 0 vdd! NAND21
+xix2445 nx18372 nx18471 nx2444 0 vdd! NAND21
+xix18441 nx332 nx4 nx18440 0 vdd! NAND21
+xix17815 nx0 nx222 nx17814 0 vdd! NAND21
+xix713 nx17564 nx17571 nx712 0 vdd! NAND21
+xix1855 nx18489 nx17775 nx1854 0 vdd! NAND21
+xix18649 nx472 nx74 nx18648 0 vdd! NAND21
+xix2321 nx18640 nx17939 nx2320 0 vdd! NAND21
+xix1447 nx18131 nx17808 nx1446 0 vdd! NAND21
+xix17607 nx162 nx56 nx17606 0 vdd! NAND21
+xix17456 nx14 nx17457 nx17455 0 vdd! NAND21
+xix17836 nx162 nx62 nx17835 0 vdd! NAND21
+xix18028 nx100 nx4 nx18027 0 vdd! NAND21
+xix18402 nx18787 nx1162 nx18401 0 vdd! NAND21
+xix17962 nx80 nx92 nx17961 0 vdd! NAND21
+xix1927 nx18178 nx18319 nx1926 0 vdd! NAND21
+xix17644 nx100 nx146 nx17643 0 vdd! NAND21
+xix1249 nx17961 nx17673 nx1248 0 vdd! NAND21
+xix17524 nx44 nx32 nx17523 0 vdd! NAND21
+xix17748 nx380 nx4 nx17747 0 vdd! NAND21
+xix18323 nx882 nx74 nx18322 0 vdd! NAND21
+xix17464 nx17432 nx17465 nx17463 0 vdd! NAND21
+xix1947 nx18306 nx18440 nx1946 0 vdd! NAND21
+xix17689 nx38 nx50 nx17688 0 vdd! NAND21
+xix18035 nx678 nx4 nx18034 0 vdd! NAND21
+xix1955 nx18057 nx18139 nx1954 0 vdd! NAND21
+xix17509 nx17500 nx17444 nx17508 0 vdd! NAND21
+xix17461 nx364 nx32 nx17460 0 vdd! NAND21
+xix17623 nx190 nx62 nx17622 0 vdd! NAND21
+xix737 nx17536 nx17543 nx736 0 vdd! NAND21
+xix17548 nx17444 nx436 nx17547 0 vdd! NAND21
+xix1921 nx18452 nx18331 nx1920 0 vdd! NAND21
+xix547 nx17698 nx17704 nx546 0 vdd! NAND21
+xix18496 nx18787 nx840 nx18495 0 vdd! NAND21
+xix18177 nx426 nx218 nx18176 0 vdd! NAND21
+xix18366 nx436 nx4 nx18365 0 vdd! NAND21
+xix17479 nx17469 nx17457 nx17478 0 vdd! NAND21
+xix17600 nx96 nx78 nx17599 0 vdd! NAND21
+xix1469 nx18040 nx18116 nx1468 0 vdd! NAND21
+xix17476 nx24 nx32 nx17475 0 vdd! NAND21
+xix17473 m_4 k_4 nx17472 0 vdd! XNR21
+xix17433 m_0 k_0 nx17432 0 vdd! XNR21
+xix17458 m_3 k_3 nx17457 0 vdd! XNR21
+xix17470 m_2 k_2 nx17469 0 vdd! XNR21
+xix17466 m_1 k_1 nx17465 0 vdd! XNR21
+xix17501 m_5 k_5 nx17500 0 vdd! XNR21
+.END

@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: oai22_core
+** View name: schematic
+.subckt oai22_core a b c d out inh_gnd inh_vdd

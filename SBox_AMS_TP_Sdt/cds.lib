@@ -1,0 +1,57 @@
+-- 
+-- File Name:    :    cds.lib
+-- File path:    :    /softslin/AMS_3.70_CDS/artist/HK_C35
+-- Author        :    Douglas Pattullo : austriamicrosystems Design Support
+-- Date          :    11-Dec-1996
+-- Version:      :    1.0 (for analog artist) for HIT Kit 3.xx
+-- Include Files :    None
+
+-- Owner: Austria Mikro Systeme
+-- HIT-Kit: Digital
+
+-- This is the template file for ams_cds
+
+--  HISTORY
+--------------------------------------------------------------------------------
+-- 11.12.96  dpa  Created
+-- 21.07.97  dpa  Path for std cds libs now references $AMS_DIR
+-- 01.06.99  tmo  Changed Version to develop
+--------------------------------------------------------------------------------
+
+-- AMS_LIB = "/softslin/AMS_3.70_CDS/artist/HK_C35"
+-- AMS_VERSION = "3.70"
+-- AMS_TECH = "c35b4"
+-- AMS_kit = "3.70"
+-- AMS_process = "c35b4"
+
+
+-- Standard Cadence libraries
+INCLUDE $AMS_DIR/artist/HK_ALL/env/cds.lib
+
+-- austriamicrosystems HIT-Kit libraries
+-- Base cds.lib file for C35 
+-- Created by tmo 29/11/2001
+-- DEFINE TECH_C35B3   $AMS_DIR/artist/HK_C35/TECH_C35B3
+DEFINE PRIMLIB      $AMS_DIR/artist/HK_C35/PRIMLIB
+DEFINE CORELIB      $AMS_DIR/artist/HK_C35/CORELIB
+DEFINE IOLIB_4M     $AMS_DIR/artist/HK_C35/IOLIB_4M
+DEFINE IOLIBV5_4M   $AMS_DIR/artist/HK_C35/IOLIBV5_4M
+DEFINE IOLIB_ANA_4M $AMS_DIR/artist/HK_C35/IOLIB_ANA_4M
+DEFINE IOLIBC_3B_4M $AMS_DIR/artist/HK_C35/IOLIBC_3B_4M
+DEFINE IOLIBC_ANA_3B_4M $AMS_DIR/artist/HK_C35/IOLIBC_ANA_3B_4M
+DEFINE IOLIB_ANA_3B_4M  $AMS_DIR/artist/HK_C35/IOLIB_ANA_3B_4M
+DEFINE GATES $AMS_DIR/artist/HK_C35/GATES
+DEFINE GATES_3B $AMS_DIR/artist/HK_C35/GATES_3B
+DEFINE sbaLib    $CDSDIR/tools/dfII/etc/cdslib/artist/sbaLib
+DEFINE A_CELLS    $AMS_DIR/artist/HK_C35/A_CELLS
+DEFINE PACKAGES   $AMS_DIR/artist/HK_ALL/PACKAGES
+DEFINE PRIMLIBRF    $AMS_DIR/artist/HK_C35/PRIMLIBRF
+DEFINE CORELIB_3B    $AMS_DIR/artist/HK_C35/CORELIB_3B
+DEFINE BORDERS   $AMS_DIR/artist/HK_ALL/BORDERS
+DEFINE TECH_C35B4   $AMS_DIR/artist/HK_C35/TECH_C35B4
+DEFINE IOLIB_3B_4M   $AMS_DIR/artist/HK_C35/IOLIB_3B_4M
+DEFINE SPIRALS_4M    $AMS_DIR/artist/HK_C35/SPIRALS_4M
+
+DEFINE SBox_AMS_CDS /tp/xph3sle/xph3sle600/SBox_AMS_TP_Sdt/SBox_AMS_CDS
+DEFINE SFCLIB_C35B4C3 $AMS_DIR/artist/HK_C35/SFCLIB_C35B4C3
+DEFINE SBox_AMS_CDS /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/lib_SBAMS/SBox_AMS_CDS

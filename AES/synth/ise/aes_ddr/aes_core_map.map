@@ -1,0 +1,816 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Map Application Log File for Design 'aes_core'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7z010-clg400-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o aes_core_map.ncd aes_core.ngd aes_core.pcf 
+Target Device  : xc7z010
+Target Package : clg400
+Target Speed   : -1
+Mapper Version : zynq -- $Revision: 1.55 $
+Mapped Date    : Mon Nov 20 10:10:00 2017
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal ck connected to top level port ck has been removed.
+WARNING:MapLib:701 - Signal data_out_ok connected to top level port data_out_ok
+   has been removed.
+WARNING:MapLib:701 - Signal data_outH<0> connected to top level port
+   data_outH<0> has been removed.
+WARNING:MapLib:701 - Signal data_outH<1> connected to top level port
+   data_outH<1> has been removed.
+WARNING:MapLib:701 - Signal data_outH<2> connected to top level port
+   data_outH<2> has been removed.
+WARNING:MapLib:701 - Signal data_outH<3> connected to top level port
+   data_outH<3> has been removed.
+WARNING:MapLib:701 - Signal data_outH<4> connected to top level port
+   data_outH<4> has been removed.
+WARNING:MapLib:701 - Signal data_outH<5> connected to top level port
+   data_outH<5> has been removed.
+WARNING:MapLib:701 - Signal data_outH<6> connected to top level port
+   data_outH<6> has been removed.
+WARNING:MapLib:701 - Signal data_outH<7> connected to top level port
+   data_outH<7> has been removed.
+WARNING:MapLib:701 - Signal data_outH<8> connected to top level port
+   data_outH<8> has been removed.
+WARNING:MapLib:701 - Signal data_outH<9> connected to top level port
+   data_outH<9> has been removed.
+WARNING:MapLib:701 - Signal data_outH<10> connected to top level port
+   data_outH<10> has been removed.
+WARNING:MapLib:701 - Signal data_outH<11> connected to top level port
+   data_outH<11> has been removed.
+WARNING:MapLib:701 - Signal data_outH<12> connected to top level port
+   data_outH<12> has been removed.
+WARNING:MapLib:701 - Signal data_outH<13> connected to top level port
+   data_outH<13> has been removed.
+WARNING:MapLib:701 - Signal data_outH<14> connected to top level port
+   data_outH<14> has been removed.
+WARNING:MapLib:701 - Signal data_outH<15> connected to top level port
+   data_outH<15> has been removed.
+WARNING:MapLib:701 - Signal data_outH<16> connected to top level port
+   data_outH<16> has been removed.
+WARNING:MapLib:701 - Signal data_outH<17> connected to top level port
+   data_outH<17> has been removed.
+WARNING:MapLib:701 - Signal data_outH<18> connected to top level port
+   data_outH<18> has been removed.
+WARNING:MapLib:701 - Signal data_outH<19> connected to top level port
+   data_outH<19> has been removed.
+WARNING:MapLib:701 - Signal data_outH<20> connected to top level port
+   data_outH<20> has been removed.
+WARNING:MapLib:701 - Signal data_outH<21> connected to top level port
+   data_outH<21> has been removed.
+WARNING:MapLib:701 - Signal data_outH<22> connected to top level port
+   data_outH<22> has been removed.
+WARNING:MapLib:701 - Signal data_outH<23> connected to top level port
+   data_outH<23> has been removed.
+WARNING:MapLib:701 - Signal data_outH<24> connected to top level port
+   data_outH<24> has been removed.
+WARNING:MapLib:701 - Signal data_outH<25> connected to top level port
+   data_outH<25> has been removed.
+WARNING:MapLib:701 - Signal data_outH<26> connected to top level port
+   data_outH<26> has been removed.
+WARNING:MapLib:701 - Signal data_outH<27> connected to top level port
+   data_outH<27> has been removed.
+WARNING:MapLib:701 - Signal data_outH<28> connected to top level port
+   data_outH<28> has been removed.
+WARNING:MapLib:701 - Signal data_outH<29> connected to top level port
+   data_outH<29> has been removed.
+WARNING:MapLib:701 - Signal data_outH<30> connected to top level port
+   data_outH<30> has been removed.
+WARNING:MapLib:701 - Signal data_outH<31> connected to top level port
+   data_outH<31> has been removed.
+WARNING:MapLib:701 - Signal data_outH<32> connected to top level port
+   data_outH<32> has been removed.
+WARNING:MapLib:701 - Signal data_outH<33> connected to top level port
+   data_outH<33> has been removed.
+WARNING:MapLib:701 - Signal data_outH<34> connected to top level port
+   data_outH<34> has been removed.
+WARNING:MapLib:701 - Signal data_outH<35> connected to top level port
+   data_outH<35> has been removed.
+WARNING:MapLib:701 - Signal data_outH<36> connected to top level port
+   data_outH<36> has been removed.
+WARNING:MapLib:701 - Signal data_outH<37> connected to top level port
+   data_outH<37> has been removed.
+WARNING:MapLib:701 - Signal data_outH<38> connected to top level port
+   data_outH<38> has been removed.
+WARNING:MapLib:701 - Signal data_outH<39> connected to top level port
+   data_outH<39> has been removed.
+WARNING:MapLib:701 - Signal data_outH<40> connected to top level port
+   data_outH<40> has been removed.
+WARNING:MapLib:701 - Signal data_outH<41> connected to top level port
+   data_outH<41> has been removed.
+WARNING:MapLib:701 - Signal data_outH<42> connected to top level port
+   data_outH<42> has been removed.
+WARNING:MapLib:701 - Signal data_outH<43> connected to top level port
+   data_outH<43> has been removed.
+WARNING:MapLib:701 - Signal data_outH<44> connected to top level port
+   data_outH<44> has been removed.
+WARNING:MapLib:701 - Signal data_outH<45> connected to top level port
+   data_outH<45> has been removed.
+WARNING:MapLib:701 - Signal data_outH<46> connected to top level port
+   data_outH<46> has been removed.
+WARNING:MapLib:701 - Signal data_outH<47> connected to top level port
+   data_outH<47> has been removed.
+WARNING:MapLib:701 - Signal data_outH<48> connected to top level port
+   data_outH<48> has been removed.
+WARNING:MapLib:701 - Signal data_outH<49> connected to top level port
+   data_outH<49> has been removed.
+WARNING:MapLib:701 - Signal data_outH<50> connected to top level port
+   data_outH<50> has been removed.
+WARNING:MapLib:701 - Signal data_outH<51> connected to top level port
+   data_outH<51> has been removed.
+WARNING:MapLib:701 - Signal data_outH<52> connected to top level port
+   data_outH<52> has been removed.
+WARNING:MapLib:701 - Signal data_outH<53> connected to top level port
+   data_outH<53> has been removed.
+WARNING:MapLib:701 - Signal data_outH<54> connected to top level port
+   data_outH<54> has been removed.
+WARNING:MapLib:701 - Signal data_outH<55> connected to top level port
+   data_outH<55> has been removed.
+WARNING:MapLib:701 - Signal data_outH<56> connected to top level port
+   data_outH<56> has been removed.
+WARNING:MapLib:701 - Signal data_outH<57> connected to top level port
+   data_outH<57> has been removed.
+WARNING:MapLib:701 - Signal data_outH<58> connected to top level port
+   data_outH<58> has been removed.
+WARNING:MapLib:701 - Signal data_outH<59> connected to top level port
+   data_outH<59> has been removed.
+WARNING:MapLib:701 - Signal data_outH<60> connected to top level port
+   data_outH<60> has been removed.
+WARNING:MapLib:701 - Signal data_outH<61> connected to top level port
+   data_outH<61> has been removed.
+WARNING:MapLib:701 - Signal data_outH<62> connected to top level port
+   data_outH<62> has been removed.
+WARNING:MapLib:701 - Signal data_outH<63> connected to top level port
+   data_outH<63> has been removed.
+WARNING:MapLib:701 - Signal data_outH<64> connected to top level port
+   data_outH<64> has been removed.
+WARNING:MapLib:701 - Signal data_outH<65> connected to top level port
+   data_outH<65> has been removed.
+WARNING:MapLib:701 - Signal data_outH<66> connected to top level port
+   data_outH<66> has been removed.
+WARNING:MapLib:701 - Signal data_outH<67> connected to top level port
+   data_outH<67> has been removed.
+WARNING:MapLib:701 - Signal data_outH<68> connected to top level port
+   data_outH<68> has been removed.
+WARNING:MapLib:701 - Signal data_outH<69> connected to top level port
+   data_outH<69> has been removed.
+WARNING:MapLib:701 - Signal data_outH<70> connected to top level port
+   data_outH<70> has been removed.
+WARNING:MapLib:701 - Signal data_outH<71> connected to top level port
+   data_outH<71> has been removed.
+WARNING:MapLib:701 - Signal data_outH<72> connected to top level port
+   data_outH<72> has been removed.
+WARNING:MapLib:701 - Signal data_outH<73> connected to top level port
+   data_outH<73> has been removed.
+WARNING:MapLib:701 - Signal data_outH<74> connected to top level port
+   data_outH<74> has been removed.
+WARNING:MapLib:701 - Signal data_outH<75> connected to top level port
+   data_outH<75> has been removed.
+WARNING:MapLib:701 - Signal data_outH<76> connected to top level port
+   data_outH<76> has been removed.
+WARNING:MapLib:701 - Signal data_outH<77> connected to top level port
+   data_outH<77> has been removed.
+WARNING:MapLib:701 - Signal data_outH<78> connected to top level port
+   data_outH<78> has been removed.
+WARNING:MapLib:701 - Signal data_outH<79> connected to top level port
+   data_outH<79> has been removed.
+WARNING:MapLib:701 - Signal data_outH<80> connected to top level port
+   data_outH<80> has been removed.
+WARNING:MapLib:701 - Signal data_outH<81> connected to top level port
+   data_outH<81> has been removed.
+WARNING:MapLib:701 - Signal data_outH<82> connected to top level port
+   data_outH<82> has been removed.
+WARNING:MapLib:701 - Signal data_outH<83> connected to top level port
+   data_outH<83> has been removed.
+WARNING:MapLib:701 - Signal data_outH<84> connected to top level port
+   data_outH<84> has been removed.
+WARNING:MapLib:701 - Signal data_outH<85> connected to top level port
+   data_outH<85> has been removed.
+WARNING:MapLib:701 - Signal data_outH<86> connected to top level port
+   data_outH<86> has been removed.
+WARNING:MapLib:701 - Signal data_outH<87> connected to top level port
+   data_outH<87> has been removed.
+WARNING:MapLib:701 - Signal data_outH<88> connected to top level port
+   data_outH<88> has been removed.
+WARNING:MapLib:701 - Signal data_outH<89> connected to top level port
+   data_outH<89> has been removed.
+WARNING:MapLib:701 - Signal data_outH<90> connected to top level port
+   data_outH<90> has been removed.
+WARNING:MapLib:701 - Signal data_outH<91> connected to top level port
+   data_outH<91> has been removed.
+WARNING:MapLib:701 - Signal data_outH<92> connected to top level port
+   data_outH<92> has been removed.
+WARNING:MapLib:701 - Signal data_outH<93> connected to top level port
+   data_outH<93> has been removed.
+WARNING:MapLib:701 - Signal data_outH<94> connected to top level port
+   data_outH<94> has been removed.
+WARNING:MapLib:701 - Signal data_outH<95> connected to top level port
+   data_outH<95> has been removed.
+WARNING:MapLib:701 - Signal data_outH<96> connected to top level port
+   data_outH<96> has been removed.
+WARNING:MapLib:701 - Signal data_outH<97> connected to top level port
+   data_outH<97> has been removed.
+WARNING:MapLib:701 - Signal data_outH<98> connected to top level port
+   data_outH<98> has been removed.
+WARNING:MapLib:701 - Signal data_outH<99> connected to top level port
+   data_outH<99> has been removed.
+WARNING:MapLib:701 - Signal data_outH<100> connected to top level port
+   data_outH<100> has been removed.
+WARNING:MapLib:701 - Signal data_outH<101> connected to top level port
+   data_outH<101> has been removed.
+WARNING:MapLib:701 - Signal data_outH<102> connected to top level port
+   data_outH<102> has been removed.
+WARNING:MapLib:701 - Signal data_outH<103> connected to top level port
+   data_outH<103> has been removed.
+WARNING:MapLib:701 - Signal data_outH<104> connected to top level port
+   data_outH<104> has been removed.
+WARNING:MapLib:701 - Signal data_outH<105> connected to top level port
+   data_outH<105> has been removed.
+WARNING:MapLib:701 - Signal data_outH<106> connected to top level port
+   data_outH<106> has been removed.
+WARNING:MapLib:701 - Signal data_outH<107> connected to top level port
+   data_outH<107> has been removed.
+WARNING:MapLib:701 - Signal data_outH<108> connected to top level port
+   data_outH<108> has been removed.
+WARNING:MapLib:701 - Signal data_outH<109> connected to top level port
+   data_outH<109> has been removed.
+WARNING:MapLib:701 - Signal data_outH<110> connected to top level port
+   data_outH<110> has been removed.
+WARNING:MapLib:701 - Signal data_outH<111> connected to top level port
+   data_outH<111> has been removed.
+WARNING:MapLib:701 - Signal data_outH<112> connected to top level port
+   data_outH<112> has been removed.
+WARNING:MapLib:701 - Signal data_outH<113> connected to top level port
+   data_outH<113> has been removed.
+WARNING:MapLib:701 - Signal data_outH<114> connected to top level port
+   data_outH<114> has been removed.
+WARNING:MapLib:701 - Signal data_outH<115> connected to top level port
+   data_outH<115> has been removed.
+WARNING:MapLib:701 - Signal data_outH<116> connected to top level port
+   data_outH<116> has been removed.
+WARNING:MapLib:701 - Signal data_outH<117> connected to top level port
+   data_outH<117> has been removed.
+WARNING:MapLib:701 - Signal data_outH<118> connected to top level port
+   data_outH<118> has been removed.
+WARNING:MapLib:701 - Signal data_outH<119> connected to top level port
+   data_outH<119> has been removed.
+WARNING:MapLib:701 - Signal data_outH<120> connected to top level port
+   data_outH<120> has been removed.
+WARNING:MapLib:701 - Signal data_outH<121> connected to top level port
+   data_outH<121> has been removed.
+WARNING:MapLib:701 - Signal data_outH<122> connected to top level port
+   data_outH<122> has been removed.
+WARNING:MapLib:701 - Signal data_outH<123> connected to top level port
+   data_outH<123> has been removed.
+WARNING:MapLib:701 - Signal data_outH<124> connected to top level port
+   data_outH<124> has been removed.
+WARNING:MapLib:701 - Signal data_outH<125> connected to top level port
+   data_outH<125> has been removed.
+WARNING:MapLib:701 - Signal data_outH<126> connected to top level port
+   data_outH<126> has been removed.
+WARNING:MapLib:701 - Signal data_outH<127> connected to top level port
+   data_outH<127> has been removed.
+WARNING:MapLib:701 - Signal go_cipher connected to top level port go_cipher has
+   been removed.
+WARNING:MapLib:701 - Signal rst connected to top level port rst has been
+   removed.
+WARNING:MapLib:701 - Signal input_key<96> connected to top level port
+   input_key<96> has been removed.
+WARNING:MapLib:701 - Signal ready_out connected to top level port ready_out has
+   been removed.
+WARNING:MapLib:701 - Signal input_key<97> connected to top level port
+   input_key<97> has been removed.
+WARNING:MapLib:701 - Signal input_key<108> connected to top level port
+   input_key<108> has been removed.
+WARNING:MapLib:701 - Signal input_key<109> connected to top level port
+   input_key<109> has been removed.
+WARNING:MapLib:701 - Signal input_key<110> connected to top level port
+   input_key<110> has been removed.
+WARNING:MapLib:701 - Signal input_key<111> connected to top level port
+   input_key<111> has been removed.
+WARNING:MapLib:701 - Signal input_key<112> connected to top level port
+   input_key<112> has been removed.
+WARNING:MapLib:701 - Signal input_key<113> connected to top level port
+   input_key<113> has been removed.
+WARNING:MapLib:701 - Signal input_key<116> connected to top level port
+   input_key<116> has been removed.
+WARNING:MapLib:701 - Signal input_key<117> connected to top level port
+   input_key<117> has been removed.
+WARNING:MapLib:701 - Signal input_key<118> connected to top level port
+   input_key<118> has been removed.
+WARNING:MapLib:701 - Signal input_key<119> connected to top level port
+   input_key<119> has been removed.
+WARNING:MapLib:701 - Signal input_key<100> connected to top level port
+   input_key<100> has been removed.
+WARNING:MapLib:701 - Signal input_key<101> connected to top level port
+   input_key<101> has been removed.
+WARNING:MapLib:701 - Signal input_key<102> connected to top level port
+   input_key<102> has been removed.
+WARNING:MapLib:701 - Signal input_key<103> connected to top level port
+   input_key<103> has been removed.
+WARNING:MapLib:701 - Signal input_key<104> connected to top level port
+   input_key<104> has been removed.
+WARNING:MapLib:701 - Signal input_key<105> connected to top level port
+   input_key<105> has been removed.
+WARNING:MapLib:701 - Signal go_key connected to top level port go_key has been
+   removed.
+WARNING:MapLib:701 - Signal enc_command connected to top level port enc_command
+   has been removed.
+WARNING:MapLib:701 - Signal error<0> connected to top level port error<0> has
+   been removed.
+WARNING:MapLib:701 - Signal input_key<120> connected to top level port
+   input_key<120> has been removed.
+WARNING:MapLib:701 - Signal input_key<121> connected to top level port
+   input_key<121> has been removed.
+WARNING:MapLib:701 - Signal input_key<124> connected to top level port
+   input_key<124> has been removed.
+WARNING:MapLib:701 - Signal input_key<125> connected to top level port
+   input_key<125> has been removed.
+WARNING:MapLib:701 - Signal input_key<126> connected to top level port
+   input_key<126> has been removed.
+WARNING:MapLib:701 - Signal input_key<127> connected to top level port
+   input_key<127> has been removed.
+WARNING:MapLib:701 - Signal data_inH<21> connected to top level port
+   data_inH<21> has been removed.
+WARNING:MapLib:701 - Signal data_inH<53> connected to top level port
+   data_inH<53> has been removed.
+WARNING:MapLib:701 - Signal data_inH<85> connected to top level port
+   data_inH<85> has been removed.
+WARNING:MapLib:701 - Signal data_inH<117> connected to top level port
+   data_inH<117> has been removed.
+WARNING:MapLib:701 - Signal input_key<98> connected to top level port
+   input_key<98> has been removed.
+WARNING:MapLib:701 - Signal input_key<106> connected to top level port
+   input_key<106> has been removed.
+WARNING:MapLib:701 - Signal input_key<114> connected to top level port
+   input_key<114> has been removed.
+WARNING:MapLib:701 - Signal data_inH<16> connected to top level port
+   data_inH<16> has been removed.
+WARNING:MapLib:701 - Signal data_inH<48> connected to top level port
+   data_inH<48> has been removed.
+WARNING:MapLib:701 - Signal data_inH<80> connected to top level port
+   data_inH<80> has been removed.
+WARNING:MapLib:701 - Signal data_inH<112> connected to top level port
+   data_inH<112> has been removed.
+WARNING:MapLib:701 - Signal data_inH<12> connected to top level port
+   data_inH<12> has been removed.
+WARNING:MapLib:701 - Signal data_inH<11> connected to top level port
+   data_inH<11> has been removed.
+WARNING:MapLib:701 - Signal data_inH<44> connected to top level port
+   data_inH<44> has been removed.
+WARNING:MapLib:701 - Signal data_inH<43> connected to top level port
+   data_inH<43> has been removed.
+WARNING:MapLib:701 - Signal data_inH<76> connected to top level port
+   data_inH<76> has been removed.
+WARNING:MapLib:701 - Signal data_inH<75> connected to top level port
+   data_inH<75> has been removed.
+WARNING:MapLib:701 - Signal data_inH<108> connected to top level port
+   data_inH<108> has been removed.
+WARNING:MapLib:701 - Signal data_inH<107> connected to top level port
+   data_inH<107> has been removed.
+WARNING:MapLib:701 - Signal data_inH<31> connected to top level port
+   data_inH<31> has been removed.
+WARNING:MapLib:701 - Signal data_inH<30> connected to top level port
+   data_inH<30> has been removed.
+WARNING:MapLib:701 - Signal data_inH<29> connected to top level port
+   data_inH<29> has been removed.
+WARNING:MapLib:701 - Signal data_inH<27> connected to top level port
+   data_inH<27> has been removed.
+WARNING:MapLib:701 - Signal data_inH<26> connected to top level port
+   data_inH<26> has been removed.
+WARNING:MapLib:701 - Signal data_inH<24> connected to top level port
+   data_inH<24> has been removed.
+WARNING:MapLib:701 - Signal data_inH<63> connected to top level port
+   data_inH<63> has been removed.
+WARNING:MapLib:701 - Signal data_inH<62> connected to top level port
+   data_inH<62> has been removed.
+WARNING:MapLib:701 - Signal data_inH<61> connected to top level port
+   data_inH<61> has been removed.
+WARNING:MapLib:701 - Signal data_inH<59> connected to top level port
+   data_inH<59> has been removed.
+WARNING:MapLib:701 - Signal data_inH<58> connected to top level port
+   data_inH<58> has been removed.
+WARNING:MapLib:701 - Signal data_inH<56> connected to top level port
+   data_inH<56> has been removed.
+WARNING:MapLib:701 - Signal data_inH<95> connected to top level port
+   data_inH<95> has been removed.
+WARNING:MapLib:701 - Signal data_inH<94> connected to top level port
+   data_inH<94> has been removed.
+WARNING:MapLib:701 - Signal data_inH<93> connected to top level port
+   data_inH<93> has been removed.
+WARNING:MapLib:701 - Signal data_inH<91> connected to top level port
+   data_inH<91> has been removed.
+WARNING:MapLib:701 - Signal data_inH<90> connected to top level port
+   data_inH<90> has been removed.
+WARNING:MapLib:701 - Signal data_inH<88> connected to top level port
+   data_inH<88> has been removed.
+WARNING:MapLib:701 - Signal data_inH<127> connected to top level port
+   data_inH<127> has been removed.
+WARNING:MapLib:701 - Signal data_inH<126> connected to top level port
+   data_inH<126> has been removed.
+WARNING:MapLib:701 - Signal data_inH<125> connected to top level port
+   data_inH<125> has been removed.
+WARNING:MapLib:701 - Signal data_inH<123> connected to top level port
+   data_inH<123> has been removed.
+WARNING:MapLib:701 - Signal data_inH<122> connected to top level port
+   data_inH<122> has been removed.
+WARNING:MapLib:701 - Signal data_inH<120> connected to top level port
+   data_inH<120> has been removed.
+WARNING:MapLib:701 - Signal data_inH<23> connected to top level port
+   data_inH<23> has been removed.
+WARNING:MapLib:701 - Signal data_inH<22> connected to top level port
+   data_inH<22> has been removed.
+WARNING:MapLib:701 - Signal data_inH<20> connected to top level port
+   data_inH<20> has been removed.
+WARNING:MapLib:701 - Signal data_inH<18> connected to top level port
+   data_inH<18> has been removed.
+WARNING:MapLib:701 - Signal data_inH<55> connected to top level port
+   data_inH<55> has been removed.
+WARNING:MapLib:701 - Signal data_inH<54> connected to top level port
+   data_inH<54> has been removed.
+WARNING:MapLib:701 - Signal data_inH<52> connected to top level port
+   data_inH<52> has been removed.
+WARNING:MapLib:701 - Signal data_inH<50> connected to top level port
+   data_inH<50> has been removed.
+WARNING:MapLib:701 - Signal data_inH<87> connected to top level port
+   data_inH<87> has been removed.
+WARNING:MapLib:701 - Signal data_inH<86> connected to top level port
+   data_inH<86> has been removed.
+WARNING:MapLib:701 - Signal data_inH<84> connected to top level port
+   data_inH<84> has been removed.
+WARNING:MapLib:701 - Signal data_inH<82> connected to top level port
+   data_inH<82> has been removed.
+WARNING:MapLib:701 - Signal data_inH<119> connected to top level port
+   data_inH<119> has been removed.
+WARNING:MapLib:701 - Signal data_inH<118> connected to top level port
+   data_inH<118> has been removed.
+WARNING:MapLib:701 - Signal data_inH<116> connected to top level port
+   data_inH<116> has been removed.
+WARNING:MapLib:701 - Signal data_inH<114> connected to top level port
+   data_inH<114> has been removed.
+WARNING:MapLib:701 - Signal data_inH<13> connected to top level port
+   data_inH<13> has been removed.
+WARNING:MapLib:701 - Signal data_inH<45> connected to top level port
+   data_inH<45> has been removed.
+WARNING:MapLib:701 - Signal data_inH<77> connected to top level port
+   data_inH<77> has been removed.
+WARNING:MapLib:701 - Signal data_inH<109> connected to top level port
+   data_inH<109> has been removed.
+WARNING:MapLib:701 - Signal data_inH<5> connected to top level port data_inH<5>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<37> connected to top level port
+   data_inH<37> has been removed.
+WARNING:MapLib:701 - Signal data_inH<69> connected to top level port
+   data_inH<69> has been removed.
+WARNING:MapLib:701 - Signal data_inH<101> connected to top level port
+   data_inH<101> has been removed.
+WARNING:MapLib:701 - Signal data_inH<15> connected to top level port
+   data_inH<15> has been removed.
+WARNING:MapLib:701 - Signal data_inH<14> connected to top level port
+   data_inH<14> has been removed.
+WARNING:MapLib:701 - Signal data_inH<10> connected to top level port
+   data_inH<10> has been removed.
+WARNING:MapLib:701 - Signal data_inH<9> connected to top level port data_inH<9>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<8> connected to top level port data_inH<8>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<47> connected to top level port
+   data_inH<47> has been removed.
+WARNING:MapLib:701 - Signal data_inH<46> connected to top level port
+   data_inH<46> has been removed.
+WARNING:MapLib:701 - Signal data_inH<42> connected to top level port
+   data_inH<42> has been removed.
+WARNING:MapLib:701 - Signal data_inH<41> connected to top level port
+   data_inH<41> has been removed.
+WARNING:MapLib:701 - Signal data_inH<40> connected to top level port
+   data_inH<40> has been removed.
+WARNING:MapLib:701 - Signal data_inH<79> connected to top level port
+   data_inH<79> has been removed.
+WARNING:MapLib:701 - Signal data_inH<78> connected to top level port
+   data_inH<78> has been removed.
+WARNING:MapLib:701 - Signal data_inH<74> connected to top level port
+   data_inH<74> has been removed.
+WARNING:MapLib:701 - Signal data_inH<73> connected to top level port
+   data_inH<73> has been removed.
+WARNING:MapLib:701 - Signal data_inH<72> connected to top level port
+   data_inH<72> has been removed.
+WARNING:MapLib:701 - Signal data_inH<111> connected to top level port
+   data_inH<111> has been removed.
+WARNING:MapLib:701 - Signal data_inH<110> connected to top level port
+   data_inH<110> has been removed.
+WARNING:MapLib:701 - Signal data_inH<106> connected to top level port
+   data_inH<106> has been removed.
+WARNING:MapLib:701 - Signal data_inH<105> connected to top level port
+   data_inH<105> has been removed.
+WARNING:MapLib:701 - Signal data_inH<104> connected to top level port
+   data_inH<104> has been removed.
+WARNING:MapLib:701 - Signal data_inH<7> connected to top level port data_inH<7>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<6> connected to top level port data_inH<6>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<4> connected to top level port data_inH<4>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<3> connected to top level port data_inH<3>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<2> connected to top level port data_inH<2>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<1> connected to top level port data_inH<1>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<0> connected to top level port data_inH<0>
+   has been removed.
+WARNING:MapLib:701 - Signal data_inH<39> connected to top level port
+   data_inH<39> has been removed.
+WARNING:MapLib:701 - Signal data_inH<38> connected to top level port
+   data_inH<38> has been removed.
+WARNING:MapLib:701 - Signal data_inH<36> connected to top level port
+   data_inH<36> has been removed.
+WARNING:MapLib:701 - Signal data_inH<35> connected to top level port
+   data_inH<35> has been removed.
+WARNING:MapLib:701 - Signal data_inH<34> connected to top level port
+   data_inH<34> has been removed.
+WARNING:MapLib:701 - Signal data_inH<33> connected to top level port
+   data_inH<33> has been removed.
+WARNING:MapLib:701 - Signal data_inH<32> connected to top level port
+   data_inH<32> has been removed.
+WARNING:MapLib:701 - Signal data_inH<71> connected to top level port
+   data_inH<71> has been removed.
+WARNING:MapLib:701 - Signal data_inH<70> connected to top level port
+   data_inH<70> has been removed.
+WARNING:MapLib:701 - Signal data_inH<68> connected to top level port
+   data_inH<68> has been removed.
+WARNING:MapLib:701 - Signal data_inH<67> connected to top level port
+   data_inH<67> has been removed.
+WARNING:MapLib:701 - Signal data_inH<66> connected to top level port
+   data_inH<66> has been removed.
+WARNING:MapLib:701 - Signal data_inH<65> connected to top level port
+   data_inH<65> has been removed.
+WARNING:MapLib:701 - Signal data_inH<64> connected to top level port
+   data_inH<64> has been removed.
+WARNING:MapLib:701 - Signal data_inH<103> connected to top level port
+   data_inH<103> has been removed.
+WARNING:MapLib:701 - Signal data_inH<102> connected to top level port
+   data_inH<102> has been removed.
+WARNING:MapLib:701 - Signal data_inH<100> connected to top level port
+   data_inH<100> has been removed.
+WARNING:MapLib:701 - Signal data_inH<99> connected to top level port
+   data_inH<99> has been removed.
+WARNING:MapLib:701 - Signal data_inH<98> connected to top level port
+   data_inH<98> has been removed.
+WARNING:MapLib:701 - Signal data_inH<97> connected to top level port
+   data_inH<97> has been removed.
+WARNING:MapLib:701 - Signal data_inH<96> connected to top level port
+   data_inH<96> has been removed.
+WARNING:MapLib:701 - Signal data_inH<28> connected to top level port
+   data_inH<28> has been removed.
+WARNING:MapLib:701 - Signal data_inH<60> connected to top level port
+   data_inH<60> has been removed.
+WARNING:MapLib:701 - Signal data_inH<92> connected to top level port
+   data_inH<92> has been removed.
+WARNING:MapLib:701 - Signal data_inH<124> connected to top level port
+   data_inH<124> has been removed.
+WARNING:MapLib:701 - Signal data_inH<25> connected to top level port
+   data_inH<25> has been removed.
+WARNING:MapLib:701 - Signal data_inH<57> connected to top level port
+   data_inH<57> has been removed.
+WARNING:MapLib:701 - Signal data_inH<89> connected to top level port
+   data_inH<89> has been removed.
+WARNING:MapLib:701 - Signal data_inH<121> connected to top level port
+   data_inH<121> has been removed.
+WARNING:MapLib:701 - Signal data_inH<19> connected to top level port
+   data_inH<19> has been removed.
+WARNING:MapLib:701 - Signal data_inH<51> connected to top level port
+   data_inH<51> has been removed.
+WARNING:MapLib:701 - Signal data_inH<83> connected to top level port
+   data_inH<83> has been removed.
+WARNING:MapLib:701 - Signal data_inH<115> connected to top level port
+   data_inH<115> has been removed.
+WARNING:MapLib:701 - Signal data_inH<17> connected to top level port
+   data_inH<17> has been removed.
+WARNING:MapLib:701 - Signal data_inH<49> connected to top level port
+   data_inH<49> has been removed.
+WARNING:MapLib:701 - Signal data_inH<81> connected to top level port
+   data_inH<81> has been removed.
+WARNING:MapLib:701 - Signal data_inH<113> connected to top level port
+   data_inH<113> has been removed.
+WARNING:MapLib:701 - Signal input_key<27> connected to top level port
+   input_key<27> has been removed.
+WARNING:MapLib:701 - Signal input_key<91> connected to top level port
+   input_key<91> has been removed.
+WARNING:MapLib:701 - Signal input_key<59> connected to top level port
+   input_key<59> has been removed.
+WARNING:MapLib:701 - Signal input_key<11> connected to top level port
+   input_key<11> has been removed.
+WARNING:MapLib:701 - Signal input_key<43> connected to top level port
+   input_key<43> has been removed.
+WARNING:MapLib:701 - Signal input_key<19> connected to top level port
+   input_key<19> has been removed.
+WARNING:MapLib:701 - Signal input_key<51> connected to top level port
+   input_key<51> has been removed.
+WARNING:MapLib:701 - Signal input_key<35> connected to top level port
+   input_key<35> has been removed.
+WARNING:MapLib:701 - Signal input_key<3> connected to top level port
+   input_key<3> has been removed.
+WARNING:MapLib:701 - Signal input_key<74> connected to top level port
+   input_key<74> has been removed.
+WARNING:MapLib:701 - Signal input_key<75> connected to top level port
+   input_key<75> has been removed.
+WARNING:MapLib:701 - Signal input_key<82> connected to top level port
+   input_key<82> has been removed.
+WARNING:MapLib:701 - Signal input_key<83> connected to top level port
+   input_key<83> has been removed.
+WARNING:MapLib:701 - Signal input_key<66> connected to top level port
+   input_key<66> has been removed.
+WARNING:MapLib:701 - Signal input_key<67> connected to top level port
+   input_key<67> has been removed.
+WARNING:MapLib:701 - Signal input_key<24> connected to top level port
+   input_key<24> has been removed.
+WARNING:MapLib:701 - Signal input_key<56> connected to top level port
+   input_key<56> has been removed.
+WARNING:MapLib:701 - Signal input_key<25> connected to top level port
+   input_key<25> has been removed.
+WARNING:MapLib:701 - Signal input_key<57> connected to top level port
+   input_key<57> has been removed.
+WARNING:MapLib:701 - Signal input_key<26> connected to top level port
+   input_key<26> has been removed.
+WARNING:MapLib:701 - Signal input_key<90> connected to top level port
+   input_key<90> has been removed.
+WARNING:MapLib:701 - Signal input_key<58> connected to top level port
+   input_key<58> has been removed.
+WARNING:MapLib:701 - Signal input_key<28> connected to top level port
+   input_key<28> has been removed.
+WARNING:MapLib:701 - Signal input_key<92> connected to top level port
+   input_key<92> has been removed.
+WARNING:MapLib:701 - Signal input_key<60> connected to top level port
+   input_key<60> has been removed.
+WARNING:MapLib:701 - Signal input_key<29> connected to top level port
+   input_key<29> has been removed.
+WARNING:MapLib:701 - Signal input_key<93> connected to top level port
+   input_key<93> has been removed.
+WARNING:MapLib:701 - Signal input_key<61> connected to top level port
+   input_key<61> has been removed.
+WARNING:MapLib:701 - Signal input_key<30> connected to top level port
+   input_key<30> has been removed.
+WARNING:MapLib:701 - Signal input_key<94> connected to top level port
+   input_key<94> has been removed.
+WARNING:MapLib:701 - Signal input_key<62> connected to top level port
+   input_key<62> has been removed.
+WARNING:MapLib:701 - Signal input_key<31> connected to top level port
+   input_key<31> has been removed.
+WARNING:MapLib:701 - Signal input_key<95> connected to top level port
+   input_key<95> has been removed.
+WARNING:MapLib:701 - Signal input_key<63> connected to top level port
+   input_key<63> has been removed.
+WARNING:MapLib:701 - Signal input_key<0> connected to top level port
+   input_key<0> has been removed.
+WARNING:MapLib:701 - Signal input_key<64> connected to top level port
+   input_key<64> has been removed.
+WARNING:MapLib:701 - Signal input_key<1> connected to top level port
+   input_key<1> has been removed.
+WARNING:MapLib:701 - Signal input_key<65> connected to top level port
+   input_key<65> has been removed.
+WARNING:MapLib:701 - Signal input_key<10> connected to top level port
+   input_key<10> has been removed.
+WARNING:MapLib:701 - Signal input_key<42> connected to top level port
+   input_key<42> has been removed.
+WARNING:MapLib:701 - Signal input_key<12> connected to top level port
+   input_key<12> has been removed.
+WARNING:MapLib:701 - Signal input_key<44> connected to top level port
+   input_key<44> has been removed.
+WARNING:MapLib:701 - Signal input_key<76> connected to top level port
+   input_key<76> has been removed.
+WARNING:MapLib:701 - Signal input_key<13> connected to top level port
+   input_key<13> has been removed.
+WARNING:MapLib:701 - Signal input_key<45> connected to top level port
+   input_key<45> has been removed.
+WARNING:MapLib:701 - Signal input_key<77> connected to top level port
+   input_key<77> has been removed.
+WARNING:MapLib:701 - Signal input_key<14> connected to top level port
+   input_key<14> has been removed.
+WARNING:MapLib:701 - Signal input_key<46> connected to top level port
+   input_key<46> has been removed.
+WARNING:MapLib:701 - Signal input_key<78> connected to top level port
+   input_key<78> has been removed.
+WARNING:MapLib:701 - Signal input_key<15> connected to top level port
+   input_key<15> has been removed.
+WARNING:MapLib:701 - Signal input_key<47> connected to top level port
+   input_key<47> has been removed.
+WARNING:MapLib:701 - Signal input_key<79> connected to top level port
+   input_key<79> has been removed.
+WARNING:MapLib:701 - Signal input_key<16> connected to top level port
+   input_key<16> has been removed.
+WARNING:MapLib:701 - Signal input_key<80> connected to top level port
+   input_key<80> has been removed.
+WARNING:MapLib:701 - Signal input_key<17> connected to top level port
+   input_key<17> has been removed.
+WARNING:MapLib:701 - Signal input_key<81> connected to top level port
+   input_key<81> has been removed.
+WARNING:MapLib:701 - Signal input_key<18> connected to top level port
+   input_key<18> has been removed.
+WARNING:MapLib:701 - Signal input_key<50> connected to top level port
+   input_key<50> has been removed.
+WARNING:MapLib:701 - Signal input_key<2> connected to top level port
+   input_key<2> has been removed.
+WARNING:MapLib:701 - Signal input_key<34> connected to top level port
+   input_key<34> has been removed.
+WARNING:MapLib:701 - Signal input_key<20> connected to top level port
+   input_key<20> has been removed.
+WARNING:MapLib:701 - Signal input_key<52> connected to top level port
+   input_key<52> has been removed.
+WARNING:MapLib:701 - Signal input_key<84> connected to top level port
+   input_key<84> has been removed.
+WARNING:MapLib:701 - Signal input_key<21> connected to top level port
+   input_key<21> has been removed.
+WARNING:MapLib:701 - Signal input_key<53> connected to top level port
+   input_key<53> has been removed.
+WARNING:MapLib:701 - Signal input_key<85> connected to top level port
+   input_key<85> has been removed.
+WARNING:MapLib:701 - Signal input_key<22> connected to top level port
+   input_key<22> has been removed.
+WARNING:MapLib:701 - Signal input_key<54> connected to top level port
+   input_key<54> has been removed.
+WARNING:MapLib:701 - Signal input_key<86> connected to top level port
+   input_key<86> has been removed.
+WARNING:MapLib:701 - Signal input_key<23> connected to top level port
+   input_key<23> has been removed.
+WARNING:MapLib:701 - Signal input_key<55> connected to top level port
+   input_key<55> has been removed.
+WARNING:MapLib:701 - Signal input_key<87> connected to top level port
+   input_key<87> has been removed.
+WARNING:MapLib:701 - Signal input_key<36> connected to top level port
+   input_key<36> has been removed.
+WARNING:MapLib:701 - Signal input_key<4> connected to top level port
+   input_key<4> has been removed.
+WARNING:MapLib:701 - Signal input_key<68> connected to top level port
+   input_key<68> has been removed.
+WARNING:MapLib:701 - Signal input_key<37> connected to top level port
+   input_key<37> has been removed.
+WARNING:MapLib:701 - Signal input_key<5> connected to top level port
+   input_key<5> has been removed.
+WARNING:MapLib:701 - Signal input_key<69> connected to top level port
+   input_key<69> has been removed.
+WARNING:MapLib:701 - Signal input_key<38> connected to top level port
+   input_key<38> has been removed.
+WARNING:MapLib:701 - Signal input_key<6> connected to top level port
+   input_key<6> has been removed.
+WARNING:MapLib:701 - Signal input_key<70> connected to top level port
+   input_key<70> has been removed.
+WARNING:MapLib:701 - Signal input_key<39> connected to top level port
+   input_key<39> has been removed.
+WARNING:MapLib:701 - Signal input_key<71> connected to top level port
+   input_key<71> has been removed.
+WARNING:MapLib:701 - Signal input_key<7> connected to top level port
+   input_key<7> has been removed.
+WARNING:MapLib:701 - Signal input_key<72> connected to top level port
+   input_key<72> has been removed.
+WARNING:MapLib:701 - Signal input_key<8> connected to top level port
+   input_key<8> has been removed.
+WARNING:MapLib:701 - Signal input_key<73> connected to top level port
+   input_key<73> has been removed.
+WARNING:MapLib:701 - Signal input_key<9> connected to top level port
+   input_key<9> has been removed.
+WARNING:MapLib:701 - Signal input_key<88> connected to top level port
+   input_key<88> has been removed.
+WARNING:MapLib:701 - Signal input_key<89> connected to top level port
+   input_key<89> has been removed.
+WARNING:MapLib:701 - Signal input_key<32> connected to top level port
+   input_key<32> has been removed.
+WARNING:MapLib:701 - Signal input_key<33> connected to top level port
+   input_key<33> has been removed.
+WARNING:MapLib:701 - Signal input_key<48> connected to top level port
+   input_key<48> has been removed.
+WARNING:MapLib:701 - Signal input_key<49> connected to top level port
+   input_key<49> has been removed.
+WARNING:MapLib:701 - Signal input_key<40> connected to top level port
+   input_key<40> has been removed.
+WARNING:MapLib:701 - Signal input_key<41> connected to top level port
+   input_key<41> has been removed.
+WARNING:MapLib:701 - Signal input_key<99> connected to top level port
+   input_key<99> has been removed.
+WARNING:MapLib:701 - Signal input_key<107> connected to top level port
+   input_key<107> has been removed.
+WARNING:MapLib:701 - Signal input_key<115> connected to top level port
+   input_key<115> has been removed.
+WARNING:MapLib:701 - Signal input_key<122> connected to top level port
+   input_key<122> has been removed.
+WARNING:MapLib:701 - Signal input_key<123> connected to top level port
+   input_key<123> has been removed.
+Running directed packing...
+Running delay-based LUT packing...
+ERROR:Pack:198 - NCD was not produced.  All logic was removed from the design. 
+   This is usually due to having no input or output PAD connections in the
+   design and no nets or symbols marked as 'SAVE'.  You can either add PADs or
+   'SAVE' attributes to the design, or run 'map -u' to disable logic trimming in
+   the mapper.  For more information on trimming issues search the Xilinx
+   Answers database for "ERROR:Pack:198" and read the Master Answer Record for
+   MAP Trimming Issues.
+
+Mapping completed.
+See MAP report file "aes_core_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings : 392

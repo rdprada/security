@@ -1,0 +1,4 @@
+mp2 q a inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mn2 q a inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+.ends invb_core
+** End of subcircuit definition.

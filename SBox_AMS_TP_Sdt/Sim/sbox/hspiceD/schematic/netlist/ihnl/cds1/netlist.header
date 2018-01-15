@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: nand2_core
+** View name: schematic
+.subckt nand2_core a b out inh_gnd inh_vdd

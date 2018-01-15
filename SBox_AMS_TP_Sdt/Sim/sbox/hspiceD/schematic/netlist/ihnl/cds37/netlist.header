@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: invb_core
+** View name: schematic
+.subckt invb_core a q inh_gnd inh_vdd

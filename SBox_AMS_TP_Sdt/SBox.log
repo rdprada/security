@@ -1,0 +1,37 @@
+ --------------------------------------------------------
+|                                                        |
+|            NanoSim_A Version D-2010.03-SP1             |
+|                    SN:20100517-amd64                   |
+|                 Machine Name: cimepc79                 |
+| Copyright (c) 2010 Synopsys Inc., All Rights Reserved. |
+|                                                        |
+ --------------------------------------------------------
+
+Built by nsmgr   on Mon May 17 18:11:11 PDT 2010
+Mon Dec 18 09:55:57 CET 2017
+
+Command line options:  spice/SBox.spi –nvec spice/SBox.vec –c spice/SBox.cfg –out fsdb –t 21ns –o simulation/trace
+
+
+The double-precision version of the simulator is running.
+
+The 64-bit version of the simulator is running.
+
+
+Initializing system messages took 0.000 s
+
+Installing interactive/configuration commands ... 
+Installing commands took 0.010 s
+
+
+Start netlist compilation at Mon Dec 18 09:55:57 2017
+
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly1.mod', Model 'resnoi' in rpoly1 has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2.mod', Model 'resnoi' in rpoly2 has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2p.mod', Model 'resnoi' in rpoly2p has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpoly2ph.mod', Model 'resnoi' in rpoly2ph has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/res/tm/rpolyh.mod', Model 'resnoi' in rpolyh has unsupported parameter "noise,kf,af,ef", ignored.
+WARNING:NanoSim:0x2020113d:File '/softslin/AMS_380_CDS/hspiceS/c35/cap/tm/cvar.mod', Model 'rvarmod' in top level has unsupported parameter "noise", ignored.
+ERROR:NanoSim:0x30201005:can not open file –nvec.
+nanosim: ERROR: Parsing netlist failed. Program exits.
+

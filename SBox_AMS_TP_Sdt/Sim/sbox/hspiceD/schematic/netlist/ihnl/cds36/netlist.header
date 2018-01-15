@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: tgate_core
+** View name: schematic
+.subckt tgate_core en ep in out inh_gnd inh_vdd

@@ -1,0 +1,8 @@
+HEADER
+"PSFversion" "1.00"
+"I3v" "xi3"
+"I3n" "aoi21_core"
+"Bv" "(FUNCTION (plus (root \"I3/b\")))"
+"Cv" "(FUNCTION (plus (root \"I3/c\")))"
+"Av" "(FUNCTION (plus (root \"I3/a\")))"
+"Qv" "(FUNCTION (plus (root \"I3/out\")))"

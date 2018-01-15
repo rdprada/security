@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.xst" -ofn "/tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.syr" 
+xst -intstyle ise -ifn "/tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.xst" -ofn "/tp/xph3sle/xph3sle603/Security_lab/AES/synth/ise/aes_ddr/aes_core.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7z010-clg400-1 aes_core.ngc aes_core.ngd  
+netgen -intstyle ise -rpw 100 -tpw 0 -ar Structure -tm aes_core -w -dir netgen/translate -ofmt vhdl -sim aes_core.ngd aes_core_translate.vhd 
+map -intstyle ise -p xc7z010-clg400-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o aes_core_map.ncd aes_core.ngd aes_core.pcf 

@@ -1,0 +1,3 @@
+xi2 a b c d q inh_gnd inh_vdd aoi31_core gt_mn2l=350e-9 gt_mn2w=3.05e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=3.05e-6 gt_mn4l=350e-9 gt_mn4w=1e-6 gt_mn3l=350e-9 gt_mn3w=3.05e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6 gt_mp4l=350e-9 gt_mp4w=3.2e-6 gt_mp7l=350e-9 gt_mp7w=3.2e-6
+.ends AOI311
+** End of subcircuit definition.

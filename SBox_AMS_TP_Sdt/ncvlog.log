@@ -1,0 +1,20 @@
+ncvlog: *W,DLNOHV: Unable to find an 'hdl.var' file to load in.
+TOOL:	ncvlog	05.50-E115: Started on Dec 18, 2017 at 09:45:05 CET
+ncvlog
+    -use5x
+    -ESCAPEDNAME
+    -work __nclib
+    -view module
+    -logfile ncvlog.log
+    -cdslib /tmp/ihdl_cdsliba4144_14144
+    -messages
+    -nostdout
+    -nocopyright
+    synth/SBox.v
+
+file: synth/SBox.v
+	module __nclib.sbox:module
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+TOOL:	ncvlog	05.50-E115: Exiting on Dec 18, 2017 at 09:45:05 CET  (total: 00:00:00)

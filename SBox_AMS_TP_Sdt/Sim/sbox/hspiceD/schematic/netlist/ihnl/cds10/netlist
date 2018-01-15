@@ -1,0 +1,6 @@
+xi9 net020 q inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=2e-6 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi8 s net11 inh_gnd inh_vdd inv_core gt_mn1l=350e-9 gt_mn1w=700e-9 sx=850e-9 lc=500e-9 gt_mp1l=350e-9 gt_mp1w=800e-9
+xi7 a net11 s net020 inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+xi6 b s net11 net020 inh_gnd inh_vdd clinv_core gt_mn0l=350e-9 gt_mn0w=2e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=2e-6 gt_mp0l=350e-9 gt_mp0w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends MUX22
+** End of subcircuit definition.

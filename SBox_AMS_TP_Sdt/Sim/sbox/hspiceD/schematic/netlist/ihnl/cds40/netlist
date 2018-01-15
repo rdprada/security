@@ -1,0 +1,3 @@
+xi3 a q inh_gnd inh_vdd invb_core gt_mp2l=350e-9 gt_mp2w=1.6e-6 sx=850e-9 lc=500e-9 gt_mn2l=350e-9 gt_mn2w=800e-9
+.ends CLKIN1
+** End of subcircuit definition.

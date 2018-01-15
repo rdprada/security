@@ -1,0 +1,5 @@
+
+** Library name: GATES
+** Cell name: clinva_core
+** View name: schematic
+.subckt clinva_core a c cn q inh_gnd inh_vdd

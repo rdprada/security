@@ -1,0 +1,3 @@
+xi1 a b q inh_gnd inh_vdd nand2_core gt_mn2l=350e-9 gt_mn2w=4e-6 sx=850e-9 lc=500e-9 gt_mn1l=350e-9 gt_mn1w=4e-6 gt_mp2l=350e-9 gt_mp2w=3.2e-6 gt_mp1l=350e-9 gt_mp1w=3.2e-6
+.ends NAND22
+** End of subcircuit definition.

@@ -1,0 +1,16 @@
+ --------------------------------------------------------
+|                                                        |
+|            NanoSim_A Version D-2010.03-SP1             |
+|                    SN:20100517-amd64                   |
+|                 Machine Name: cimepc79                 |
+| Copyright (c) 2010 Synopsys Inc., All Rights Reserved. |
+|                                                        |
+ --------------------------------------------------------
+
+Built by nsmgr   on Mon May 17 18:11:11 PDT 2010
+Mon Dec 18 09:53:42 CET 2017
+
+                                User (s)             Alloc (mb)           Core (mb)
+initial_code_size               0.000 (0.000)        21.477 (21.477)      100.781 (100.781)
+simulator_set_up                0.020 (0.020)        21.340 (42.816)      26.668 (127.449)
+load_tech_files()               0.000 (0.020)        0.000 (42.816)       0.000 (127.449)

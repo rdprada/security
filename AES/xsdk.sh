@@ -1,0 +1,1 @@
+ssh -Y ocaepc13 "source ~/Security_lab/.set_vivado_17_1.sh ; xsdk -workspace ~/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk -hwspec ~/Security_lab/AES/synth/vivado/aes_ddr/aes_ddr.sdk/design_1_wrapper.hdf"

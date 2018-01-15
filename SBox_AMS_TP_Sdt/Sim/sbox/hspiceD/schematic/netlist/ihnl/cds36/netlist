@@ -1,0 +1,4 @@
+mp1 out ep in inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+mn1 out en in inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+.ends tgate_core
+** End of subcircuit definition.

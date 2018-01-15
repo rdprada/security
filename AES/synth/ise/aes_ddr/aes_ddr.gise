@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="aes_ddr.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="aes_core.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="aes_core.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="aes_core.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="aes_core.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="aes_core.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="aes_core.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="aes_core.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="aes_core.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="aes_core.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="aes_core.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_core_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_core_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="aes_core_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_core_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="aes_core_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_core_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostTranslateSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/translate/aes_core_translate.nlf"/>
+    <file xil_pn:branch="PostTranslateSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/translate/aes_core_translate.vhd"/>
+    <file xil_pn:branch="PostTranslateSimulation" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1511167636" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1511167636">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167637" xil_pn:in_ck="-1503732403597560575" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1511167636">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../../../bench/test_core_glob.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Aff_Trans.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Aff_Trans_Inv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Control_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_dual.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_enable.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_reg.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GFMap.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GFMapInv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GF_Inv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GF_Molt.vhd"/>
+      <outfile xil_pn:name="../../../vhd/KeyUnit_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/MixColumn.vhd"/>
+      <outfile xil_pn:name="../../../vhd/MixColumn0.vhd"/>
+      <outfile xil_pn:name="../../../vhd/PreMcRot.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Quadrato.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Rcon.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Sbox.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X2Time.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X4Time.vhd"/>
+      <outfile xil_pn:name="../../../vhd/XTime.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X_e.vhd"/>
+      <outfile xil_pn:name="../../../vhd/aes_core.vhd"/>
+      <outfile xil_pn:name="../../../vhd/aes_globals.vhd"/>
+      <outfile xil_pn:name="../../../vhd/column.vhd"/>
+      <outfile xil_pn:name="../../../vhd/dataunit_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/l_barrel.vhd"/>
+      <outfile xil_pn:name="../../../vhd/linear.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167637" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6775801108185695420" xil_pn:start_ts="1511167637">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167637" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2746412234355367112" xil_pn:start_ts="1511167637">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167637" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3880697975680800469" xil_pn:start_ts="1511167637">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167637" xil_pn:in_ck="-1503732403597560575" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1511167637">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../../../bench/test_core_glob.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Aff_Trans.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Aff_Trans_Inv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Control_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_dual.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_enable.vhd"/>
+      <outfile xil_pn:name="../../../vhd/DDR_reg.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GFMap.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GFMapInv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GF_Inv.vhd"/>
+      <outfile xil_pn:name="../../../vhd/GF_Molt.vhd"/>
+      <outfile xil_pn:name="../../../vhd/KeyUnit_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/MixColumn.vhd"/>
+      <outfile xil_pn:name="../../../vhd/MixColumn0.vhd"/>
+      <outfile xil_pn:name="../../../vhd/PreMcRot.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Quadrato.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Rcon.vhd"/>
+      <outfile xil_pn:name="../../../vhd/Sbox.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X2Time.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X4Time.vhd"/>
+      <outfile xil_pn:name="../../../vhd/XTime.vhd"/>
+      <outfile xil_pn:name="../../../vhd/X_e.vhd"/>
+      <outfile xil_pn:name="../../../vhd/aes_core.vhd"/>
+      <outfile xil_pn:name="../../../vhd/aes_globals.vhd"/>
+      <outfile xil_pn:name="../../../vhd/column.vhd"/>
+      <outfile xil_pn:name="../../../vhd/dataunit_ddr.vhd"/>
+      <outfile xil_pn:name="../../../vhd/l_barrel.vhd"/>
+      <outfile xil_pn:name="../../../vhd/linear.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1511167841" xil_pn:in_ck="-1503732403597560575" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-7689708141609321539" xil_pn:start_ts="1511167841">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2374471597757846743" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3880697975680800469" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5159365901907695013" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8912443121649815033" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168047" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2062963572845670497" xil_pn:start_ts="1511168047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168177" xil_pn:in_ck="2124505563361893590" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-6244594934144280392" xil_pn:start_ts="1511168162">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="aes_core.lso"/>
+      <outfile xil_pn:name="aes_core.ngc"/>
+      <outfile xil_pn:name="aes_core.ngr"/>
+      <outfile xil_pn:name="aes_core.prj"/>
+      <outfile xil_pn:name="aes_core.stx"/>
+      <outfile xil_pn:name="aes_core.syr"/>
+      <outfile xil_pn:name="aes_core.xst"/>
+      <outfile xil_pn:name="aes_core_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168503" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5157554939643066822" xil_pn:start_ts="1511168503">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168512" xil_pn:in_ck="5062749106029956583" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3180745955662582525" xil_pn:start_ts="1511168503">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="aes_core.bld"/>
+      <outfile xil_pn:name="aes_core.ngd"/>
+      <outfile xil_pn:name="aes_core_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1511169013" xil_pn:in_ck="5062749106029956584" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="5826180378948242564" xil_pn:start_ts="1511168997">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="aes_core_map.map"/>
+      <outfile xil_pn:name="aes_core_map.mrp"/>
+      <outfile xil_pn:name="aes_core_map.ngm"/>
+    </transform>
+    <transform xil_pn:name="TRAN_postRouteTrce">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168516" xil_pn:in_ck="5062749106029956584" xil_pn:name="TRAN_postXlateSimModel" xil_pn:prop_ck="5974694293826296985" xil_pn:start_ts="1511168512">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/translate/aes_core_translate.nlf"/>
+      <outfile xil_pn:name="netgen/translate/aes_core_translate.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168678" xil_pn:in_ck="-5577720221917916266" xil_pn:name="TRAN_copyPost-TranslateAbstractToPreSimulation" xil_pn:start_ts="1511168678">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../../../bench/test_core_glob.vhd"/>
+      <outfile xil_pn:name="netgen/translate/aes_core_translate.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1511168679" xil_pn:in_ck="-5577720221917916266" xil_pn:name="TRAN_MSimulatePostTranslateModel" xil_pn:prop_ck="-1362644421001144746" xil_pn:start_ts="1511168678">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+    </transform>
+  </transforms>
+
+</generated_project>

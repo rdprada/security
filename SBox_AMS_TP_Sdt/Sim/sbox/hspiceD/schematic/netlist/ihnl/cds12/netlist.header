@@ -1,0 +1,5 @@
+
+** Library name: CORELIB
+** Cell name: AOI2111
+** View name: cmos_sch
+.subckt AOI2111 a b c d q inh_gnd inh_vdd

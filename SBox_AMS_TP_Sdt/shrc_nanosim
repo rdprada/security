@@ -1,0 +1,17 @@
+#
+################# Settings for Synopsys vB2008_09_SP2_64b######################
+#
+export LD_LIBRARY_PATH="/softslin/lenny-amd64/usr/lib:/softslin/lenny-amd64/lib:/usr/lib:/lib"
+export SYNOPSYS=/softslin/synthesisvB2008_09_SP2_64b
+export SNPSLMD_LICENSE_FILE=1721@cimekey1
+export PATH="${PATH}:${SYNOPSYS}/suse64/syn/bin"
+export MANPATH=${MANPATH}:"${SYNOPSYS}/doc/snps_gui/man:${SYNOPSYS}/doc/snps_tcl/man:${SYNOPSYS}/doc/syn/man:${SYNOPSYS}/doc/vhdl/man"
+export NANOSIM_64=1 
+export EPIC_HOME=/softslin/ns_vD_2010_03_sp1_64b
+export SCOPE=/softslin/cosmosscope64_d2010_03_sp1
+export PATH="${PATH}::${EPIC_HOME}/amd64/ns/bin:${SCOPE}/ai_bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${EPIC_HOME}/amd64/ns/lib"
+export MANPATH="${MANPATH}:${EPIC_HOME}/doc/ns/man"
+
+
+############### End Settings for Synopsys vB2008_09_SP2_64b####################

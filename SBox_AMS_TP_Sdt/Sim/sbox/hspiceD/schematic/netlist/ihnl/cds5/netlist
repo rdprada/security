@@ -1,0 +1,6 @@
+mn2 out a inh_gnd inh_gnd modn L=gt_mn2l W=gt_mn2w AD='sx*gt_mn2w' AS='sx*gt_mn2w' PD='2*sx+gt_mn2w' PS='2*sx+gt_mn2w' NRD='lc/gt_mn2w' NRS='lc/gt_mn2w' M=1
+mn1 out b inh_gnd inh_gnd modn L=gt_mn1l W=gt_mn1w AD='sx*gt_mn1w' AS='sx*gt_mn1w' PD='2*sx+gt_mn1w' PS='2*sx+gt_mn1w' NRD='lc/gt_mn1w' NRS='lc/gt_mn1w' M=1
+mp2 net17 b inh_vdd inh_vdd modp L=gt_mp2l W=gt_mp2w AD='sx*gt_mp2w' AS='sx*gt_mp2w' PD='2*sx+gt_mp2w' PS='2*sx+gt_mp2w' NRD='lc/gt_mp2w' NRS='lc/gt_mp2w' M=1
+mp1 out a net17 inh_vdd modp L=gt_mp1l W=gt_mp1w AD='sx*gt_mp1w' AS='sx*gt_mp1w' PD='2*sx+gt_mp1w' PS='2*sx+gt_mp1w' NRD='lc/gt_mp1w' NRS='lc/gt_mp1w' M=1
+.ends nor2_core
+** End of subcircuit definition.

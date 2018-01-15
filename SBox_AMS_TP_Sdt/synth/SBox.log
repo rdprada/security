@@ -1,0 +1,139 @@
+/softslin/leonardo2010a/bin/Linux/spectrum vhd/SBox.vhd synth/SBox.v \
+-target=c35_CORELIB 
+-------------------------------------------------
+LeonardoSpectrum Level 3 - 2010a.7 (Release Production Release, compiled Jun 30 2010 at 15:05:46)
+Copyright 1990-2010 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2010 Compuware Corporation
+
+Checking Security ...
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run Started On Mon Dec 18 09:33:02 CET 2017
+--
+-- Reading target technology c35_CORELIB
+Reading library file `/softslin/leonardo2010a/lib/c35_CORELIB.syn`...
+Delays assume: Process=typical Temp= 25.0 C  Voltage=3.30 V  
+Info: setting encoding to auto
+-- read -tech c35_corelib {vhd/SBox.vhd}
+-- Reading file /softslin/leonardo2010a/data/standard.vhd for unit standard
+-- Loading package standard into library std
+-- Reading vhdl file /tp/xph3sle/xph3sle603/Security_lab/SBox_AMS_TP_Sdt/vhd/SBox.vhd into library work
+-- Reading file /softslin/leonardo2010a/data/std_1164.vhd for unit std_logic_1164
+-- Loading package std_logic_1164 into library ieee
+-- Loading entity sbox into library work
+-- Loading architecture behavioral of sbox into library work
+-- Compiling root entity sbox(behavioral)
+-- Pre Optimizing Design .work.sbox.behavioral
+-- Boundary optimization.
+Info: setting modgen_select to fast
+-- optimize -target c35_corelib -effort quick -chip -auto -hierarchy=auto
+Using first wire table: 10k
+-- Optimizing netlist .work.sbox.behavioral
+-- Automatic IO buffer insertion...
+WARNING: cannot do IO mapping. Library has no plain input IO buffer
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Info: setting optimize_timing_cpu_limit to 30
+-- Start timing optimization for design .work.sbox.behavioral
+
+Latest arrival time at primary output:  0.6 ns
+Latest arrival time at register input:  8.6 ns
+
+Forcing timing constraints at all end points:  7.7 ns
+
+Initial Timing Optimization Statistics:
+---------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 116.6 MHz
+
+
+	Most Critical Slack    :       -0.9
+	Sum of Negative Slacks :       -7.3
+	Area                   :    52252.2
+
+                                                             
+Final Timing Optimization Statistics:
+-------------------------------------
+
+	Clock                  : Frequency
+      ------------------------------------
+
+	clk                    : 140.7 MHz
+
+
+	Most Critical Slack    :        0.6
+	Sum of Negative Slacks :        0.0
+	Area                   :    52306.8
+
+	Total time taken : 0 cpu secs
+Info: setting optimize_timing_cpu_limit to 0
+Info: setting modgen_select to auto
+
+*******************************************************
+
+Cell: sbox    View: behavioral    Library: work
+
+*******************************************************
+
+ Number of ports :                      26
+ Number of nets :                      853
+ Number of instances :                 835
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of um2 :                     52307
+ Number of accumulated instances :     835
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clk                  : 140.7 MHz
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+m(7)/                                          0.00  0.00 up             0.04
+ix17447/Q                          XNR22       0.20  0.20 up             0.02
+ix18788/Q                          BUF2        1.55  1.76 up             0.54
+ix17443/Q                          NAND22      0.69  2.44 dn             0.47
+ix147/Q                            CLKIN1      1.85  4.30 up             0.28
+ix17484/Q                          AOI221      0.14  4.44 dn             0.03
+ix1271/Q                           OAI211      0.52  4.96 up             0.04
+ix18229/Q                          CLKIN1      0.16  5.12 dn             0.01
+ix1273/Q                           NAND21      0.22  5.34 up             0.01
+ix18225/Q                          NOR40       0.34  5.68 dn             0.02
+ix1297/Q                           NAND41      0.50  6.18 up             0.01
+ix18215/Q                          NOR40       0.45  6.63 dn             0.02
+ix1479/Q                           NAND41      0.47  7.10 up             0.01
+reg_reg(2)/D                       DFC1        0.00  7.10 up             0.00
+data arrival time                                    7.10
+
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    7.10
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+
+-- Design summary in file 'synth/SBox.sum'
+-- Saving the design database in synth/SBox.xdb
+-- Writing file synth/SBox.xdb
+-- Writing XDB version 1999.1
+-- Writing file synth/SBox.v
+-- CPU time taken for this run was 12.14 sec
+-- Run ended On Mon Dec 18 09:33:15 CET 2017
+-- LeonardoSpectrum Level 3 run successfully completed.  Goodbye !

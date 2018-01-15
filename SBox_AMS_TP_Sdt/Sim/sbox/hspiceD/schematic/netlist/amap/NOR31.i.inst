@@ -1,0 +1,8 @@
+HEADER
+"PSFversion" "1.00"
+"xi1v" "I1"
+"xi1n" "nor3_core"
+"(FUNCTION (plus (root \"I1/out\")))v" "Q"
+"(FUNCTION (plus (root \"I1/b\")))v" "B"
+"(FUNCTION (plus (root \"I1/c\")))v" "C"
+"(FUNCTION (plus (root \"I1/a\")))v" "A"

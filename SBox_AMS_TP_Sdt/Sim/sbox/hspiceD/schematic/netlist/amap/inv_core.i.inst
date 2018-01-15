@@ -1,0 +1,8 @@
+HEADER
+"PSFversion" "1.00"
+"mn1v" "MN1"
+"mn1n" "PRIMLIB_nmos4_hspiceD"
+"mp1v" "MP1"
+"mp1n" "PRIMLIB_pmos4_hspiceD"
+"(FUNCTION (plus (root \"MN1/D\") (root \"MP1/D\")))v" "out"
+"(FUNCTION (plus (root \"MN1/G\") (root \"MP1/G\")))v" "in"

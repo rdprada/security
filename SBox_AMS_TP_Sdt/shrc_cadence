@@ -1,0 +1,54 @@
+#!/bin/bash
+
+#
+# CADENCE DFW II 2005 and SoC ENcounter 2006 (version 5.2.3) in AMS 3.70 environment 
+#
+
+unset CDS_INST_DIR
+
+export CDS_INST_DIR=/softslin/cdsic5_1_41_usr5
+export CDSDIR=${CDS_INST_DIR}
+export ENCOUNTER=/softslin/cdssoc7_1
+export LDVDIR=/softslin/cdsius8_1_6
+export ASSURAHOME=/softslin/cdsassu3_1_7_CDB
+# export ICCRAFT_HOME=/softslin/cdsicc11_2_41
+
+export PATH="${PATH}:${LDVDIR}/tools/verilog/bin: ${LDVDIR}/tools/simvisdai/bin:${CDSDIR}/tools/dfII/bin:${CDSDIR}/tools/bin:${ENCOUNTER}/bin:${ENCOUNTER}/tools/bin:${ICCRAFT_HOME}/tools/iccraft/bin:${ASSURAHOME}/tools/bin:${ASSURAHOME}/tools/assura/bin"
+
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ASSURAHOME}/tools/lib:${ICCRAFT_HOME}/tools/iccraft/lib:${ICCRAFT_HOME}/share/oa/lib/sunos_58_32/opt:${LDVDIR}/tools/lib"
+
+#export LM_LICENSE_FILE=5287@cimeldap:5280@v212
+export LM_LICENSE_FILE=5287@cimeldap:5280@cimekey1:${LM_LICENSE_FILE}
+export CDS_LIC_FILE="${LM_LICENSE_FILE}"
+export CDS_LIC_TIMEOUT=30
+
+#
+# AMS 3.70 environment for CADENCE DFW II 2005 
+#
+
+export AMS_DIR=/softslin/AMS_380_CDS
+
+export PATH="${PATH}:${AMS_DIR}/programs/bin:${AMS_DIR}/artist/bin"
+
+export LM_LICENSE_FILE=${LM_LICENSE_FILE}:26745@cimekey1
+
+export  DD_DONT_DO_OS_LOCKS  set
+
+######## Environnement pour Calibre ############
+export MGC_HOME=/softslin/calibre2007_4_30_24/ixl_cal_2007.4_30.24
+export path=($path $MGC_HOME/bin )
+
+export LM_LICENSE_FILE=${LM_LICENSE_FILE}:1717@cimekey1
+
+#  (0.35 um 4LM) 0,35 cmos 
+alias 'amsc35b4=${AMS_DIR}/artist/bin/ams_cds -tech c35b4 -mode fb & '
+
+#  (0.35 um 3LM) 0,35 cmos
+alias 'amsc35b3=${AMS_DIR}/artist/bin/ams_cds -tech c35b3 -mode fb & '
+
+#  (0.35 um BiCMOS 4LM) 0,35 SiGe
+alias 'amss35d4=${AMS_DIR}/artist/bin/ams_cds -tech s35d4 -mode fb & '
+
+#  (0.35 um 4LM) 0,35 cmos
+alias 'c35b4m3=${AMS_DIR}/artist/bin/ams_cds -tech s35d4 -mode fb &'
+
